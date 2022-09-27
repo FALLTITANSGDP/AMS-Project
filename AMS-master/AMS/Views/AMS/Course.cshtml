@@ -1,0 +1,13 @@
+﻿@model AMS.Models.Course
+@{
+    ViewBag.Title = "Course Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" action="SaveCourse">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input name="Name" type="text" class="form-control" id="courseName" placeholder="Enter Name">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

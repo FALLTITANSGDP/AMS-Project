@@ -1,0 +1,71 @@
+﻿@using AMS.ViewModels.Faculty
+@{
+    ViewBag.Title = "Course Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model FacultyRegistrationViewModel;
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="bg-light col-sm-12 col-xl-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h6 class="mb-4">Add Course </h6>
+                <form asp-action="RegisterFacultyWithCourse" asp-controller="AMS" method="post">
+                    <div class="row mb-3" style="float:left;width:33%">
+                        <div class="form-floating mb-3">
+                            <select name="CName" asp-items="@(new SelectList(Model.Courses,"Name","Name"))" class="form-select" id="floatingSelect"
+                                    aria-label="Floating label select example"></select>
+                            <label for="floatingSelect">Course</label>
+                        </div>
+                    </div>
+                    <div class="row mb-3" style="float:left;width:33%;margin-left:2%">
+                        <div class="form-floating mb-3">
+                            <select name="SName" asp-items="@(new SelectList(Model.Sections,"Name","Name"))" class="form-select" id="floatingSelect"
+                                    aria-label="Floating label select example"></select>
+                            <label for="floatingSelect">Section</label>
+                        </div>
+                    </div>
+                    <div style="float:left;margin-left:2%;margin-top:1%">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="bg-light col-sm-12 col-xl-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h6 class="mb-4">Course Registered</h6>
+                <table class="table">
+                    <thead>
+                        <tr>
+                        
+                            <th scope="col">Course</th>
+                            <th scope="col">Section</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if(@Model.RegistrationList.Count<=0)
+                        {
+                            <tr><td colspan=4 style="text-align: center;"><h6>No Registrations</h6></td></tr>
+                        }
+                        @foreach (var listItem in Model.RegistrationList)
+                        {
+                            <tr>
+                             
+                                <td>@listItem.Course.Name</td>
+                                <td>@listItem.Section.Name</td>
+                                <td><a asp-action="ViewRegCourseDetails" asp-controller="AMS" asp-route-data="@listItem.Id" class="link-primary">View Details</a></td>
+                            </tr>
+                        }
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

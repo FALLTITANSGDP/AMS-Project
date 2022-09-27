@@ -1,0 +1,62 @@
+﻿@using AMS.Models
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@{
+    ViewBag.Title = "My Attendance Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IList<Students_Attendance>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="bg-light col-sm-12 col-xl-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h6 class="mb-4">Attendance List</h6>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Faculty Name</th>
+                            <th scope="col">Faculty Email</th>
+                            <th scope="col">Course Name</th>
+                            <th scope="col">Section</th>
+                            <th scope="col">Is Attend</th>
+                            <th scope="col">Is Approved</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (@Model.Count <= 0)
+                        {
+                            <tr><td colspan=6 style="text-align: center;"><h6>No Records</h6></td></tr>
+                        }
+                        @foreach (var listItem in Model)
+                        {
+                            <tr>
+                                <td>@listItem.Student_Course_Registration.Course_Section_Faculty.Faculty.Name</td>
+                                <td>@listItem.Student_Course_Registration.Course_Section_Faculty.Faculty.Email</td>
+                                <td>@listItem.Student_Course_Registration.Course_Section_Faculty.Course.Name</td>
+                                <td>@listItem.Student_Course_Registration.Course_Section_Faculty.Section.Name</td>
+                                @if (@listItem.IsAttended)
+                                {
+                                    <td><h6>Attended</h6></td>
+                                }
+                                else
+                                {
+                                    <td>Not Attended</td>
+                                }
+                                @if (@listItem.IsApproved)
+                                {
+                                    <td><h6>Approved</h6></td>
+                                }
+                                else
+                                {
+                                    <td>Rejected</td>
+                                }
+
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

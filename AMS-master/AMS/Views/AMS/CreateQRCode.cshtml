@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "QR Code";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<hr />
+<div class="row">
+    <div class="col-12">
+        <img src="@ViewBag.QrCodeUri" class="img-thumbnail" style="height: 60%;width: 60%;margin-left:20%" />
+    </div>
+</div>
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}
