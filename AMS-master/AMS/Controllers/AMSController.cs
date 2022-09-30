@@ -423,7 +423,7 @@ namespace AMS.Controllers
                 var studentList = await dbOperations.GetAllData<Student>("Student");
                 if (!studentList.Any(x => x.Email.Equals(data.Email, StringComparison.OrdinalIgnoreCase)))
                 {
-                    ViewData["Invalid"] = "Studnet not exit";
+                    ViewData["Invalid"] = "Student does not exist";
                     return View();
                 }
                 var userPINDetails = pinList.FirstOrDefault(x => x.Email.Equals(data.Email, StringComparison.OrdinalIgnoreCase));
