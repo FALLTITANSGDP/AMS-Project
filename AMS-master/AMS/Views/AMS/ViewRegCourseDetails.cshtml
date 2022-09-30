@@ -52,7 +52,7 @@
                         {
                             <tr>
                                 <td>@listItem.Student_Course_Registration.Student.Name</td>
-                                <td>@listItem.Student_Course_Registration.Student.Email</td>
+                                <td><a href="#" onclick="GetPercentage('@listItem.Student_Course_Registration.Student.Email','@Model.Course_Section_Faculty.Id')">@listItem.Student_Course_Registration.Student.Email</a></td>
                                 @if (@listItem.IsAttended)
                                 {
                                     <td><h6>Attended</h6></td>
@@ -65,9 +65,13 @@
                                 {
                                     <td><h6>Approved</h6></td>
                                 }
-                                else
+                                else if (!@listItem.IsApproved && listItem.ApprovedOn.Ticks > 0)
                                 {
                                     <td>Rejected</td>
+                                }
+                                else
+                                {
+                                    <td>Pending</td>
                                 }
 
                                 @if (@listItem.IsApproved)
@@ -78,7 +82,6 @@
                                 {
                                     <td><a asp-action="UpdateAttendance" asp-controller="AMS" asp-route-email="@listItem.Student_Course_Registration.Student.Email" asp-route-data="@listItem.Id" asp-route-isApproved=true asp-route-cId="@listItem.Student_Course_Registration.Course_Section_Faculty.Id" class="link-primary">Approve</a></td>
                                 }
-
                             </tr>
                         }
 
@@ -88,3 +91,18 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    function GetPercentage(email, Id) {
+        console.log(email);
+        console.log(Id);
+        var url = '@Url.Action("GetAttendancePercentage","AMS")';
+        url = url + "?studentEmail=" + email + "&Uid=" + Id;
+        $.ajax({
+            url: url,
+            async: false,
+            success: function (result) {
+                alert('Current Percentage of the student :' + email + " is " + result);
+            }
+        });
+    }
+</script>

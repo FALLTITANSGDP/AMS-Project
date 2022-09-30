@@ -7,30 +7,30 @@
 @model ProfileViewModel;
 <section style="background-color: #eee;">
     @{
-        var result = @HttpContextAccessor.HttpContext.Session.GetString("IsPINSet");
-        if (result == "TRUE")
+        var result = TempData["IsPINSet"];
+        if (result != null && (bool)result)
         {
 
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 "PIN Reset successfully. Please Refresh the Page."
             </div>
         }
-        if (result == "FALSE")
+        if (result != null && !(bool)result)
         {
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <h6>PIN Reset failed.</h6>
             </div>
         }
 
-        var passResult = @HttpContextAccessor.HttpContext.Session.GetString("IsPasswordSet");
-        if (passResult == "TRUE")
+        var passResult = TempData["IsPasswordSet"];
+        if (passResult != null && (bool)passResult)
         {
 
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 "Password Reset link send successfully"
             </div>
         }
-        if (passResult == "FALSE")
+        if (passResult != null && !(bool)passResult)
         {
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <h6>Password Reset failed.</h6>
@@ -94,15 +94,27 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4" style="margin-left: 2%;">
-                <form method="post" asp-action="ResetPIN" asp-controller="AMS">
-                    <input name="PIN" type="number" required maxlength="4" style="height: 100%;width: 25%;" pattern="\d{4}" /> <button type="submit" class="btn btn-primary">Reset PIN</button>
-                    <a asp-action="ResetPassword" asp-controller="Home" class="btn btn-primary" >Reset Password</a>
-                </form>
+        @if (User.IsInRole("Student"))
+        {
+            <div class="row">
+                <div class="col-lg-4" style="margin-left: 2%;">
+                    <form method="post" asp-action="ResetPIN" asp-controller="AMS">
+                        <input name="PIN" type="number" required maxlength="4" style="height: 100%;width: 25%;" pattern="\d{4}" /> <button type="submit" class="btn btn-primary">Reset PIN</button>
+                        <a asp-action="ResetPassword" asp-controller="Home" class="btn btn-primary">Reset Password</a>
+                    </form>
 
+                </div>
+                <div class="col-lg-8"></div>
             </div>
-            <div class="col-lg-8"></div>
-        </div>
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-lg-4" style="margin-left: 2%;">
+                    <a asp-action="ResetPassword" asp-controller="Home" class="btn btn-primary">Reset Password</a>
+                </div>
+                <div class="col-lg-8"></div>
+            </div>
+        }
     </div>
 </section>

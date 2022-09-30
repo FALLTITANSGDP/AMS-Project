@@ -38,6 +38,10 @@
                                 {
                                     <td><h6>Attended</h6></td>
                                 }
+                                else if (!@listItem.IsAttended)
+                                {
+                                    <td>Not Attended</td>
+                                }
                                 else
                                 {
                                     <td>Not Attended</td>
@@ -46,9 +50,13 @@
                                 {
                                     <td><h6>Approved</h6></td>
                                 }
-                                else
+                                else if (!@listItem.IsApproved && listItem.ApprovedOn.Ticks > 0)
                                 {
                                     <td>Rejected</td>
+                                }
+                                else
+                                {
+                                    <td>Pending</td>
                                 }
 
                             </tr>

@@ -9,6 +9,9 @@ using AMS.ViewModels.Faculty;
 using AMS.ViewModels.Student;
 using static QRCoder.PayloadGenerator;
 using NuGet.Common;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using MessagePack.Resolvers;
+using System.Numerics;
 
 namespace AMS.Controllers
 {
@@ -24,36 +27,24 @@ namespace AMS.Controllers
         }
 
         #region Section
-        public IActionResult Section()
+        public async Task<IActionResult> Section()
         {
-            return View();
+            var section = await dbOperations.GetAllData<Section>("Section");
+            return View(section);
         }
 
-        public async Task<Section> SaveSection(Section section)
+        public async Task<IActionResult> SaveSection(Section section)
         {
             try
             {
                 var result = await dbOperations.SaveData(section, "Section");
                 if (result == null)
                 {
-
+                    return RedirectToAction("Section", "AMS");
                 }
-                return result;
+                return RedirectToAction("Section", "AMS");
             }
             catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        public async Task<IList<Section>> GetSection()
-        {
-            try
-            {
-                var result = await dbOperations.GetAllData<Section>("Section");
-                return result;
-            }
-            catch (Exception ex)
             {
                 throw;
             }
@@ -61,117 +52,29 @@ namespace AMS.Controllers
         #endregion Section
 
         #region Course
-        public IActionResult Course()
+        public async Task<IActionResult> Course()
         {
-            return View();
+            var course = await dbOperations.GetAllData<Course>("Course");
+            return View(course);
         }
 
-        public async Task<Course?> SaveCourse(Course course)
+        public async Task<IActionResult> SaveCourse(Course course)
         {
             try
             {
                 var result = await dbOperations.SaveData(course, "Course");
                 if (result == null)
                 {
-
+                    return RedirectToAction("Course", "AMS");
                 }
-                return result;
+                return RedirectToAction("Course", "AMS");
             }
             catch (Exception)
             {
                 throw;
             }
-        }
-
-        public async Task<IList<Course>> GetCourse()
-        {
-            try
-            {
-                var result = await dbOperations.GetAllData<Course>("Course");
-                return result;
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-
         }
         #endregion Course
-
-        #region Faculty
-        public IActionResult Faculty()
-        {
-            return View();
-        }
-
-        public async Task<Faculty> SaveFaculty(Faculty faculty)
-        {
-            try
-            {
-
-                var result = await dbOperations.SaveData(faculty, "Faculty");
-                if (result == null)
-                {
-
-                }
-                return result;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        public async Task<IList<Faculty>> GetFaculty()
-        {
-            try
-            {
-                var result = await dbOperations.GetAllData<Faculty>("Faculty");
-                return result;
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-        }
-        #endregion Faculty
-
-        #region Student
-        public IActionResult Student()
-        {
-            return View();
-        }
-
-        public async Task<IActionResult> SaveStudent(Student student)
-        {
-            try
-            {
-                var result = await dbOperations.SaveData(student, "Student");
-                if (result == null)
-                {
-
-                }
-                return View("Student");
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        public async Task<IActionResult> GetStudent()
-        {
-            try
-            {
-                var result = await dbOperations.GetAllData<Student>("Student");
-                return View();
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-        }
-        #endregion Student
 
         #region FacultyRegistration
         public async Task<IActionResult> FacultyRegistration()
@@ -202,10 +105,9 @@ namespace AMS.Controllers
                     viewDetails = new ViewDetails
                     {
                         Course_Section_Faculty = selectedCourseDetails,
-                        AttendanceList = attendanceLise.Where(x => x.Student_Course_Registration.Course_Section_Faculty.Id == data).ToList()
+                        AttendanceList = attendanceLise.Where(x => x.Student_Course_Registration.Course_Section_Faculty.Id == data).OrderBy(x => x.Student_Course_Registration.Student.Email).ToList()
                     };
                 }
-
                 return View(viewDetails);
             }
             catch (Exception ex)
@@ -260,7 +162,8 @@ namespace AMS.Controllers
 
         #endregion FacultyRegistration
 
-        #region StudentCourseRegistration
+        #region StudentCourseRegistration        
+
         public async Task<IActionResult> StudentRegistration()
         {
             var email = HttpContext.Session.GetString("UserEmail");
@@ -270,7 +173,8 @@ namespace AMS.Controllers
             IList<StudentRegistrationViewModel> studentRegistrationViewModel = new List<StudentRegistrationViewModel>();
             foreach (var sCourse in scheduledCourses)
             {
-                var data = courseRegistered.FirstOrDefault(x => x.Course_Section_Faculty.Course.Id.Equals(sCourse.Course.Id, StringComparison.OrdinalIgnoreCase) && x.Course_Section_Faculty.Faculty.Id.Equals(sCourse.Faculty.Id, StringComparison.OrdinalIgnoreCase) && x.Course_Section_Faculty.Section.Id.Equals(sCourse.Section.Id, StringComparison.OrdinalIgnoreCase));
+                var data = courseRegistered.FirstOrDefault(x => x.Course_Section_Faculty.Id.Equals(sCourse.Id));
+                //var data = courseRegistered.FirstOrDefault(x => x.Course_Section_Faculty.Course.Id.Equals(sCourse.Course.Id, StringComparison.OrdinalIgnoreCase) && x.Course_Section_Faculty.Faculty.Id.Equals(sCourse.Faculty.Id, StringComparison.OrdinalIgnoreCase) && x.Course_Section_Faculty.Section.Id.Equals(sCourse.Section.Id, StringComparison.OrdinalIgnoreCase));
                 if (courseRegistered.Count > 0 && data != null)
                 {
                     var courseRegisteredId = data.Id;
@@ -349,12 +253,27 @@ namespace AMS.Controllers
                     //Message with Error
                     return RedirectToAction("StudentRegistration");
                 }
-                var result = await dbOperations.DeleteData(data, "Student_Course_Registration");
-                if (!result)
+                var studentAttendance = await dbOperations.GetAllData<Students_Attendance>("Students_Attendance");
+                var studentCourseReg = await dbOperations.GetAllData<Student_Course_Registration>("Student_Course_Registration");
+                if (studentCourseReg != null && studentCourseReg.Count > 0)
                 {
-                    //Message with Error
-                    return RedirectToAction("StudentRegistration");
+                    var id = studentCourseReg.FirstOrDefault(x => x.Id.Equals(data, StringComparison.OrdinalIgnoreCase))?.Id;
+                    if (studentAttendance != null && studentAttendance.Count > 0)
+                    {
+                        studentAttendance = studentAttendance.Where(x => x.Student_Course_Registration.Id.Equals(id)).ToList();
+                        foreach (var attendance in studentAttendance)
+                        {
+                            var attendanceResult = await dbOperations.DeleteData(attendance.Id, "Students_Attendance");
+                        }
+                    }
+                    var result = await dbOperations.DeleteData(data, "Student_Course_Registration");
+                    if (!result)
+                    {
+                        //Message with Error
+                        return RedirectToAction("StudentRegistration");
+                    }
                 }
+
                 return RedirectToAction("StudentRegistration");
             }
             catch (Exception)
@@ -364,13 +283,126 @@ namespace AMS.Controllers
         }
         #endregion StudentCourseRegistration
 
-        #region Attendance
+        #region Attendance       
 
-        public async Task<IActionResult> ViewMyAttendance()
+        public async Task<string> GetAttendancePercentage(string studentEmail, string Uid)
+        {
+
+            var studentCourseReg = await dbOperations.GetAllData<Student_Course_Registration>("Student_Course_Registration");
+            if (studentCourseReg.Count > 0)
+            {
+                var currentStudentCourse = studentCourseReg.FirstOrDefault(x => x.Student.Email.Equals(studentEmail, StringComparison.OrdinalIgnoreCase) && x.Course_Section_Faculty.Id == Uid);
+                if (currentStudentCourse != null)
+                {
+                    var totalCount = currentStudentCourse.Course_Section_Faculty.TotalCount;
+                    var attendanceList = await dbOperations.GetAllData<Students_Attendance>("Students_Attendance");
+                    attendanceList = attendanceList.Where(x => x.Student_Course_Registration.Course_Section_Faculty.Id.Equals(currentStudentCourse.Course_Section_Faculty.Id) && x.Student_Course_Registration.Student.Email.Equals(studentEmail, StringComparison.OrdinalIgnoreCase) && x.IsApproved).ToList();
+                    var percentage = (int)Math.Round((double)(100 * attendanceList.Count) / totalCount);
+                    return percentage.ToString();
+                }
+            }
+
+            return "";
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ShowMyRegCourse()
         {
             var email = HttpContext.Session.GetString("UserEmail");
+            var studentCourseReg = await dbOperations.GetAllData<Student_Course_Registration>("Student_Course_Registration");
+            studentCourseReg = studentCourseReg.Where(x => x.Student.Email.Equals(email, StringComparison.OrdinalIgnoreCase)).ToList();
+            var courseReg = new List<SelectListItem> { };
+            foreach (var item in studentCourseReg)
+            {
+                var courseName = item.Course_Section_Faculty.Course.Name + "-" + item.Course_Section_Faculty.Section.Name + "-" + item.Course_Section_Faculty.Faculty.Name;
+                SelectListItem selectList = new()
+                {
+                    Text = courseName,
+                    Value = item.Id,
+                    Selected = false
+                };
+                if (courseReg.Count < 0)
+                {
+                    selectList.Selected = true;
+                }
+                courseReg.Add(selectList);
+            }
+            ViewBag.CourseData = courseReg;
+            return View();
+        }
+
+        public async Task<JsonResult> GetGraphDetails(string Uid)
+        {
+
+            if (!string.IsNullOrEmpty(Uid))
+            {
+                var studentCourseRegit = await dbOperations.GetAllData<Student_Course_Registration>("Student_Course_Registration");
+                if (studentCourseRegit.Count <= 0)
+                {
+                    return Json(string.Empty);
+                }
+                var currentStudentSub = studentCourseRegit.FirstOrDefault(x => x.Id.Equals(Uid, StringComparison.OrdinalIgnoreCase));
+                if (currentStudentSub == null)
+                {
+                    return Json(string.Empty);
+                }
+                //Need to get Total from below list of Course_Section_Faculty
+                var courserSectionFaculty = await dbOperations.GetAllData<Course_Section_Faculty>("Course_Section_Faculty");
+                if (courserSectionFaculty.Count <= 0)
+                {
+                    return Json(string.Empty);
+                }
+                var currentcourserSectionFaculty = courserSectionFaculty.FirstOrDefault(x => x.Id == currentStudentSub.Course_Section_Faculty.Id);
+                if (currentcourserSectionFaculty == null)
+                {
+                    return Json(string.Empty);
+                }
+                if (courserSectionFaculty.Count > 0 && currentStudentSub.Course_Section_Faculty != null)
+                {
+                    var totalCount = currentcourserSectionFaculty.TotalCount;
+                    var studentsAttendance = await dbOperations.GetAllData<Students_Attendance>("Students_Attendance");
+                    var attendedCount = studentsAttendance.Where(x => x.Student_Course_Registration.Course_Section_Faculty.Id.Equals(currentStudentSub.Course_Section_Faculty.Id, StringComparison.OrdinalIgnoreCase) && x.Student_Course_Registration.Student.Email.Equals(currentStudentSub.Student.Email, StringComparison.OrdinalIgnoreCase) && x.IsApproved).Count();
+                    Dictionary<string, dynamic> keyValuePairs = new Dictionary<string, dynamic>();
+                    int percentage = 0;
+                    int absentCount = 0;
+                    if (totalCount >= attendedCount)
+                    {
+                        absentCount = totalCount - attendedCount;
+                        percentage = (int)Math.Round((double)(100 * attendedCount) / totalCount);
+                        if (percentage < 0)
+                        {
+                            percentage = 0;
+                        }
+                    }
+
+                    keyValuePairs.Add("totalCount", totalCount);
+                    keyValuePairs.Add("attendedCount", attendedCount);
+                    keyValuePairs.Add("absentCount", absentCount);
+                    if (totalCount <= 0)
+                    {
+                        keyValuePairs.Add("percentage", "Class not yet started");
+                    }
+                    else
+                    {
+                        keyValuePairs.Add("percentage", percentage.ToString() + "%");
+                    }
+                    return Json(keyValuePairs);
+                }
+            }
+            return Json(string.Empty);
+        }
+
+        public async Task<IActionResult> ViewMyAttendance(string uId)
+        {
+            if (uId == null || uId == "0")
+            {
+                var email = HttpContext.Session.GetString("UserEmail");
+                var attendanceListTemp = await dbOperations.GetAllData<Students_Attendance>("Students_Attendance");
+                attendanceListTemp = attendanceListTemp.Where(x => x.Student_Course_Registration.Student.Email.Equals(email, StringComparison.OrdinalIgnoreCase)).ToList();
+                return View(attendanceListTemp);
+            }
             var attendanceList = await dbOperations.GetAllData<Students_Attendance>("Students_Attendance");
-            attendanceList = attendanceList.Where(x => x.Student_Course_Registration.Student.Email.Equals(email, StringComparison.OrdinalIgnoreCase)).ToList();
+            attendanceList = attendanceList.Where(x => x.Student_Course_Registration.Id.Equals(uId, StringComparison.OrdinalIgnoreCase)).ToList();
             return View(attendanceList);
         }
 
@@ -380,6 +412,7 @@ namespace AMS.Controllers
             ViewBag.CId = uid;
             return View();
         }
+
         [AllowAnonymous]
         public async Task<IActionResult> SubmitAttendance(SubmitAttendanceViewModel data)
         {
@@ -403,8 +436,15 @@ namespace AMS.Controllers
                 var studentCourseRegistered = student_Course_Registration.FirstOrDefault(x => x.Student.Email.Equals(data.Email, StringComparison.OrdinalIgnoreCase) && x.Course_Section_Faculty.Id.Equals(data.CId, StringComparison.OrdinalIgnoreCase));
                 if (studentCourseRegistered != null)
                 {
+                    var attendance = await dbOperations.GetAllData<Students_Attendance>("Students_Attendance");
+                    if (attendance.Where(x => x.AttendedOn.Date == DateTime.UtcNow.Date && x.Student_Course_Registration.Student.Email.Equals(data.Email, StringComparison.OrdinalIgnoreCase) && x.Student_Course_Registration.Course_Section_Faculty.Id.Equals(data.CId, StringComparison.OrdinalIgnoreCase)).Any())
+                    {
+                        ViewData["Invalid"] = "Already attendance marked for the class";
+                        return View();
+                    }
                     var result = await dbOperations.SaveData<Students_Attendance>(new Students_Attendance
                     {
+                        AttendedOn = DateTime.UtcNow,
                         IsAttended = true,
                         Student_Course_Registration = studentCourseRegistered
                     }, "Students_Attendance");
@@ -413,6 +453,11 @@ namespace AMS.Controllers
                         ViewData["Valid"] = "Submitted";
                         return View();
                     }
+                }
+                else
+                {
+                    ViewData["Invalid"] = "Not Registered for the Course";
+                    return View();
                 }
             }
             catch (Exception ex)
@@ -431,17 +476,20 @@ namespace AMS.Controllers
             if (currentAttendance != null)
             {
                 currentAttendance.IsApproved = isApproved;
+                currentAttendance.ApprovedOn = DateTime.UtcNow;
                 var updatedData = await dbOperations.UpdateData<Students_Attendance>(data, currentAttendance, "Students_Attendance");
                 return RedirectToAction("ViewRegCourseDetails", "AMS", new { data = cId });
             }
             return RedirectToAction("ViewRegCourseDetails", "AMS", new { data = cId });
         }
+
         #endregion Attendance
 
         #region QRCode
         [HttpGet]
-        public IActionResult CreateQRCode(string data)
+        public async Task<IActionResult> CreateQRCode(string data)
         {
+            await AddClassCount(data);
             var url = HttpContext.Request.Scheme + "://" + HttpContext.Request.Host + "/AMS/MarkAttendance?uid=" + data;
             string WebUri = new Uri(url).ToString();
             string UriPayload = WebUri.ToString();
@@ -455,8 +503,6 @@ namespace AMS.Controllers
             return View();
         }
         #endregion QRCode
-
-
 
         #region MyProfile
         public IActionResult MyProfile()
@@ -504,7 +550,7 @@ namespace AMS.Controllers
                 var result = await dbOperations.UpdateData<UPIN>(currentPinDetails.Id, currentPinDetails, "UPIN");
                 if (result.PIN == PIN)
                 {
-                    HttpContext.Session.SetString("IsPINSet", "TRUE");
+                    TempData["IsPINSet"] = true;
                     return RedirectToAction("MyProfile", "AMS");
                 }
             }
@@ -518,12 +564,32 @@ namespace AMS.Controllers
                 var result = await dbOperations.SaveData<UPIN>(currentPinDetails, "UPIN");
                 if (result.PIN == PIN)
                 {
-                    HttpContext.Session.SetString("IsPINSet", "TRUE");
+                    TempData["IsPINSet"] = true;
                     return RedirectToAction("MyProfile", "AMS");
                 }
             }
-            HttpContext.Session.SetString("IsPINSet", "FALSE");
+            TempData["IsPINSet"] = false;
             return RedirectToAction("MyProfile", "AMS");
+        }
+
+        private async Task<bool> AddClassCount(string uId)
+        {
+            var data = await dbOperations.GetAllData<Course_Section_Faculty>("Course_Section_Faculty");
+            if (data != null && data.Count > 0)
+            {
+                var currentRecord = data.FirstOrDefault(x => x.Id.Equals(uId, StringComparison.OrdinalIgnoreCase));
+                if (currentRecord != null && currentRecord.LastClassOn.Date < DateTime.UtcNow.Date)
+                {
+                    currentRecord.TotalCount += 1;
+                    currentRecord.LastClassOn = DateTime.UtcNow;
+                    var result = await dbOperations.UpdateData<Course_Section_Faculty>(currentRecord.Id, currentRecord, "Course_Section_Faculty");
+                    if (result != null)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
         #endregion MyProfile
 
