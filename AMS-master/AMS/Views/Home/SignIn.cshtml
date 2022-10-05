@@ -49,19 +49,21 @@
                         <form class="login-form" action="SignInUser" method="post">
                             <div class="d-flex align-items-center mb-3" style="justify-content:center">
                                 Login as :
-                                Student <input checked="checked"
+                                </div>
+                                <div>
+                                 <input checked="checked"
                                                id="UserType"
                                                name="Type"
                                                type="radio"
                                                value="Student"
                                                style="margin:2%"
-                                               GroupName="UserType" />
+                                               GroupName="UserType" /> Student
 
-                                Instructor <input name="Type"
+                                 <input name="Type"
                                                   type="radio"
                                                   value="Faculty"
                                                   style="margin:2%"
-                                                  GroupName="UserType" />
+                                                  GroupName="UserType" /> Instructor
                             </div>
                             <div class="d-flex align-items-center mb-3" style="justify-content:center">
                                 <a asp-action="SignIn" asp-controller="Home" class="">
