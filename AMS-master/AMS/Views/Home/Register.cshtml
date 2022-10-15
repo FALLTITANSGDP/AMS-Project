@@ -59,27 +59,36 @@
                                 <h3>&nbsp; Sign Up</h3>
                             </div>
                             <div class="d-flex align-items-center mb-3" style="justify-content:center">
-                                Register as :</div>
-                                <div>
-                                 <input checked="checked"
-                                               id="UserType"
-                                               name="Type"
-                                               type="radio"
-                                               value="Student"
-                                               style="margin:2%"
-                                               GroupName="UserType" /> Student
+                                Register as :
+                            </div>
+                            <div>
+                                <input checked="checked"
+                                       id="UserType"
+                                       name="Type"
+                                       type="radio"
+                                       value="Student"
+                                       style="margin:2%"
+                                       GroupName="UserType" /> Student
 
-                                 <input name="Type"
-                                                  type="radio"
-                                                  value="Faculty"
-                                                  style="margin:2%"
-                                                  GroupName="UserType" /> Instructor
+                                <input name="Type"
+                                       type="radio"
+                                       value="Faculty"
+                                       style="margin:2%"
+                                       GroupName="UserType" /> Instructor
 
 
                             </div>
                             <div class="form-floating mb-3">
-                                <input required type="text" name="UserName" class="form-control" id="floatingText" placeholder="jhondoe">
+                                <input required type="text" name="UserName" class="form-control" id="floatingText" placeholder="jhondoe" readonly value=" @ViewData["UserName"].ToString()">
                                 <label for="floatingText">Username</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input required type="text" name="FirstName" class="form-control" id="floatingText" placeholder="jhondoe">
+                                <label for="floatingText">First Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input required type="text" name="LastName" class="form-control" id="floatingText" placeholder="jhondoe">
+                                <label for="floatingText">Last Name</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input required type="email" name="Email" class="form-control" id="floatingInput" placeholder="name@example.com">

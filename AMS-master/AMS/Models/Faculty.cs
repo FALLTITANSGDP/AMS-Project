@@ -1,8 +1,7 @@
 ﻿namespace AMS.Models
 {
-    public class Faculty : BaseModel
+    public class Faculty : UserBaseModel
     {
-        public string Name { get; set; }
-        public string Email { get; set; }
+   
     }
 }

@@ -65,6 +65,7 @@ namespace AMS.Controllers
         /// <returns></returns>
         public IActionResult Register()
         {
+            ViewData["UserName"] = GenerateUID();
             return View();
         }
 
@@ -78,27 +79,14 @@ namespace AMS.Controllers
         {
             try
             {
-                if (userModel.Type == "Student")
+                var userList = await dbOperations.GetAllData<Models.User>("User");
+                if (userList.Count > 0)
                 {
-                    var studentList = await dbOperations.GetAllData<Student>("Student");
-                    if (studentList != null && studentList.Any(x => x.Email?.ToLower() == userModel.Email.ToLower()))
+                    var currentUser = userList.FirstOrDefault(x => x.Email.Equals(userModel.Email, StringComparison.OrdinalIgnoreCase));
+                    if (currentUser != null)
                     {
-                        //User Already Exist
-                        //Return to Registration Page and say that email aready exist.
                         ViewData["Invalid"] = "Email Already Exist..!";
                         return View("Register");
-                    }
-                }
-
-                if (userModel.Type == "Faculty")
-                {
-                    var facultyList = await dbOperations.GetAllData<Faculty>("Faculty");
-                    if (facultyList != null && facultyList.Any(x => x.Email?.ToLower() == userModel.Email.ToLower()))
-                    {
-                        //User Already Exist
-                        ViewData["Invalid"] = "Email Already Exist..!";
-                        return View("Register");
-
                     }
                 }
                 //Talks with Firebase Auth process and creates the user with provided userId and password.
@@ -107,21 +95,31 @@ namespace AMS.Controllers
                 {
                     // If something went wrong on firebase then we wil show below message
                     ViewData["Invalid"] = "Some thing went wrong..!";
+                    ViewData["UserName"] = GenerateUID();
                     return View("Register");
                 }
-
+                userModel.Password = String.Empty;
+                var user = await dbOperations.SaveData<Models.User>(userModel, "User");
+                if (user == null)
+                {
+                    ViewData["Invalid"] = "Something went wrong..!";
+                    ViewData["UserName"] = GenerateUID();
+                    return View("Register");
+                }
                 //Creating the student model to be saved in database
                 if (userModel.Type == "Student")
                 {
                     var student = new Student
                     {
                         Email = userModel.Email,
+                        FirstName = userModel.FirstName,
+                        LastName = userModel.LastName,
                         Name = userModel.UserName
                     };
                     var uPIN = new UPIN
                     {
                         Email = userModel.Email,
-                        PIN = new Random().Next(0, 10000),
+                        PIN = int.Parse(GenerateUID())
                     };
 
                     var upinResult = await dbOperations.SaveData<UPIN>(uPIN, "UPIN");
@@ -133,6 +131,8 @@ namespace AMS.Controllers
                     var faculty = new Faculty
                     {
                         Email = userModel.Email,
+                        FirstName = userModel.FirstName,
+                        LastName = userModel.LastName,
                         Name = userModel.UserName
                     };
 
@@ -140,6 +140,7 @@ namespace AMS.Controllers
                 }
 
                 ViewData["Valid"] = "Registered Successfully.";
+                ViewData["UserName"] = GenerateUID();
                 return View("Register");
             }
 
@@ -147,7 +148,8 @@ namespace AMS.Controllers
             {
                 var firebaseEx = JsonConvert.DeserializeObject<FirebaseError>(ex.ResponseData);
                 ModelState.AddModelError(String.Empty, firebaseEx.error.message);
-                ViewData["Invalid"] = "Some thing went wrong..!";
+                ViewData["Invalid"] = firebaseEx.error.message;
+                ViewData["UserName"] = GenerateUID();
                 return View("Register");
             }
 
@@ -179,39 +181,18 @@ namespace AMS.Controllers
                 //saving the token in a session variable
                 if (token != null)
                 {
-                    var userName = string.Empty;
-                    if (userModel.Type == "Student")
+                    var userList = await dbOperations.GetAllData<Models.User>("User");
+                    var currentUser = userList.FirstOrDefault(x => x.Email.Equals(userModel.Email, StringComparison.OrdinalIgnoreCase));
+                    if (currentUser == null)
                     {
-                        var studentList = await dbOperations.GetAllData<Student>("Student");
-                        if (studentList != null && studentList.Any(x => x.Email?.ToLower() == userModel.Email.ToLower()))
-                        {
-                            userName = studentList.FirstOrDefault(x => x.Email?.ToLower() == userModel.Email.ToLower()).Name;
-                        }
-                        if (!studentList.Any(x => x.Email?.ToLower() == userModel.Email.ToLower()))
-                        {
-                            ViewData["Invalid"] = "Fail to login";
-                            return View("SignIn");
-                        }
+                        ViewData["Invalid"] = "Fail to login";
+                        return View("SignIn");
                     }
-                    if (userModel.Type == "Faculty")
-                    {
-                        var facultyList = await dbOperations.GetAllData<Faculty>("Faculty");
-                        if (facultyList != null && facultyList.Any(x => x.Email?.ToLower() == userModel.Email.ToLower()))
-                        {
-                            userName = facultyList.FirstOrDefault(x => x.Email?.ToLower() == userModel.Email.ToLower()).Name;
-                        }
-                        if (!facultyList.Any(x => x.Email?.ToLower() == userModel.Email.ToLower()))
-                        {
-                            ViewData["Invalid"] = "Fail to login";
-                            return View("SignIn");
-                        }
-                    }
-
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Name, userModel.Email),
                         new Claim("_UserToken", token),
-                        new Claim(ClaimTypes.Role, userModel.Type),
+                        new Claim(ClaimTypes.Role, currentUser.Type),
                     };
                     var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                     var authProperties = new AuthenticationProperties
@@ -224,9 +205,9 @@ namespace AMS.Controllers
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
 
                     HttpContext.Session.SetString("_UserToken", token);
-                    HttpContext.Session.SetString("UserName", userName ?? "");
+                    HttpContext.Session.SetString("UserName", currentUser.FirstName + ' ' + currentUser.LastName ?? "");
                     HttpContext.Session.SetString("UserEmail", userModel.Email ?? "");
-                    HttpContext.Session.SetString("UserType", userModel.Type);
+                    HttpContext.Session.SetString("UserType", currentUser.Type);
                     return RedirectToAction("Index");
                 }
                 else
@@ -306,6 +287,13 @@ namespace AMS.Controllers
                 return RedirectToAction("ForgotPassword");
             }
 
+        }
+
+        private string GenerateUID()
+        {
+            Random generator = new Random();
+            String r = generator.Next(0, 1000000).ToString("D6");
+            return r;
         }
     }
 }
