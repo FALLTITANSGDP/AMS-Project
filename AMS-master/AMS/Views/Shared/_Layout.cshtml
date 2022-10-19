@@ -67,8 +67,12 @@
                     }
                      @if (User.IsInRole("Admin"))
                     {
+                        <a asp-action="GetPendingUserApprovals" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Users</a>
+                        <a asp-action="GetPendingSubjectApprovals" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Subject</a>
+
                         <a asp-action="Section" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Section</a>
                         <a asp-action="Course" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Course</a>
+
                     }
                 </div>
             </nav>

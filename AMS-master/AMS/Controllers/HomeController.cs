@@ -86,6 +86,7 @@ namespace AMS.Controllers
                     if (currentUser != null)
                     {
                         ViewData["Invalid"] = "Email Already Exist..!";
+                        ViewData["UserName"] = GenerateUID();
                         return View("Register");
                     }
                 }
@@ -98,8 +99,9 @@ namespace AMS.Controllers
                     ViewData["UserName"] = GenerateUID();
                     return View("Register");
                 }
-                userModel.Password = String.Empty;
-                var user = await dbOperations.SaveData<Models.User>(userModel, "User");
+                userModel.Password = string.Empty;
+                userModel.IsApproved = false;
+                var user = await dbOperations.SaveData(userModel, "User");
                 if (user == null)
                 {
                     ViewData["Invalid"] = "Something went wrong..!";
@@ -188,6 +190,11 @@ namespace AMS.Controllers
                         ViewData["Invalid"] = "Fail to login";
                         return View("SignIn");
                     }
+                    if (!currentUser.IsApproved)
+                    {
+                        ViewData["Invalid"] = "User Not Approved";
+                        return View("SignIn");
+                    }
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Name, userModel.Email),
@@ -219,7 +226,7 @@ namespace AMS.Controllers
             catch (FirebaseAuthException ex)
             {
                 var firebaseEx = JsonConvert.DeserializeObject<FirebaseError>(ex.ResponseData);
-                ModelState.AddModelError(String.Empty, firebaseEx.error.message);
+                ModelState.AddModelError(string.Empty, firebaseEx.error.message);
                 ViewData["Invalid"] = "Fail to login";
                 return View("SignIn");
             }

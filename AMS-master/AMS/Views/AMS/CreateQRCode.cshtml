@@ -10,6 +10,15 @@
 </div>
 @section Scripts {
     @{
-    await Html.RenderPartialAsync("_ValidationScriptsPartial");
-}
-}
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            setTimeout(function () {
+                alert('Reloading Page');
+                location.reload(true);
+            }, 5000);
+        });
+    </script>

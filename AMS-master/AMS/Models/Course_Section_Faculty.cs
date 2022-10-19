@@ -6,6 +6,7 @@
         public Section Section { get; set; }
         public Faculty Faculty { get; set; }
         public DateTime LastClassOn { get; set; }
+        public bool IsApproved { get; set; }
         public int TotalCount { get; set; }
     }
 }

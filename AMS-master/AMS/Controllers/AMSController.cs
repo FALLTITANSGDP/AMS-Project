@@ -27,6 +27,7 @@ namespace AMS.Controllers
         }
 
         #region Section
+
         public async Task<IActionResult> Section()
         {
             var section = await dbOperations.GetAllData<Section>("Section");
@@ -49,9 +50,11 @@ namespace AMS.Controllers
                 throw;
             }
         }
+
         #endregion Section
 
         #region Course
+
         public async Task<IActionResult> Course()
         {
             var course = await dbOperations.GetAllData<Course>("Course");
@@ -74,9 +77,11 @@ namespace AMS.Controllers
                 throw;
             }
         }
+
         #endregion Course
 
         #region FacultyRegistration
+
         public async Task<IActionResult> FacultyRegistration()
         {
             var courseList = await dbOperations.GetAllData<Course>("Course");
@@ -186,7 +191,8 @@ namespace AMS.Controllers
                     {
                         Course_Section_Faculty = sCourse,
                         CourseRegisteredId = courseRegisteredId,
-                        IsRegistered = true
+                        IsRegistered = true,
+                        IsApproved= data.IsApproved
                     };
                     studentRegistrationViewModel.Add(studentRegistration);
                 }
@@ -223,6 +229,7 @@ namespace AMS.Controllers
                     {
                         student_Course_Registration.Course_Section_Faculty = selectedCourse_Section_Faculty;
                         student_Course_Registration.Student = student;
+                        student_Course_Registration.IsApproved = false;
                     }
                 }
                 if (student_Course_Registration.Student == null || student_Course_Registration.Course_Section_Faculty == null)
@@ -281,6 +288,7 @@ namespace AMS.Controllers
                 throw;
             }
         }
+
         #endregion StudentCourseRegistration
 
         #region Attendance       
@@ -445,6 +453,7 @@ namespace AMS.Controllers
                     var result = await dbOperations.SaveData<Students_Attendance>(new Students_Attendance
                     {
                         AttendedOn = DateTime.UtcNow,
+                        IsApproved = true,
                         IsAttended = true,
                         Student_Course_Registration = studentCourseRegistered
                     }, "Students_Attendance");
@@ -486,6 +495,7 @@ namespace AMS.Controllers
         #endregion Attendance
 
         #region QRCode
+
         [HttpGet]
         public async Task<IActionResult> CreateQRCode(string data)
         {
@@ -502,9 +512,11 @@ namespace AMS.Controllers
             ViewBag.QrCodeUri = QrUri;
             return View();
         }
+
         #endregion QRCode
 
         #region MyProfile
+
         public IActionResult MyProfile()
         {
 
@@ -591,7 +603,51 @@ namespace AMS.Controllers
             }
             return false;
         }
+
         #endregion MyProfile
+
+        #region AdminApprovals
+
+        public async Task<IActionResult> GetPendingUserApprovals()
+        {
+            var usersList = await dbOperations.GetAllData<Models.User>("User");
+            usersList = usersList.Where(x => x.IsApproved == false).ToList();
+            return View("PendingUserApprovals", usersList);
+        }
+
+        public async Task<IActionResult> UpdateUserStatus(string userEmail)
+        {
+            var usersList = await dbOperations.GetAllData<Models.User>("User");
+            var currentUser = usersList.FirstOrDefault(x => x.Email.Equals(userEmail, StringComparison.OrdinalIgnoreCase));
+            if (currentUser != null)
+            {
+                currentUser.IsApproved = true;
+                var result = await dbOperations.UpdateData<Models.User>(currentUser.Id, currentUser, "User");
+            }
+            return RedirectToAction("GetPendingUserApprovals");
+        }
+
+
+        public async Task<IActionResult> GetPendingSubjectApprovals()
+        {
+            var usersList = await dbOperations.GetAllData<Models.Student_Course_Registration>("Student_Course_Registration");
+            usersList = usersList.Where(x => x.IsApproved == false).ToList();
+            return View("PendingSubjectApprovals", usersList);
+        }
+
+        public async Task<IActionResult> UpdateStudentCourseStatus(string id)
+        {
+            var studentCourseList = await dbOperations.GetAllData<Models.Student_Course_Registration>("Student_Course_Registration");
+            var currentStudentCourse = studentCourseList.FirstOrDefault(x => x.Id.Equals(id, StringComparison.OrdinalIgnoreCase));
+            if (currentStudentCourse != null)
+            {
+                currentStudentCourse.IsApproved = true;
+                var result = await dbOperations.UpdateData<Models.Student_Course_Registration>(currentStudentCourse.Id, currentStudentCourse, "Student_Course_Registration");
+            }
+            return RedirectToAction("GetPendingSubjectApprovals");
+        }
+
+        #endregion AdminApprovals
 
     }
 }

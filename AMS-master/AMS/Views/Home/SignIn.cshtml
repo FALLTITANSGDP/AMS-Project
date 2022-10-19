@@ -42,7 +42,7 @@
                         @if (@ViewData.ContainsKey("Invalid"))
                         {
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                Invalid Details.
+                                @ViewData["Invalid"].ToString()
                             </div>
                         }
 

@@ -14,7 +14,7 @@
                 <table class="table">
                     <thead>
                         <tr>
-                           
+
                             <th scope="col">Course</th>
                             <th scope="col">Section</th>
                             <th scope="col">Faculty</th>
@@ -34,14 +34,19 @@
                         @foreach (var listItem in Model)
                         {
                             <tr>
-                               
+
                                 <td>@listItem.Course_Section_Faculty.Course.Name</td>
                                 <td>@listItem.Course_Section_Faculty.Section.Name</td>
                                 <td>@listItem.Course_Section_Faculty.Faculty.Name</td>
-                                @if (listItem.IsRegistered)
+                                @if (listItem.IsRegistered && listItem.IsApproved)
                                 {
-                                    <td>Registered</td>
+                                    <td>Registered/Approved</td>
                                     <td><a asp-action="CancelRegisterOfCourse" asp-controller="AMS" asp-route-data="@listItem.CourseRegisteredId" class="link-primary">Cancel</a></td>
+                                }
+                                else if (listItem.IsRegistered && !listItem.IsApproved)
+                                {
+                                    <td>Not Approved</td>
+                                    <td>--</td>
                                 }
                                 else
                                 {
