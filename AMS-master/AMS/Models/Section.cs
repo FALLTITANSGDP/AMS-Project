@@ -4,9 +4,5 @@
     {
         public string Name { get; set; }
 
-        public Section(string? name)
-        {
-            Name = name;
-        }
     }
 }
