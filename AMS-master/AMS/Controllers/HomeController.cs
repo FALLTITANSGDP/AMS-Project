@@ -300,7 +300,7 @@ namespace AMS.Controllers
         private string GenerateUID()
         {
             Random generator = new Random();
-            String r = generator.Next(0, 1000000).ToString("D6");
+            String r = generator.Next(0, 1000000).ToString("D5");
             return r;
         }
 
