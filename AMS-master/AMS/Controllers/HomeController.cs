@@ -5,6 +5,7 @@ using Firebase.Auth;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Newtonsoft.Json;
@@ -55,7 +56,7 @@ namespace AMS.Controllers
             }
             else
             {
-                return RedirectToAction("SignIn");
+                return View("UnAuthorize");
             }
         }
 
@@ -272,7 +273,7 @@ namespace AMS.Controllers
         /// <returns></returns>
         public IActionResult ForgotPassword()
         {
-            return View("ForgotPassword");
+             return View("ForgotPassword");
         }
 
         /// <summary>
@@ -300,8 +301,13 @@ namespace AMS.Controllers
         private string GenerateUID()
         {
             Random generator = new Random();
-            String r = generator.Next(0, 1000000).ToString("D6");
+            String r = generator.Next(0, 1000000).ToString("D5");
             return r;
+        }
+
+        public IActionResult UnAuthorize()
+        {
+            return View();
         }
     }
 }
