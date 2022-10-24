@@ -1,27 +1,23 @@
 ﻿@using AMS.Models
-@*
-
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 @{
-    ViewBag.Title = "Users Approval Page";
+    ViewBag.Title = "Students List Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@model IList<User>
+@model IList<Student_Course_Registration>
+
 <div class="container-fluid pt-4 px-4">
     <div class="row g-4">
         <div class="bg-light col-sm-12 col-xl-12">
             <div class="bg-light rounded h-100 p-4">
-                <h6 class="mb-4">User's List</h6>
+                <h6 class="mb-4">Student's List</h6>
                 <input class="form-control" id="myInput" type="text" placeholder="Search..">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">User Id</th>
+                            <th scope="col">Id</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Type</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Status</th>
                         </tr>
                     </thead>
                     <tbody id="myTable">
@@ -32,20 +28,18 @@
                         @foreach (var listItem in Model)
                         {
                             <tr>
-                                <td>@listItem.UserName</td>
-                                <td>@listItem.FirstName @listItem.LastName</td>
-                                <td>@listItem.Type</td>
-                                <td>@listItem.Email </td>
-                                <td><a asp-action="UpdateUserStatus" asp-controller="AMS" asp-route-userEmail="@listItem.Email" class="link-primary">Approve</a></td>
+                                <td>@listItem.Student.Name</td>
+                                <td>@listItem.Student.FirstName @listItem.Student.LastName</td>
+                                <td>@listItem.Student.Email</td>
                             </tr>
                         }
-
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script>

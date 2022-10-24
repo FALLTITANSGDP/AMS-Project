@@ -55,7 +55,7 @@ namespace AMS.Controllers
             }
             else
             {
-                return RedirectToAction("SignIn");
+                return View("UnAuthorize");
             }
         }
 
@@ -85,8 +85,8 @@ namespace AMS.Controllers
                     var currentUser = userList.FirstOrDefault(x => x.Email.Equals(userModel.Email, StringComparison.OrdinalIgnoreCase));
                     if (currentUser != null)
                     {
-                        ViewData["Invalid"] = "Email Already Exist..!";
                         ViewData["UserName"] = GenerateUID();
+                        ViewData["Invalid"] = "Email Already Exist..!";
                         return View("Register");
                     }
                 }
@@ -212,7 +212,8 @@ namespace AMS.Controllers
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
 
                     HttpContext.Session.SetString("_UserToken", token);
-                    HttpContext.Session.SetString("UserName", currentUser.FirstName + ' ' + currentUser.LastName ?? "");
+                    HttpContext.Session.SetString("UserName", currentUser.FirstName + ' ' + currentUser.LastName ?? "N/A");
+                    HttpContext.Session.SetString("UserId", currentUser.UserName);
                     HttpContext.Session.SetString("UserEmail", userModel.Email ?? "");
                     HttpContext.Session.SetString("UserType", currentUser.Type);
                     return RedirectToAction("Index");
@@ -301,6 +302,11 @@ namespace AMS.Controllers
             Random generator = new Random();
             String r = generator.Next(0, 1000000).ToString("D6");
             return r;
+        }
+
+        public IActionResult UnAuthorize()
+        {
+            return View();
         }
     }
 }

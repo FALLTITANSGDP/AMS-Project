@@ -11,6 +11,7 @@
         <div class="bg-light col-sm-12 col-xl-12">
             <div class="bg-light rounded h-100 p-4">
                 <h6 class="mb-4">Attendance List</h6>
+                <input class="form-control" id="myInput" type="text" placeholder="Search..">
                 <table class="table">
                     <thead>
                         <tr>
@@ -22,7 +23,7 @@
                             <th scope="col">Is Approved</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="myTable">
                         @if (@Model.Count <= 0)
                         {
                             <tr><td colspan=6 style="text-align: center;"><h6>No Records</h6></td></tr>
@@ -30,7 +31,7 @@
                         @foreach (var listItem in Model)
                         {
                             <tr>
-                                <td>@listItem.Student_Course_Registration.Course_Section_Faculty.Faculty.Name</td>
+                                <td>@listItem.Student_Course_Registration.Course_Section_Faculty.Faculty.FirstName  @listItem.Student_Course_Registration.Course_Section_Faculty.Faculty.LastName</td>
                                 <td>@listItem.Student_Course_Registration.Course_Section_Faculty.Faculty.Email</td>
                                 <td>@listItem.Student_Course_Registration.Course_Section_Faculty.Course.Name</td>
                                 <td>@listItem.Student_Course_Registration.Course_Section_Faculty.Section.Name</td>
@@ -68,3 +69,16 @@
         </div>
     </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
