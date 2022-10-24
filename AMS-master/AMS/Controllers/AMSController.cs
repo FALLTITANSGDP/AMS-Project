@@ -12,6 +12,7 @@ using NuGet.Common;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MessagePack.Resolvers;
 using System.Numerics;
+using System.Security.Cryptography;
 
 namespace AMS.Controllers
 {
@@ -169,6 +170,13 @@ namespace AMS.Controllers
 
         #region StudentCourseRegistration        
 
+        public async Task<IActionResult> GetRegisteredStudents(string data)
+        {
+            var studnetCourseReg = await dbOperations.GetAllData<Student_Course_Registration>("Student_Course_Registration");
+            studnetCourseReg = studnetCourseReg.Where(x => x.Course_Section_Faculty.Id == data).ToList();
+            return View(studnetCourseReg);
+        }
+
         public async Task<IActionResult> StudentRegistration()
         {
             var email = HttpContext.Session.GetString("UserEmail");
@@ -192,7 +200,7 @@ namespace AMS.Controllers
                         Course_Section_Faculty = sCourse,
                         CourseRegisteredId = courseRegisteredId,
                         IsRegistered = true,
-                        IsApproved= data.IsApproved
+                        IsApproved = data.IsApproved
                     };
                     studentRegistrationViewModel.Add(studentRegistration);
                 }
@@ -318,7 +326,7 @@ namespace AMS.Controllers
         {
             var email = HttpContext.Session.GetString("UserEmail");
             var studentCourseReg = await dbOperations.GetAllData<Student_Course_Registration>("Student_Course_Registration");
-            studentCourseReg = studentCourseReg.Where(x => x.Student.Email.Equals(email, StringComparison.OrdinalIgnoreCase)).ToList();
+            studentCourseReg = studentCourseReg.Where(x => x.Student.Email.Equals(email, StringComparison.OrdinalIgnoreCase) && x.IsApproved).ToList();
             var courseReg = new List<SelectListItem> { };
             foreach (var item in studentCourseReg)
             {
@@ -415,9 +423,10 @@ namespace AMS.Controllers
         }
 
         [AllowAnonymous]
-        public IActionResult MarkAttendance(string uid)
+        public IActionResult MarkAttendance(string uid, string QRId)
         {
             ViewBag.CId = uid;
+            ViewBag.QRId = QRId;
             return View();
         }
 
@@ -427,7 +436,13 @@ namespace AMS.Controllers
             try
             {
                 var pinList = await dbOperations.GetAllData<UPIN>("UPIN");
-
+                var QRList = await dbOperations.GetAllData<QRCodeTracker>("QRCodeTracker");
+                var currentQRCode = QRList.FirstOrDefault(x => x.UId.Equals(data.CId, StringComparison.OrdinalIgnoreCase));
+                if (currentQRCode == null || !currentQRCode.QRId.Equals(data.QRId, StringComparison.OrdinalIgnoreCase))
+                {
+                    ViewData["Invalid"] = "Invalid Request";
+                    return View();
+                }
                 var studentList = await dbOperations.GetAllData<Student>("Student");
                 if (!studentList.Any(x => x.Email.Equals(data.Email, StringComparison.OrdinalIgnoreCase)))
                 {
@@ -499,8 +514,36 @@ namespace AMS.Controllers
         [HttpGet]
         public async Task<IActionResult> CreateQRCode(string data)
         {
+            ViewBag.IsVisible = true;
+            var QId = string.Empty;
+            var QRInformation = await dbOperations.GetAllData<QRCodeTracker>("QRCodeTracker");
+            if (QRInformation != null && QRInformation.Any(x => x.UId.Equals(data, StringComparison.OrdinalIgnoreCase)))
+            {
+                var currentRecord = QRInformation.FirstOrDefault(x => x.UId.Equals(data, StringComparison.OrdinalIgnoreCase));
+                if (currentRecord != null)
+                {
+                    currentRecord.QRId = Guid.NewGuid().ToString("N");
+                    QId = currentRecord.QRId;
+                    if (currentRecord.Expiry < DateTime.UtcNow && currentRecord.Expiry.Date == DateTime.UtcNow.Date && currentRecord.Expiry.Month == DateTime.UtcNow.Month && currentRecord.Expiry.Year == DateTime.UtcNow.Year)
+                    {
+                        ViewBag.IsVisible = false;
+                    }
+                    await dbOperations.UpdateData<QRCodeTracker>(currentRecord.Id, currentRecord, "QRCodeTracker");
+                }
+            }
+            else
+            {
+                QRCodeTracker qRCodeTracker = new QRCodeTracker
+                {
+                    Expiry = DateTime.UtcNow.AddMinutes(15),
+                    QRId = Guid.NewGuid().ToString("N"),
+                    UId = data
+                };
+                QId = qRCodeTracker.QRId;
+                await dbOperations.SaveData<QRCodeTracker>(qRCodeTracker, "QRCodeTracker");
+            }
             await AddClassCount(data);
-            var url = HttpContext.Request.Scheme + "://" + HttpContext.Request.Host + "/AMS/MarkAttendance?uid=" + data;
+            var url = HttpContext.Request.Scheme + "://" + HttpContext.Request.Host + "/AMS/MarkAttendance?uid=" + data + "&QRId=" + QId;
             string WebUri = new Uri(url).ToString();
             string UriPayload = WebUri.ToString();
             QRCodeGenerator QrGenerator = new();
@@ -513,6 +556,21 @@ namespace AMS.Controllers
             return View();
         }
 
+        public async Task<IActionResult> ExtendQRCodeTime(string data)
+        {
+            var QRInformation = await dbOperations.GetAllData<QRCodeTracker>("QRCodeTracker");
+            if (QRInformation != null && QRInformation.Any(x => x.UId.Equals(data, StringComparison.OrdinalIgnoreCase)))
+            {
+                var currentRecord = QRInformation.FirstOrDefault(x => x.UId.Equals(data, StringComparison.OrdinalIgnoreCase));
+                if (currentRecord != null)
+                {
+                    currentRecord.Expiry = DateTime.UtcNow.AddMinutes(5);
+                    await dbOperations.UpdateData<QRCodeTracker>(currentRecord.Id, currentRecord, "QRCodeTracker");
+                }
+            }
+            return RedirectToAction("ViewRegCourseDetails", "AMS", new { data = data });            
+        }
+
         #endregion QRCode
 
         #region MyProfile
@@ -522,6 +580,7 @@ namespace AMS.Controllers
 
             ProfileViewModel profile = new ProfileViewModel
             {
+                UserId = HttpContext.Session.GetString("UserId"),
                 Email = HttpContext.Session.GetString("UserEmail"),
                 Name = HttpContext.Session.GetString("UserName"),
                 UserType = HttpContext.Session.GetString("_UserType"),
@@ -631,7 +690,7 @@ namespace AMS.Controllers
         public async Task<IActionResult> GetPendingSubjectApprovals()
         {
             var usersList = await dbOperations.GetAllData<Models.Student_Course_Registration>("Student_Course_Registration");
-            usersList = usersList.Where(x => x.IsApproved == false).ToList();
+            usersList = usersList.Where(x => x.IsApproved == true).ToList();
             return View("PendingSubjectApprovals", usersList);
         }
 

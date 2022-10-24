@@ -33,6 +33,8 @@
     <link href="~/css/style.css" rel="stylesheet">
 
 
+
+
 </head>
 <body>
 
@@ -50,7 +52,7 @@
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                        <h6 class="mb-0" style="text-transform:capitalize">@HttpContextAccessor.HttpContext.Session.GetString("UserName")</h6>
+                        <h6 class="mb-0" style="text-transform:capitalize">@HttpContextAccessor.HttpContext.Session.GetString("UserName") </h6>
                         <span> @HttpContextAccessor.HttpContext.Session.GetString("UserType")</span>
                     </div>
                 </div>
@@ -65,7 +67,7 @@
                         <a asp-action="StudentRegistration" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Register Course</a>
                         <a asp-action="ShowMyRegCourse" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>My Attendance</a>
                     }
-                     @if (User.IsInRole("Admin"))
+                    @if (User.IsInRole("Admin"))
                     {
                         <a asp-action="GetPendingUserApprovals" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Users</a>
                         <a asp-action="GetPendingSubjectApprovals" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Subject</a>
@@ -99,7 +101,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="~/img/user.webp" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex" style="text-transform:capitalize">@HttpContextAccessor.HttpContext.Session.GetString("UserName")</span>
+                            <span class="d-none d-lg-inline-flex" style="text-transform:capitalize">@HttpContextAccessor.HttpContext.Session.GetString("UserName") - @HttpContextAccessor.HttpContext.Session.GetString("UserId") </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a asp-action="MyProfile" asp-controller="AMS" class="dropdown-item">My Profile</a>
@@ -130,6 +132,14 @@
 
 
     <!-- JavaScript Libraries -->
+
+
+
+
+    <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+
+
     <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -153,11 +163,11 @@
             $(this).addClass('active');
         });
 
-                            //$('a .nav-item nav-link').click(function () {
-                            //    $(this).addClass('active').siblings().removeClass('active');
-                            //});
-                            //$('.nav-item nav-link active').removeClass('active');
-                           //$(att).addClass('active');
+                                            //$('a .nav-item nav-link').click(function () {
+                                            //    $(this).addClass('active').siblings().removeClass('active');
+                                            //});
+                                            //$('.nav-item nav-link active').removeClass('active');
+                                           //$(att).addClass('active');
 
     </script>
 </body>

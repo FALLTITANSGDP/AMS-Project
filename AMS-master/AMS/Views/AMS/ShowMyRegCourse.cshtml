@@ -18,44 +18,54 @@
         padding-top: 1.5rem;
     }
 </style>
-
-<div class="container-fluid pt-4 px-4">
-    <div class="row g-4">
-        <div class="bg-light col-sm-12 col-xl-12">
-            <div class="bg-light rounded h-100 p-4">
-                <h6 class="mb-4">Course Details</h6>
-                <form asp-action="ViewMyAttendance" asp-controller="AMS" method="post">
-                    <input id="uId" name="uId" type="text" hidden value="0" />
-                    <div class="row mb-3" style="float:left;width:33%">
-                        <div class="form-floating mb-3">
-                            @Html.DropDownList("Course", (List
-                            <SelectListItem>)ViewBag.CourseData, new { @class="form-select",@id="Course", @onchange="renderChart(this.value)"})
-                            <label for="Course">Course</label>
+<div id="divContent">
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+            <div class="bg-light col-sm-12 col-xl-12">
+                <div class="bg-light rounded h-100 p-4">
+                    <h6 class="mb-4">Course Details</h6>
+                    <form asp-action="ViewMyAttendance" asp-controller="AMS" method="post">
+                        <input id="uId" name="uId" type="text" hidden value="0" />
+                        <div class="row mb-3" style="float:left;width:33%">
+                            <div class="form-floating mb-3">
+                                @Html.DropDownList("Course", (List
+                                <SelectListItem>)ViewBag.CourseData, new { @class="form-select",@id="Course", @onchange="renderChart(this.value)"})
+                                <label for="Course">Course</label>
+                            </div>
                         </div>
-                    </div>
-                    <div style="float:left;margin-left:2%;margin-top:1%">
-                        <button id="actLink" type="submit" class="btn btn-primary">Get More Details</button>
-                    </div>
-                </form>
+                        <div style="float:left;margin-left:2%;margin-top:1%">
+                            <button id="actLink" type="submit" class="btn btn-primary">Get More Details</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<div class="container-fluid pt-4 px-4">
-    <div class="row g-4">
-        <div class="col-sm-12 col-xl-6">
-            <div class="bg-light rounded h-100 p-4" style="position: relative; width=650; height=850">
-                <h6 id="className" class="mb-4">Attendance Chart</h6>
-                <canvas id="doughnut-chart"></canvas>
-                <div id='percentage' class="label-text">
-                    0
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+            <div class="col-sm-12 col-xl-6">
+                <div class="bg-light rounded h-100 p-4" style="position: relative; width=650; height=850">
+                    <h6 id="className" class="mb-4">Attendance Chart</h6>
+                    <canvas id="doughnut-chart"></canvas>
+                    <div id='percentage' class="label-text">
+                        0
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<div id="divNoData">
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+            <div class="bg-light col-sm-12 col-xl-12">
+                <div class="bg-light rounded h-100 p-4">
+                    <span>No Data to show</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="~/lib/chart/chart.min.js"></script>
 <script type="text/javascript">
@@ -80,8 +90,20 @@
     }
     const myChart = new Chart(ctx6, config);
     jQuery(document).ready(function () {
+
         var id = $('#Course').find(":selected").val();
-        renderChart(id);
+        if (typeof id === "undefined") {
+            console.log(id);
+            $("#divContent").attr("hidden", true);
+            $("#divNoData").attr("hidden", false);
+
+        }
+        else {
+            $("#divContent").attr("hidden", false);
+            $("#divNoData").attr("hidden", true);
+            renderChart(id);
+        }
+
     });
 
     function renderChart(id) {

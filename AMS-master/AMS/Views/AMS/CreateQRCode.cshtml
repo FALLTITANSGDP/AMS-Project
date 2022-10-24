@@ -3,22 +3,38 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <hr />
-<div class="row">
-    <div class="col-12">
-        <img src="@ViewBag.QrCodeUri" class="img-thumbnail" style="height: 60%;width: 60%;margin-left:20%" />
-    </div>
-</div>
+@{
+    if (ViewBag.IsVisible)
+    {
+        <div class="row">
+            <div class="col-12">
+                <img src="@ViewBag.QrCodeUri" class="img-thumbnail" style="height: 60%;width: 60%;margin-left:20%" />
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-12">
+                <h5 style="margin-left: 35%;margin-top: 20%;">
+                    QRCode Disabled for the Day
+                </h5>
+            </div>
+        </div>
+    }
+}
+
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     }
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            setTimeout(function () {
-                alert('Reloading Page');
-                location.reload(true);
-            }, 5000);
-        });
-    </script>
+        setTimeout(function () {
+            console.log('refreshed');
+            location.reload();
+        }, 1200000);
+    </script> 
