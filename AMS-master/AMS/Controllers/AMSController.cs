@@ -714,6 +714,6 @@ namespace AMS.Controllers
             return View();
         }
       
-        #endregion errorPages
+        #endregion ErrorPages
     }
 }
