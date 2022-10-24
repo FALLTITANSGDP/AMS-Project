@@ -207,7 +207,7 @@ namespace AMS.Controllers
                         AllowRefresh = true,
                         ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(25),
                         IssuedUtc = DateTime.UtcNow,
-                        RedirectUri = Url.Action("Index", "Home")
+                        RedirectUri = Url.Action("Index", "HomePage")
                     };
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
 
