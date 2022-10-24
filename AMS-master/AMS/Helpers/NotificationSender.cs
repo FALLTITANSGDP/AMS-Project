@@ -30,7 +30,7 @@ namespace AMS.Helpers
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
                 throw;
             }
