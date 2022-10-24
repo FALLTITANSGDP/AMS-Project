@@ -273,8 +273,7 @@ namespace AMS.Controllers
         /// <returns></returns>
         public IActionResult ForgotPassword()
         {
-            if(PasswordVerificationResult==false)
-            return View("ForgotPassword");
+             return View("ForgotPassword");
         }
 
         /// <summary>
