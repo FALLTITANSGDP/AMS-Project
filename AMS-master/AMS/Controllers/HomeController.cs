@@ -5,6 +5,7 @@ using Firebase.Auth;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Newtonsoft.Json;
@@ -272,7 +273,7 @@ namespace AMS.Controllers
         /// <returns></returns>
         public IActionResult ForgotPassword()
         {
-            return View("ForgotPassword");
+             return View("ForgotPassword");
         }
 
         /// <summary>
