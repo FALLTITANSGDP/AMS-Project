@@ -8,5 +8,7 @@
         public DateTime LastClassOn { get; set; }
         public bool IsApproved { get; set; }
         public int TotalCount { get; set; }
+        public Timer addTimer
+            { get; set; }
     }
 }
