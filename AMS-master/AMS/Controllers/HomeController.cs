@@ -55,7 +55,7 @@ namespace AMS.Controllers
             }
             else
             {
-                return RedirectToAction("SignIn");
+                return View("UnAuthorize");
             }
         }
 
@@ -302,6 +302,11 @@ namespace AMS.Controllers
             Random generator = new Random();
             String r = generator.Next(0, 1000000).ToString("D6");
             return r;
+        }
+
+        public IActionResult UnAuthorize()
+        {
+            return View();
         }
     }
 }
