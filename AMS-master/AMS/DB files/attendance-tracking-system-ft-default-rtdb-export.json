@@ -1,0 +1,4197 @@
+{
+  "Course": {
+    "00ff0199ca8243b091d49c1a7739a324": {
+      "Id": "00ff0199ca8243b091d49c1a7739a324",
+      "Name": "BigData"
+    },
+    "1838dd8789c54db080ff3fb920da16c8": {
+      "Id": "1838dd8789c54db080ff3fb920da16c8",
+      "Name": "Software Engineering"
+    },
+    "1ead694724ce4ca38370a808fcd2b1b6": {
+      "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+      "Name": "Mobile Computing - IOS"
+    },
+    "56315cf45c82417d9f29c55ba051a40a": {
+      "Id": "56315cf45c82417d9f29c55ba051a40a",
+      "Name": "WebApplication"
+    },
+    "628a9eb35517474892950502495cd37b": {
+      "Id": "628a9eb35517474892950502495cd37b",
+      "Name": "Database systems"
+    },
+    "99ddf6a49610428c9e89c20b7c3594ae": {
+      "Id": "99ddf6a49610428c9e89c20b7c3594ae",
+      "Name": "Java"
+    },
+    "fefc1e4bc5b945598ca97e0f520b4aea": {
+      "Id": "fefc1e4bc5b945598ca97e0f520b4aea",
+      "Name": "Project Management"
+    }
+  },
+  "Course_Section_Faculty": {
+    "0c9db82a601a40729714223b43cb6f0c": {
+      "Course": {
+        "Id": "fefc1e4bc5b945598ca97e0f520b4aea",
+        "Name": "Project Management"
+      },
+      "Faculty": {
+        "Email": "F12344@nwmissouri.edu",
+        "FirstName": "Fella ",
+        "Id": "74c8018a2edb4d7fa641a1d654b7d510",
+        "LastName": "Aziz",
+        "Name": " 027272"
+      },
+      "Id": "0c9db82a601a40729714223b43cb6f0c",
+      "IsApproved": false,
+      "LastClassOn": "0001-01-01T00:00:00",
+      "Section": {
+        "Id": "a272520fe7074834b5cad0b6603aa7eb",
+        "Name": "S3"
+      },
+      "TotalCount": 0
+    },
+    "1484dd2308e04830b757c5c57982e2e7": {
+      "Course": {
+        "Id": "628a9eb35517474892950502495cd37b",
+        "Name": "Database systems"
+      },
+      "Faculty": {
+        "Email": "harshakalluri579@gmail.com",
+        "Id": "6fce5cde42b44154bb16f0641591f8bc",
+        "Name": "Harsha Kalluri"
+      },
+      "Id": "1484dd2308e04830b757c5c57982e2e7",
+      "LastClassOn": "0001-01-01T00:00:00",
+      "Section": {
+        "Id": "9c2a8af41c584d47ac90bc876152e461",
+        "Name": "PM01"
+      },
+      "TotalCount": 0
+    },
+    "27b3f7932186439d9067a48363b417bb": {
+      "Course": {
+        "Id": "99ddf6a49610428c9e89c20b7c3594ae",
+        "Name": "Java"
+      },
+      "Faculty": {
+        "Email": "F12344@nwmissouri.edu",
+        "FirstName": "Fella ",
+        "Id": "74c8018a2edb4d7fa641a1d654b7d510",
+        "LastName": "Aziz",
+        "Name": " 027272"
+      },
+      "Id": "27b3f7932186439d9067a48363b417bb",
+      "IsApproved": false,
+      "LastClassOn": "0001-01-01T00:00:00",
+      "Section": {
+        "Id": "70fe3ba0c0874ce58987e345e032481d",
+        "Name": "S1"
+      },
+      "TotalCount": 0
+    },
+    "2c7f7a3adbdc4970a4a6da1a13cf965d": {
+      "Course": {
+        "Id": "00ff0199ca8243b091d49c1a7739a324",
+        "Name": "BigData"
+      },
+      "Faculty": {
+        "Email": "F12344@nwmissouri.edu",
+        "FirstName": "Fella ",
+        "Id": "74c8018a2edb4d7fa641a1d654b7d510",
+        "LastName": "Aziz",
+        "Name": " 027272"
+      },
+      "Id": "2c7f7a3adbdc4970a4a6da1a13cf965d",
+      "IsApproved": false,
+      "LastClassOn": "0001-01-01T00:00:00",
+      "Section": {
+        "Id": "70fe3ba0c0874ce58987e345e032481d",
+        "Name": "S1"
+      },
+      "TotalCount": 0
+    },
+    "2fe687c543e84bcebed4195b4e7c87c3": {
+      "Course": {
+        "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+        "Name": "Mobile Computing - IOS"
+      },
+      "Faculty": {
+        "Email": "laxman@gmail.com",
+        "FirstName": "Laxman",
+        "Id": "3f0508d7514145a4a6531d7e36f0a27a",
+        "LastName": "namxal",
+        "Name": " 603184"
+      },
+      "Id": "2fe687c543e84bcebed4195b4e7c87c3",
+      "IsApproved": false,
+      "LastClassOn": "2022-10-19T05:47:40.1265445Z",
+      "Section": {
+        "Id": "70fe3ba0c0874ce58987e345e032481d",
+        "Name": "S1"
+      },
+      "TotalCount": 3
+    },
+    "30e6d489f5334fee9853e78eeebd1136": {
+      "Course": {
+        "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+        "Name": "Mobile Computing - IOS"
+      },
+      "Faculty": {
+        "Email": "F12341@nwmissouri.edu",
+        "FirstName": "Ajay",
+        "Id": "7ad4028867934ce092ef8faa535494e9",
+        "LastName": "Bandi",
+        "Name": " 614989"
+      },
+      "Id": "30e6d489f5334fee9853e78eeebd1136",
+      "IsApproved": false,
+      "LastClassOn": "2022-10-24T14:30:39.2957066Z",
+      "Section": {
+        "Id": "a272520fe7074834b5cad0b6603aa7eb",
+        "Name": "S3"
+      },
+      "TotalCount": 5
+    },
+    "47f9e7a083644d00a046788573a1772c": {
+      "Course": {
+        "Id": "56315cf45c82417d9f29c55ba051a40a",
+        "Name": "WebApplication"
+      },
+      "Faculty": {
+        "Email": "laxman@gmail.com",
+        "FirstName": "Laxman",
+        "Id": "3f0508d7514145a4a6531d7e36f0a27a",
+        "LastName": "namxal",
+        "Name": " 603184"
+      },
+      "Id": "47f9e7a083644d00a046788573a1772c",
+      "IsApproved": false,
+      "LastClassOn": "2022-10-19T08:41:21.2533608Z",
+      "Section": {
+        "Id": "9c2a8af41c584d47ac90bc876152e461",
+        "Name": "PM01"
+      },
+      "TotalCount": 1
+    },
+    "48f46a91cf624d0bb3ee083bf5e8a0c1": {
+      "Course": {
+        "Id": "00ff0199ca8243b091d49c1a7739a324",
+        "Name": "BigData"
+      },
+      "Faculty": {
+        "Email": "sravankumar93915@gmail.com",
+        "Id": "33af4394121d41aabe2d6a389d941e48",
+        "Name": "DrFellah"
+      },
+      "Id": "48f46a91cf624d0bb3ee083bf5e8a0c1",
+      "LastClassOn": "2022-10-05T13:23:11.2650597Z",
+      "Section": {
+        "Id": "70fe3ba0c0874ce58987e345e032481d",
+        "Name": "S1"
+      },
+      "TotalCount": 1
+    },
+    "5af2d9e5ec69498995fa0819e695e255": {
+      "Course": {
+        "Id": "56315cf45c82417d9f29c55ba051a40a",
+        "Name": "WebApplication"
+      },
+      "Faculty": {
+        "Email": "prasunkumar@gmail.com",
+        "Id": "65078a2b61264ccb9f929f4b556ab7db",
+        "Name": "prasun"
+      },
+      "Id": "5af2d9e5ec69498995fa0819e695e255",
+      "LastClassOn": "2022-09-30T03:22:29.8357547Z",
+      "Section": {
+        "Id": "70fe3ba0c0874ce58987e345e032481d",
+        "Name": "S1"
+      },
+      "TotalCount": 6
+    },
+    "6171de0c74514ee597a9621bd460433b": {
+      "Course": {
+        "Id": "56315cf45c82417d9f29c55ba051a40a",
+        "Name": "WebApplication"
+      },
+      "Faculty": {
+        "Email": "testcase21@gmail.com",
+        "Id": "e659470c9605493583c22beda8a24512",
+        "Name": "Testcase21"
+      },
+      "Id": "6171de0c74514ee597a9621bd460433b",
+      "Section": {
+        "Id": "a272520fe7074834b5cad0b6603aa7eb",
+        "Name": "S3"
+      }
+    },
+    "7f75d0efe0e24cee8a32ecd1069909df": {
+      "Course": {
+        "Id": "00ff0199ca8243b091d49c1a7739a324",
+        "Name": "BigData"
+      },
+      "Faculty": {
+        "Email": "F12341@nwmissouri.edu",
+        "FirstName": "Ajay",
+        "Id": "7ad4028867934ce092ef8faa535494e9",
+        "LastName": "Bandi",
+        "Name": " 614989"
+      },
+      "Id": "7f75d0efe0e24cee8a32ecd1069909df",
+      "IsApproved": false,
+      "LastClassOn": "2022-10-19T03:03:14.1362834Z",
+      "Section": {
+        "Id": "70fe3ba0c0874ce58987e345e032481d",
+        "Name": "S1"
+      },
+      "TotalCount": 1
+    },
+    "83ef974024ca4ea89a072735edf61f5b": {
+      "Course": {
+        "Id": "628a9eb35517474892950502495cd37b",
+        "Name": "Database systems"
+      },
+      "Faculty": {
+        "Email": "sravankumar93915@gmail.com",
+        "Id": "33af4394121d41aabe2d6a389d941e48",
+        "Name": "DrFellah"
+      },
+      "Id": "83ef974024ca4ea89a072735edf61f5b",
+      "LastClassOn": "2022-10-05T14:07:21.8091079Z",
+      "Section": {
+        "Id": "70fe3ba0c0874ce58987e345e032481d",
+        "Name": "S1"
+      },
+      "TotalCount": 1
+    },
+    "84fbb0c266264cbc995a1508dd878ce5": {
+      "Course": {
+        "Id": "56315cf45c82417d9f29c55ba051a40a",
+        "Name": "WebApplication"
+      },
+      "Faculty": {
+        "Email": "prasunkumar@gmail.com",
+        "Id": "65078a2b61264ccb9f929f4b556ab7db",
+        "Name": "prasun"
+      },
+      "Id": "84fbb0c266264cbc995a1508dd878ce5",
+      "Section": {
+        "Id": "a272520fe7074834b5cad0b6603aa7eb",
+        "Name": "S4"
+      },
+      "TotalCount": 1
+    },
+    "9537c9de2c034de2ac2b7064d305b655": {
+      "Course": {
+        "Id": "56315cf45c82417d9f29c55ba051a40a",
+        "Name": "WebApplication"
+      },
+      "Faculty": {
+        "Email": "TestFaculty@gmai.com",
+        "Id": "e5fe8009f84243bd9bbe056ffdb5ef09",
+        "Name": "TestFaculty"
+      },
+      "Id": "9537c9de2c034de2ac2b7064d305b655",
+      "Section": {
+        "Id": "a272520fe7074834b5cad0b6603aa7eb",
+        "Name": "S3"
+      }
+    },
+    "a9308a4b652d48c9b1a556b940ac8e65": {
+      "Course": {
+        "Id": "1838dd8789c54db080ff3fb920da16c8",
+        "Name": "Software Engineering"
+      },
+      "Faculty": {
+        "Email": "F12341@nwmissouri.edu",
+        "FirstName": "Ajay",
+        "Id": "7ad4028867934ce092ef8faa535494e9",
+        "LastName": "Bandi",
+        "Name": " 614989"
+      },
+      "Id": "a9308a4b652d48c9b1a556b940ac8e65",
+      "IsApproved": false,
+      "LastClassOn": "0001-01-01T00:00:00",
+      "Section": {
+        "Id": "a272520fe7074834b5cad0b6603aa7eb",
+        "Name": "S2"
+      },
+      "TotalCount": 0
+    },
+    "dc572f8766d144cdaf5775d76d588436": {
+      "Course": {
+        "Id": "56315cf45c82417d9f29c55ba051a40a",
+        "Name": "WebApplication"
+      },
+      "Faculty": {
+        "Email": "TestFaculty@gmai.com",
+        "Id": "e5fe8009f84243bd9bbe056ffdb5ef09",
+        "Name": "TestFaculty"
+      },
+      "Id": "dc572f8766d144cdaf5775d76d588436",
+      "Section": {
+        "Id": "70fe3ba0c0874ce58987e345e032481d",
+        "Name": "S1"
+      }
+    },
+    "e1b9d4d71faf4633a43e9a205e2d79ac": {
+      "Course": {
+        "Id": "628a9eb35517474892950502495cd37b",
+        "Name": "Database systems"
+      },
+      "Faculty": {
+        "Email": "hvrabhi2@gmail.com",
+        "Id": "76ab53bc608d49f2916d9fb972e96045",
+        "Name": "Hvrabhi2"
+      },
+      "Id": "e1b9d4d71faf4633a43e9a205e2d79ac",
+      "LastClassOn": "2022-09-30T14:45:02.5293984Z",
+      "Section": {
+        "Id": "6b0e7176d10c463983f915e51840e748",
+        "Name": "DB01"
+      },
+      "TotalCount": 1
+    },
+    "e55c8f1a734a4cf0b99a994353cd37e2": {
+      "Course": {
+        "Id": "56315cf45c82417d9f29c55ba051a40a",
+        "Name": "WebApplication"
+      },
+      "Faculty": {
+        "Email": "sravankumar93915@gmail.com",
+        "Id": "33af4394121d41aabe2d6a389d941e48",
+        "Name": "DrFellah"
+      },
+      "Id": "e55c8f1a734a4cf0b99a994353cd37e2",
+      "LastClassOn": "2022-10-05T14:16:00.4402901Z",
+      "Section": {
+        "Id": "70fe3ba0c0874ce58987e345e032481d",
+        "Name": "S1"
+      },
+      "TotalCount": 1
+    },
+    "e70b3595e92f4aa5b8c3c5e778d6b30d": {
+      "Course": {
+        "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+        "Name": "Mobile Computing - IOS"
+      },
+      "Faculty": {
+        "Email": "DrCase@gmail.com",
+        "Id": "d42142fbda46469f9bdfea4c4afd5cf0",
+        "Name": "case"
+      },
+      "Id": "e70b3595e92f4aa5b8c3c5e778d6b30d",
+      "LastClassOn": "2022-09-30T14:44:28.6076543Z",
+      "Section": {
+        "Id": "70fe3ba0c0874ce58987e345e032481d",
+        "Name": "S1"
+      },
+      "TotalCount": 1
+    },
+    "f5d72e011c704027bd614dca202c3cc5": {
+      "Course": {
+        "Id": "56315cf45c82417d9f29c55ba051a40a",
+        "Name": "WebApplication"
+      },
+      "Faculty": {
+        "Email": "TestFaculty@gmai.com",
+        "Id": "e5fe8009f84243bd9bbe056ffdb5ef09",
+        "Name": "TestFaculty"
+      },
+      "Id": "f5d72e011c704027bd614dca202c3cc5",
+      "Section": {
+        "Id": "a272520fe7074834b5cad0b6603aa7eb",
+        "Name": "S4"
+      }
+    }
+  },
+  "Faculty": {
+    "27ae6d1b3c6a4243adba5c922fdf5ff7": {
+      "Email": "rajashekharkota411@gmail.com",
+      "Id": "27ae6d1b3c6a4243adba5c922fdf5ff7",
+      "Name": "Rajashekhar"
+    },
+    "3082a209ad0b337ff60b6a2349253327": {
+      "Id": "70fe3ba0c0874ce54598e345e032481d",
+      "Name": "Jack"
+    },
+    "33af4394121d41aabe2d6a389d941e48": {
+      "Email": "sravankumar93915@gmail.com",
+      "Id": "33af4394121d41aabe2d6a389d941e48",
+      "Name": "DrFellah"
+    },
+    "3f0508d7514145a4a6531d7e36f0a27a": {
+      "Email": "laxman@gmail.com",
+      "FirstName": "Laxman",
+      "Id": "3f0508d7514145a4a6531d7e36f0a27a",
+      "LastName": "namxal",
+      "Name": " 603184"
+    },
+    "41dea708a9fd4400b38aed4ee4f14698": {
+      "Email": "Dinalinville@gmail.com",
+      "Id": "41dea708a9fd4400b38aed4ee4f14698",
+      "Name": "Diana Linville"
+    },
+    "44c27719189d4f95a0de976e38314573": {
+      "Email": "Terryimmel@gmail.com",
+      "Id": "44c27719189d4f95a0de976e38314573",
+      "Name": "Terry Immel"
+    },
+    "4b0dd0a2a65b4631bdea2e172c589841": {
+      "Email": "TestFac7@gmail.com",
+      "Id": "4b0dd0a2a65b4631bdea2e172c589841",
+      "Name": "TestFac7"
+    },
+    "55e01a4f6e14405c85febbdda73e0640": {
+      "Email": "12346@nwmissouri.edu",
+      "FirstName": "Rathan ",
+      "Id": "55e01a4f6e14405c85febbdda73e0640",
+      "LastName": "Lal",
+      "Name": " 765617"
+    },
+    "5b2ed2c8bfb6497683f9c8f1e0bc13da": {
+      "Email": "F12347@nwmissouri.edu",
+      "FirstName": "Prasad",
+      "Id": "5b2ed2c8bfb6497683f9c8f1e0bc13da",
+      "LastName": "chitty ",
+      "Name": " 812616"
+    },
+    "65078a2b61264ccb9f929f4b556ab7db": {
+      "Email": "prasunkumar@gmail.com",
+      "Id": "65078a2b61264ccb9f929f4b556ab7db",
+      "Name": "prasun"
+    },
+    "6fce5cde42b44154bb16f0641591f8bc": {
+      "Email": "harshakalluri579@gmail.com",
+      "Id": "6fce5cde42b44154bb16f0641591f8bc",
+      "Name": "Harsha Kalluri"
+    },
+    "74c8018a2edb4d7fa641a1d654b7d510": {
+      "Email": "F12344@nwmissouri.edu",
+      "FirstName": "Fella ",
+      "Id": "74c8018a2edb4d7fa641a1d654b7d510",
+      "LastName": "Aziz",
+      "Name": " 027272"
+    },
+    "76ab53bc608d49f2916d9fb972e96045": {
+      "Email": "hvrabhi2@gmail.com",
+      "Id": "76ab53bc608d49f2916d9fb972e96045",
+      "Name": "Hvrabhi2"
+    },
+    "7ad4028867934ce092ef8faa535494e9": {
+      "Email": "F12341@nwmissouri.edu",
+      "FirstName": "Ajay",
+      "Id": "7ad4028867934ce092ef8faa535494e9",
+      "LastName": "Bandi",
+      "Name": " 614989"
+    },
+    "7e507bcf829748fb97u3bcccd632a823": {
+      "Id": "a234533fe7074834b5cad0b6603aa7eb",
+      "Name": "Fellah"
+    },
+    "8dff70d9da9c4094b599076c60eb89ed": {
+      "Email": "Ajaykumar123@gmail.com",
+      "Id": "8dff70d9da9c4094b599076c60eb89ed",
+      "Name": "Ajay "
+    },
+    "a17b224aa1c34dcd9a80e1763314ffa1": {
+      "Email": "F12343@nwmissouri.edu",
+      "FirstName": "Likitha",
+      "Id": "a17b224aa1c34dcd9a80e1763314ffa1",
+      "LastName": "Gopi ",
+      "Name": " 705258"
+    },
+    "c90508df8c4445c69bb8e1bb33ee7902": {
+      "Email": "Ajay123@gmail.com",
+      "Id": "c90508df8c4445c69bb8e1bb33ee7902",
+      "Name": "Ajay "
+    },
+    "ce0b46845cba4076bf57e3a06cfd3e47": {
+      "Email": "prasadchetty@gmail.com",
+      "Id": "ce0b46845cba4076bf57e3a06cfd3e47",
+      "Name": "Prasad"
+    },
+    "d42142fbda46469f9bdfea4c4afd5cf0": {
+      "Email": "DrCase@gmail.com",
+      "Id": "d42142fbda46469f9bdfea4c4afd5cf0",
+      "Name": "case"
+    },
+    "d72da2bede774420a7f83a197e809942": {
+      "Email": "DrFellah@gmail.com",
+      "Id": "d72da2bede774420a7f83a197e809942",
+      "Name": "DrFellah"
+    },
+    "e5fe8009f84243bd9bbe056ffdb5ef09": {
+      "Email": "TestFaculty@gmai.com",
+      "Id": "e5fe8009f84243bd9bbe056ffdb5ef09",
+      "Name": "TestFaculty"
+    },
+    "e659470c9605493583c22beda8a24512": {
+      "Email": "testcase21@gmail.com",
+      "Id": "e659470c9605493583c22beda8a24512",
+      "Name": "Testcase21"
+    }
+  },
+  "QRCodeTracker": {
+    "1f65700a4914458cbf745475da15e346": {
+      "Expiry": "2022-10-19T08:56:17.7838074Z",
+      "Id": "1f65700a4914458cbf745475da15e346",
+      "QRId": "3ce60b8666cf461cb9dc2e0da7b636cb",
+      "UId": "47f9e7a083644d00a046788573a1772c"
+    },
+    "306e0d5cec4a4420b7a6c3b047adfe4d": {
+      "Expiry": "2022-10-19T09:13:10.2393807Z",
+      "Id": "306e0d5cec4a4420b7a6c3b047adfe4d",
+      "QRId": "4b68ee7cd692417fbc853a3c319c4532",
+      "UId": "2fe687c543e84bcebed4195b4e7c87c3"
+    },
+    "5dceba4c180c417abc017e6828a4badc": {
+      "Expiry": "2022-10-19T23:35:48.3206516Z",
+      "Id": "5dceba4c180c417abc017e6828a4badc",
+      "QRId": "d77821e983a34af2ad4bc54b5773fafd",
+      "UId": "30e6d489f5334fee9853e78eeebd1136"
+    }
+  },
+  "Section": {
+    "3082a209ad0b457ca60b6a2349253427": {
+      "Id": "70fe3ba0c0874ce58987e345e032481d",
+      "Name": "S1"
+    },
+    "6b0e7176d10c463983f915e51840e748": {
+      "Id": "6b0e7176d10c463983f915e51840e748",
+      "Name": "DB01"
+    },
+    "7e507bcf829748fb93e3bcDFd632a823": {
+      "Id": "a272520fe7074834b5cad0b6603aa7eb",
+      "Name": "S3"
+    },
+    "7e507bcf829748fb93e3bcccd342a823": {
+      "Id": "a272520fe7074834b5cad0b6603aa7eb",
+      "Name": "S4"
+    },
+    "7e507bcf829748fb93e3bcccd6323323": {
+      "Id": "a272520fe7074834b5cad0b6603aa7eb",
+      "Name": "S2"
+    },
+    "9c2a8af41c584d47ac90bc876152e461": {
+      "Id": "9c2a8af41c584d47ac90bc876152e461",
+      "Name": "PM01"
+    },
+    "d877b91ae2204b1a8942da6f7c87cf6f": {
+      "Id": "d877b91ae2204b1a8942da6f7c87cf6f",
+      "Name": "S1"
+    },
+    "fe46cf16541d4c22a4551d6cb32f180f": {
+      "Id": "fe46cf16541d4c22a4551d6cb32f180f",
+      "Name": "S5"
+    }
+  },
+  "Student": {
+    "0352c8348db444e3bfce167832be00a9": {
+      "Email": "sunny579@gmail.com",
+      "Id": "0352c8348db444e3bfce167832be00a9",
+      "Name": "Sunny"
+    },
+    "03f53933de7f4e6b9982e897be6defb6": {
+      "Email": "S545161@nwmissouri.edu",
+      "FirstName": "Karthik",
+      "Id": "03f53933de7f4e6b9982e897be6defb6",
+      "LastName": "Noone",
+      "Name": " 538949"
+    },
+    "05e9a4a25f634a3b915c31edbcf9400b": {
+      "Email": "S545427@nwmissouri.edu",
+      "FirstName": "Sindhura  ",
+      "Id": "05e9a4a25f634a3b915c31edbcf9400b",
+      "LastName": "Byrapuneni",
+      "Name": " 417579"
+    },
+    "0607d80b4dc84d86bdbb33b73c574fcb": {
+      "Email": "S545568@nwmissouri.edu",
+      "FirstName": "Saiharsha",
+      "Id": "0607d80b4dc84d86bdbb33b73c574fcb",
+      "LastName": "Kalluri",
+      "Name": " 674491"
+    },
+    "0eadceece8ea4d78ba5b4680e24034cb": {
+      "Email": "ajaykumarchepuri1@gmail.com",
+      "Id": "0eadceece8ea4d78ba5b4680e24034cb",
+      "Name": " 101168"
+    },
+    "0f51b245136b426cb974c0dd1447442f": {
+      "Email": "test17@gmail.com",
+      "FirstName": "AJAY",
+      "Id": "0f51b245136b426cb974c0dd1447442f",
+      "LastName": "KUMAR",
+      "Name": " 381136"
+    },
+    "1323e662f8e5489e9f8e752784c8dac7": {
+      "Email": "S545245@nwmissouri.edi",
+      "FirstName": "Abhilash ",
+      "Id": "1323e662f8e5489e9f8e752784c8dac7",
+      "LastName": "Malipatlola",
+      "Name": " 869411"
+    },
+    "18c3f97ddcb949558a77266320cef77c": {
+      "Email": "S545135@Nwmissouri.edu",
+      "FirstName": "Siddharth ",
+      "Id": "18c3f97ddcb949558a77266320cef77c",
+      "LastName": "addunoor",
+      "Name": " 338767"
+    },
+    "18c932444ec14b6aa65e5e32e091714c": {
+      "Email": "S545015@nwmissouri.edu",
+      "FirstName": "Laxman",
+      "Id": "18c932444ec14b6aa65e5e32e091714c",
+      "LastName": "Alugubelli",
+      "Name": " 047963"
+    },
+    "1e000b0de50b469c8ed13300f6472f70": {
+      "Email": "S545519@nwmissouri.edu",
+      "FirstName": "Mahima  ",
+      "Id": "1e000b0de50b469c8ed13300f6472f70",
+      "LastName": "Byrapuneni",
+      "Name": " 117346"
+    },
+    "1ff3ab1d651a492eaf0a0329615295bf": {
+      "Email": "s545008@nwmissouri.edu",
+      "FirstName": "Rajashekhar",
+      "Id": "1ff3ab1d651a492eaf0a0329615295bf",
+      "LastName": "Kota",
+      "Name": " 082799"
+    },
+    "321abdff211e44ddb6677e9272e386ff": {
+      "Email": "S545717@nwmissouri.edu",
+      "FirstName": "Ravali ",
+      "Id": "321abdff211e44ddb6677e9272e386ff",
+      "LastName": "Nalati",
+      "Name": " 475092"
+    },
+    "4b3fcde81f444faab798384bac2587b0": {
+      "Email": "S545146@nwmissouri.edu",
+      "FirstName": "sumanth ",
+      "Id": "4b3fcde81f444faab798384bac2587b0",
+      "LastName": "a",
+      "Name": " 757403"
+    },
+    "51cdee75552f47e2ae28c372b5b5e5fb": {
+      "Email": "harsha579@gmail.com",
+      "Id": "51cdee75552f47e2ae28c372b5b5e5fb",
+      "Name": "Harsha"
+    },
+    "5cc3d2fdde324043a9fe4e1b80784d53": {
+      "Email": "S545721@nwmissouri.edu",
+      "FirstName": "Rashmi",
+      "Id": "5cc3d2fdde324043a9fe4e1b80784d53",
+      "LastName": "chava",
+      "Name": " 537660"
+    },
+    "70ea851e614e46fb8a383d7da54d4339": {
+      "Email": "s545412@nwmissouri.edu",
+      "FirstName": "Sravankumar",
+      "Id": "70ea851e614e46fb8a383d7da54d4339",
+      "LastName": "ch",
+      "Name": " 843773"
+    },
+    "7279f6aad8f847bfaa4781f2c3de3a70": {
+      "Email": "mahima97.rc@gmail.com",
+      "FirstName": "Mahima",
+      "Id": "7279f6aad8f847bfaa4781f2c3de3a70",
+      "LastName": "Byrapuneni",
+      "Name": " 395702"
+    },
+    "73dad339408644aab56feb8b7e339817": {
+      "Email": "abhi@gmail.com",
+      "Id": "73dad339408644aab56feb8b7e339817",
+      "Name": "Abhilash"
+    },
+    "76cc8b56149840fa999669ee798ba296": {
+      "Email": "ram@gmail.com",
+      "FirstName": "Ram ",
+      "Id": "76cc8b56149840fa999669ee798ba296",
+      "LastName": "mar",
+      "Name": " 619322"
+    },
+    "93ba7879fe1c44079a07dc1c892ec87b": {
+      "Email": "F12345@nwmissouri.edu",
+      "FirstName": "Ratan",
+      "Id": "93ba7879fe1c44079a07dc1c892ec87b",
+      "LastName": "Lal",
+      "Name": " 040592"
+    },
+    "9aee30db631f4c3abe7f5c777e93bfcd": {
+      "Email": "Sindhura.rc@gmail.com",
+      "Id": "9aee30db631f4c3abe7f5c777e93bfcd",
+      "Name": "Sindhura Byrapuneni"
+    },
+    "a1633d87201044a3b4ccf8e6775a17df": {
+      "Email": "laxman.alugubelli@gmail.com",
+      "FirstName": "Laxman",
+      "Id": "a1633d87201044a3b4ccf8e6775a17df",
+      "LastName": "Alugubelli",
+      "Name": " 899500"
+    },
+    "a73c61f2c2a14d1eb1e8f8f355f875e0": {
+      "Email": "xyz1234@gmail.com",
+      "Id": "a73c61f2c2a14d1eb1e8f8f355f875e0",
+      "Name": "xyz123"
+    },
+    "a7ee2d64c84345c0b659d5fc707c61c4": {
+      "Email": "F12342@nwmissouri.edu",
+      "FirstName": "Prasad",
+      "Id": "a7ee2d64c84345c0b659d5fc707c61c4",
+      "LastName": "chitty ",
+      "Name": " 822358"
+    },
+    "c343fc7fde7a49a6a00228631f775a70": {
+      "Email": "sravankumarcheipuri1@gmail.com",
+      "Id": "c343fc7fde7a49a6a00228631f775a70",
+      "Name": "Sravan kumar"
+    },
+    "cb467705c1c24d6dbed605e6eb84cc4f": {
+      "Email": "laxman.alugubelliii@gmail.com",
+      "Id": "cb467705c1c24d6dbed605e6eb84cc4f",
+      "Name": "lucky5"
+    },
+    "eb42a9f4d26c454f80920f0a980ea6f8": {
+      "Email": "ajaykumarchepuri1@gmail.com",
+      "FirstName": "AJAY",
+      "Id": "eb42a9f4d26c454f80920f0a980ea6f8",
+      "LastName": "KUMAR",
+      "Name": " 746582"
+    },
+    "f3853e2690de4d5dba60be87d9f6cb99": {
+      "Email": "rashmichava4@gmail.com",
+      "Id": "f3853e2690de4d5dba60be87d9f6cb99",
+      "Name": "rashmi"
+    },
+    "f92f80a371c94651a565128e77f99b19": {
+      "Email": "arrabellisumanth85@gmail.com",
+      "Id": "f92f80a371c94651a565128e77f99b19",
+      "Name": "sumanth"
+    },
+    "fad9726b62054500a109b329ca3cef4a": {
+      "Email": "S545114@nwmissouri.edu",
+      "FirstName": "Narayan reddy",
+      "Id": "fad9726b62054500a109b329ca3cef4a",
+      "LastName": "dodla",
+      "Name": " 847037"
+    },
+    "fce7e578455d42a3a854b92c1f4fe627": {
+      "Email": "mahima97.rc@gmail.com",
+      "Id": "fce7e578455d42a3a854b92c1f4fe627",
+      "Name": "mahima byrapuneni"
+    }
+  },
+  "Student_Course_Registration": {
+    "01b29fb8083b4e7ca86d6c404ead99ba": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "48f46a91cf624d0bb3ee083bf5e8a0c1",
+        "LastClassOn": "2022-10-05T13:23:11.2650597Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 1
+      },
+      "Id": "01b29fb8083b4e7ca86d6c404ead99ba",
+      "Student": {
+        "Email": "abhi@gmail.com",
+        "Id": "73dad339408644aab56feb8b7e339817",
+        "Name": "Abhilash"
+      }
+    },
+    "03ffa57f9ef646da8e945d8311c94807": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "TestFaculty@gmai.com",
+          "Id": "e5fe8009f84243bd9bbe056ffdb5ef09",
+          "Name": "TestFaculty"
+        },
+        "Id": "9537c9de2c034de2ac2b7064d305b655",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 0
+      },
+      "Id": "03ffa57f9ef646da8e945d8311c94807",
+      "Student": {
+        "Email": "prasad123@gmail.com",
+        "Id": "75cd3dfbfb074c63aa9e0de278d9a799",
+        "Name": "Prasad"
+      }
+    },
+    "093658fb333d405993c112c50c3570bb": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "48f46a91cf624d0bb3ee083bf5e8a0c1",
+        "LastClassOn": "2022-10-05T13:23:11.2650597Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 1
+      },
+      "Id": "093658fb333d405993c112c50c3570bb",
+      "Student": {
+        "Email": "rashmichava4@gmail.com",
+        "Id": "f3853e2690de4d5dba60be87d9f6cb99",
+        "Name": "rashmi"
+      }
+    },
+    "0c8d920404b54cfea184c3a893e10b27": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "628a9eb35517474892950502495cd37b",
+          "Name": "Database systems"
+        },
+        "Faculty": {
+          "Email": "harshakalluri579@gmail.com",
+          "Id": "6fce5cde42b44154bb16f0641591f8bc",
+          "Name": "Harsha Kalluri"
+        },
+        "Id": "1484dd2308e04830b757c5c57982e2e7",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "9c2a8af41c584d47ac90bc876152e461",
+          "Name": "PM01"
+        },
+        "TotalCount": 0
+      },
+      "Id": "0c8d920404b54cfea184c3a893e10b27",
+      "IsApproved": true,
+      "Student": {
+        "Email": "test17@gmail.com",
+        "FirstName": "AJAY",
+        "Id": "0f51b245136b426cb974c0dd1447442f",
+        "LastName": "KUMAR",
+        "Name": " 381136"
+      }
+    },
+    "0e55fd5f8da741758c8895c5c83c33af": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "7f75d0efe0e24cee8a32ecd1069909df",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "0e55fd5f8da741758c8895c5c83c33af",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545146@nwmissouri.edu",
+        "FirstName": "sumanth ",
+        "Id": "4b3fcde81f444faab798384bac2587b0",
+        "LastName": "a",
+        "Name": " 757403"
+      }
+    },
+    "1106b335622c4a46823a65bf5f8dc6ec": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+          "Name": "Mobile Computing - IOS"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "30e6d489f5334fee9853e78eeebd1136",
+        "IsApproved": false,
+        "LastClassOn": "2022-10-18T01:41:19.4311038Z",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 2
+      },
+      "Id": "1106b335622c4a46823a65bf5f8dc6ec",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545015@nwmissouri.edu",
+        "FirstName": "Laxman",
+        "Id": "18c932444ec14b6aa65e5e32e091714c",
+        "LastName": "Alugubelli",
+        "Name": " 047963"
+      }
+    },
+    "13c2efbe6166404aaf45ac1236988889": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1838dd8789c54db080ff3fb920da16c8",
+          "Name": "Software Engineering"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "a9308a4b652d48c9b1a556b940ac8e65",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S2"
+        },
+        "TotalCount": 0
+      },
+      "Id": "13c2efbe6166404aaf45ac1236988889",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545721@nwmissouri.edu",
+        "FirstName": "Rashmi",
+        "Id": "5cc3d2fdde324043a9fe4e1b80784d53",
+        "LastName": "chava",
+        "Name": " 537660"
+      }
+    },
+    "1409126d01534df0a09f5cf049d56ce3": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "testcase21@gmail.com",
+          "Id": "e659470c9605493583c22beda8a24512",
+          "Name": "Testcase21"
+        },
+        "Id": "6171de0c74514ee597a9621bd460433b",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 0
+      },
+      "Id": "1409126d01534df0a09f5cf049d56ce3",
+      "Student": {
+        "Email": "ajaykumarchepuri1@gmail.com",
+        "Id": "115fdab84fc64117afa0367211745460",
+        "Name": "Sravan"
+      }
+    },
+    "171df431646047c4a20743d9c06b5aa2": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+          "Name": "Mobile Computing - IOS"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "30e6d489f5334fee9853e78eeebd1136",
+        "IsApproved": false,
+        "LastClassOn": "2022-10-18T01:41:19.4311038Z",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 2
+      },
+      "Id": "171df431646047c4a20743d9c06b5aa2",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545146@nwmissouri.edu",
+        "FirstName": "sumanth ",
+        "Id": "4b3fcde81f444faab798384bac2587b0",
+        "LastName": "a",
+        "Name": " 757403"
+      }
+    },
+    "1be9e0d40fac45b6a7dde84d9bc4f0a2": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1838dd8789c54db080ff3fb920da16c8",
+          "Name": "Software Engineering"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "a9308a4b652d48c9b1a556b940ac8e65",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S2"
+        },
+        "TotalCount": 0
+      },
+      "Id": "1be9e0d40fac45b6a7dde84d9bc4f0a2",
+      "IsApproved": false,
+      "Student": {
+        "Email": "S545568@nwmissouri.edu",
+        "FirstName": "Saiharsha",
+        "Id": "0607d80b4dc84d86bdbb33b73c574fcb",
+        "LastName": "Kalluri",
+        "Name": " 674491"
+      }
+    },
+    "1d093381af68476da75128568dc7e735": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "628a9eb35517474892950502495cd37b",
+          "Name": "Database systems"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "83ef974024ca4ea89a072735edf61f5b",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "1d093381af68476da75128568dc7e735",
+      "Student": {
+        "Email": "Sindhura.rc@gmail.com",
+        "Id": "9aee30db631f4c3abe7f5c777e93bfcd",
+        "Name": "Sindhura Byrapuneni"
+      }
+    },
+    "1eee0e908d964aecb1aedbbe86404413": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "628a9eb35517474892950502495cd37b",
+          "Name": "Database systems"
+        },
+        "Faculty": {
+          "Email": "harshakalluri579@gmail.com",
+          "Id": "6fce5cde42b44154bb16f0641591f8bc",
+          "Name": "Harsha Kalluri"
+        },
+        "Id": "1484dd2308e04830b757c5c57982e2e7",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "9c2a8af41c584d47ac90bc876152e461",
+          "Name": "PM01"
+        },
+        "TotalCount": 0
+      },
+      "Id": "1eee0e908d964aecb1aedbbe86404413",
+      "IsApproved": false,
+      "Student": {
+        "Email": "laxman.alugubelli@gmail.com",
+        "FirstName": "Laxman",
+        "Id": "a1633d87201044a3b4ccf8e6775a17df",
+        "LastName": "Alugubelli",
+        "Name": " 899500"
+      }
+    },
+    "205e83c402664eff8fc321d14e8c46a1": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "Name": " 614989"
+        },
+        "Id": "7f75d0efe0e24cee8a32ecd1069909df",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "205e83c402664eff8fc321d14e8c46a1",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545427@nwmissouri.edu",
+        "Id": "05e9a4a25f634a3b915c31edbcf9400b",
+        "Name": " 417579"
+      }
+    },
+    "211ea26a9d4e49c9a2b72540f28867a9": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "prasunkumar@gmail.com",
+          "Id": "65078a2b61264ccb9f929f4b556ab7db",
+          "Name": "prasun"
+        },
+        "Id": "84fbb0c266264cbc995a1508dd878ce5",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S4"
+        },
+        "TotalCount": 1
+      },
+      "Id": "211ea26a9d4e49c9a2b72540f28867a9",
+      "IsApproved": false,
+      "Student": {
+        "Email": "S545015@nwmissouri.edu",
+        "FirstName": "Laxman",
+        "Id": "18c932444ec14b6aa65e5e32e091714c",
+        "LastName": "Alugubelli",
+        "Name": " 047963"
+      }
+    },
+    "24158358b89249eaae3c2a3dad51e3d3": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "e55c8f1a734a4cf0b99a994353cd37e2",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "24158358b89249eaae3c2a3dad51e3d3",
+      "Student": {
+        "Email": "arrabellisumanth85@gmail.com",
+        "Id": "f92f80a371c94651a565128e77f99b19",
+        "Name": "sumanth"
+      }
+    },
+    "27335b81020b4c87a021cedafb3567f6": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "fefc1e4bc5b945598ca97e0f520b4aea",
+          "Name": "Project Management"
+        },
+        "Faculty": {
+          "Email": "F12344@nwmissouri.edu",
+          "FirstName": "Fella ",
+          "Id": "74c8018a2edb4d7fa641a1d654b7d510",
+          "LastName": "Aziz",
+          "Name": " 027272"
+        },
+        "Id": "0c9db82a601a40729714223b43cb6f0c",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 0
+      },
+      "Id": "27335b81020b4c87a021cedafb3567f6",
+      "IsApproved": false,
+      "Student": {
+        "Email": "s545008@nwmissouri.edu",
+        "FirstName": "Rajashekhar",
+        "Id": "1ff3ab1d651a492eaf0a0329615295bf",
+        "LastName": "Kota",
+        "Name": " 082799"
+      }
+    },
+    "2864383f934046049077c6f0c61a398c": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "48f46a91cf624d0bb3ee083bf5e8a0c1",
+        "LastClassOn": "2022-10-05T13:23:11.2650597Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 1
+      },
+      "Id": "2864383f934046049077c6f0c61a398c",
+      "Student": {
+        "Email": "s545008@nwmissouri.edu",
+        "FirstName": "Rajashekhar",
+        "Id": "1ff3ab1d651a492eaf0a0329615295bf",
+        "LastName": "Kota",
+        "Name": " 082799"
+      }
+    },
+    "35ceb653011947d68fbbed69a6887cc0": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+          "Name": "Mobile Computing - IOS"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "30e6d489f5334fee9853e78eeebd1136",
+        "IsApproved": false,
+        "LastClassOn": "2022-10-18T01:41:19.4311038Z",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 2
+      },
+      "Id": "35ceb653011947d68fbbed69a6887cc0",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545717@nwmissouri.edu",
+        "FirstName": "Ravali ",
+        "Id": "321abdff211e44ddb6677e9272e386ff",
+        "LastName": "Nalati",
+        "Name": " 475092"
+      }
+    },
+    "35d0e0ea93ea40c7b571ee4ce5599e31": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "628a9eb35517474892950502495cd37b",
+          "Name": "Database systems"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "83ef974024ca4ea89a072735edf61f5b",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "35d0e0ea93ea40c7b571ee4ce5599e31",
+      "Student": {
+        "Email": "arrabellisumanth85@gmail.com",
+        "Id": "f92f80a371c94651a565128e77f99b19",
+        "Name": "sumanth"
+      }
+    },
+    "3905403e7ada42c9bb53e172fb5ddc99": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1838dd8789c54db080ff3fb920da16c8",
+          "Name": "Software Engineering"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "a9308a4b652d48c9b1a556b940ac8e65",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S2"
+        },
+        "TotalCount": 0
+      },
+      "Id": "3905403e7ada42c9bb53e172fb5ddc99",
+      "Student": {
+        "Email": "S545519@nwmissouri.edu",
+        "FirstName": "Mahima  ",
+        "Id": "1e000b0de50b469c8ed13300f6472f70",
+        "LastName": "Byrapuneni",
+        "Name": " 117346"
+      }
+    },
+    "3da4559f74484ff594903cb12504ebe0": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "prasunkumar@gmail.com",
+          "Id": "65078a2b61264ccb9f929f4b556ab7db",
+          "Name": "prasun"
+        },
+        "Id": "84fbb0c266264cbc995a1508dd878ce5",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S4"
+        },
+        "TotalCount": 1
+      },
+      "Id": "3da4559f74484ff594903cb12504ebe0",
+      "Student": {
+        "Email": "ajaykumarchepuri1@gmail.com",
+        "Id": "115fdab84fc64117afa0367211745460",
+        "Name": "Sravan"
+      }
+    },
+    "3e82617ab4c54a8099b00ea7be5f0412": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1838dd8789c54db080ff3fb920da16c8",
+          "Name": "Software Engineering"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "a9308a4b652d48c9b1a556b940ac8e65",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S2"
+        },
+        "TotalCount": 0
+      },
+      "Id": "3e82617ab4c54a8099b00ea7be5f0412",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545146@nwmissouri.edu",
+        "FirstName": "sumanth ",
+        "Id": "4b3fcde81f444faab798384bac2587b0",
+        "LastName": "a",
+        "Name": " 757403"
+      }
+    },
+    "415ce3ab436742dba9ae7a8c29935862": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "testcase21@gmail.com",
+          "Id": "e659470c9605493583c22beda8a24512",
+          "Name": "Testcase21"
+        },
+        "Id": "6171de0c74514ee597a9621bd460433b",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 0
+      },
+      "Id": "415ce3ab436742dba9ae7a8c29935862",
+      "Student": {
+        "Email": "laxman.alugubel@gmail.com",
+        "Id": "43ac18210fe144458e96c1c0afaf7ec7",
+        "Name": "lucky510"
+      }
+    },
+    "41a270c727604821a9a70165a563f81e": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "TestFaculty@gmai.com",
+          "Id": "e5fe8009f84243bd9bbe056ffdb5ef09",
+          "Name": "TestFaculty"
+        },
+        "Id": "9537c9de2c034de2ac2b7064d305b655",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 0
+      },
+      "Id": "41a270c727604821a9a70165a563f81e",
+      "Student": {
+        "Email": "ajaykumarchepuri1@gmail.com",
+        "Id": "115fdab84fc64117afa0367211745460",
+        "Name": "Sravan"
+      }
+    },
+    "41c9a7c1800e46d0b4e4c9ec028c19d3": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1838dd8789c54db080ff3fb920da16c8",
+          "Name": "Software Engineering"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "a9308a4b652d48c9b1a556b940ac8e65",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S2"
+        },
+        "TotalCount": 0
+      },
+      "Id": "41c9a7c1800e46d0b4e4c9ec028c19d3",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545717@nwmissouri.edu",
+        "FirstName": "Ravali ",
+        "Id": "321abdff211e44ddb6677e9272e386ff",
+        "LastName": "Nalati",
+        "Name": " 475092"
+      }
+    },
+    "41d72d7a40434b7f94dc3c49a5e4c08e": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+          "Name": "Mobile Computing - IOS"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "Name": " 614989"
+        },
+        "Id": "30e6d489f5334fee9853e78eeebd1136",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 0
+      },
+      "Id": "41d72d7a40434b7f94dc3c49a5e4c08e",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545427@nwmissouri.edu",
+        "Id": "05e9a4a25f634a3b915c31edbcf9400b",
+        "Name": " 417579"
+      }
+    },
+    "46b1cb5840d140289103bfed1a6ef6d5": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+          "Name": "Mobile Computing - IOS"
+        },
+        "Faculty": {
+          "Email": "laxman@gmail.com",
+          "FirstName": "Laxman",
+          "Id": "3f0508d7514145a4a6531d7e36f0a27a",
+          "LastName": "namxal",
+          "Name": " 603184"
+        },
+        "Id": "2fe687c543e84bcebed4195b4e7c87c3",
+        "LastClassOn": "2022-10-17T02:06:38.6290402Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 2
+      },
+      "Id": "46b1cb5840d140289103bfed1a6ef6d5",
+      "Student": {
+        "Email": "S545721@nwmissouri.edu",
+        "FirstName": "Rashmi",
+        "Id": "5cc3d2fdde324043a9fe4e1b80784d53",
+        "LastName": "chava",
+        "Name": " 537660"
+      }
+    },
+    "4add5146755e4a7ebe3724d0d03a37d9": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+          "Name": "Mobile Computing - IOS"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "30e6d489f5334fee9853e78eeebd1136",
+        "IsApproved": false,
+        "LastClassOn": "2022-10-18T01:41:19.4311038Z",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 2
+      },
+      "Id": "4add5146755e4a7ebe3724d0d03a37d9",
+      "IsApproved": false,
+      "Student": {
+        "Email": "S545568@nwmissouri.edu",
+        "FirstName": "Saiharsha",
+        "Id": "0607d80b4dc84d86bdbb33b73c574fcb",
+        "LastName": "Kalluri",
+        "Name": " 674491"
+      }
+    },
+    "560852d778804a8d8eac80f6351c005f": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+          "Name": "Mobile Computing - IOS"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "30e6d489f5334fee9853e78eeebd1136",
+        "IsApproved": false,
+        "LastClassOn": "2022-10-18T01:41:19.4311038Z",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 2
+      },
+      "Id": "560852d778804a8d8eac80f6351c005f",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545721@nwmissouri.edu",
+        "FirstName": "Rashmi",
+        "Id": "5cc3d2fdde324043a9fe4e1b80784d53",
+        "LastName": "chava",
+        "Name": " 537660"
+      }
+    },
+    "56e168d8625b4dd381f23eb0f0d3bf52": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "TestFaculty@gmai.com",
+          "Id": "e5fe8009f84243bd9bbe056ffdb5ef09",
+          "Name": "TestFaculty"
+        },
+        "Id": "dc572f8766d144cdaf5775d76d588436",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        }
+      },
+      "Id": "56e168d8625b4dd381f23eb0f0d3bf52",
+      "Student": {
+        "Email": "S545427@nwmissouri.edu",
+        "Id": "05e9a4a25f634a3b915c31edbcf9400b",
+        "Name": " 417579"
+      }
+    },
+    "63d1235995d5422486f0183c098c62bb": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "48f46a91cf624d0bb3ee083bf5e8a0c1",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "63d1235995d5422486f0183c098c62bb",
+      "Student": {
+        "Email": "arrabellisumanth85@gmail.com",
+        "Id": "f92f80a371c94651a565128e77f99b19",
+        "Name": "sumanth"
+      }
+    },
+    "659d432e8a7a42649777fe12544383d3": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "testcase21@gmail.com",
+          "Id": "e659470c9605493583c22beda8a24512",
+          "Name": "Testcase21"
+        },
+        "Id": "6171de0c74514ee597a9621bd460433b",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 0
+      },
+      "Id": "659d432e8a7a42649777fe12544383d3",
+      "Student": {
+        "Email": "testcase900@gmail.com",
+        "Id": "350a94de1653404aa03df62219f11d62",
+        "Name": "testcase900"
+      }
+    },
+    "68628f8bc01a43ed8cc7099cd9f76185": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "F12344@nwmissouri.edu",
+          "FirstName": "Fella ",
+          "Id": "74c8018a2edb4d7fa641a1d654b7d510",
+          "LastName": "Aziz",
+          "Name": " 027272"
+        },
+        "Id": "2c7f7a3adbdc4970a4a6da1a13cf965d",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "68628f8bc01a43ed8cc7099cd9f76185",
+      "IsApproved": false,
+      "Student": {
+        "Email": "s545008@nwmissouri.edu",
+        "FirstName": "Rajashekhar",
+        "Id": "1ff3ab1d651a492eaf0a0329615295bf",
+        "LastName": "Kota",
+        "Name": " 082799"
+      }
+    },
+    "6a4a053547e649ceb4f4487bb20cf99b": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+          "Name": "Mobile Computing - IOS"
+        },
+        "Faculty": {
+          "Email": "laxman@gmail.com",
+          "FirstName": "Laxman",
+          "Id": "3f0508d7514145a4a6531d7e36f0a27a",
+          "LastName": "namxal",
+          "Name": " 603184"
+        },
+        "Id": "2fe687c543e84bcebed4195b4e7c87c3",
+        "IsApproved": false,
+        "LastClassOn": "2022-10-19T05:47:40.1265445Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 3
+      },
+      "Id": "6a4a053547e649ceb4f4487bb20cf99b",
+      "IsApproved": false,
+      "Student": {
+        "Email": "ajaykumarchepuri1@gmail.com",
+        "Id": "0eadceece8ea4d78ba5b4680e24034cb",
+        "Name": " 101168"
+      }
+    },
+    "6b521de4dfa8477689b32069ab5f4444": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "628a9eb35517474892950502495cd37b",
+          "Name": "Database systems"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "83ef974024ca4ea89a072735edf61f5b",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "6b521de4dfa8477689b32069ab5f4444",
+      "Student": {
+        "Email": "sunny579@gmail.com",
+        "Id": "0352c8348db444e3bfce167832be00a9",
+        "Name": "Sunny"
+      }
+    },
+    "6f1a04ffe9ff4440b1f6a0edde03ff95": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+          "Name": "Mobile Computing - IOS"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "30e6d489f5334fee9853e78eeebd1136",
+        "LastClassOn": "2022-10-19T02:25:50.8792369Z",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 3
+      },
+      "Id": "6f1a04ffe9ff4440b1f6a0edde03ff95",
+      "Student": {
+        "Email": "S545519@nwmissouri.edu",
+        "FirstName": "Mahima  ",
+        "Id": "1e000b0de50b469c8ed13300f6472f70",
+        "LastName": "Byrapuneni",
+        "Name": " 117346"
+      }
+    },
+    "7026e207b8c74dbbb653c298c526ae1e": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "TestFaculty@gmai.com",
+          "Id": "e5fe8009f84243bd9bbe056ffdb5ef09",
+          "Name": "TestFaculty"
+        },
+        "Id": "dc572f8766d144cdaf5775d76d588436",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "7026e207b8c74dbbb653c298c526ae1e",
+      "Student": {
+        "Email": "ajaykumarchepuri1@gmail.com",
+        "Id": "115fdab84fc64117afa0367211745460",
+        "Name": "Sravan"
+      }
+    },
+    "72b303050b79436b92a2b880a76a518f": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "TestFaculty@gmai.com",
+          "Id": "e5fe8009f84243bd9bbe056ffdb5ef09",
+          "Name": "TestFaculty"
+        },
+        "Id": "f5d72e011c704027bd614dca202c3cc5",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S4"
+        },
+        "TotalCount": 0
+      },
+      "Id": "72b303050b79436b92a2b880a76a518f",
+      "Student": {
+        "Email": "ajaykumarchepuri1@gmail.com",
+        "Id": "115fdab84fc64117afa0367211745460",
+        "Name": "Sravan"
+      }
+    },
+    "7af9780cdb5e428ebf5065fb13e5fa0d": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "e55c8f1a734a4cf0b99a994353cd37e2",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "7af9780cdb5e428ebf5065fb13e5fa0d",
+      "Student": {
+        "Email": "abhi@gmail.com",
+        "Id": "73dad339408644aab56feb8b7e339817",
+        "Name": "Abhilash"
+      }
+    },
+    "7e12ae4a7cc4439ca5e669c3c4bd5ea9": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "7f75d0efe0e24cee8a32ecd1069909df",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "7e12ae4a7cc4439ca5e669c3c4bd5ea9",
+      "IsApproved": false,
+      "Student": {
+        "Email": "S545568@nwmissouri.edu",
+        "FirstName": "Saiharsha",
+        "Id": "0607d80b4dc84d86bdbb33b73c574fcb",
+        "LastName": "Kalluri",
+        "Name": " 674491"
+      }
+    },
+    "820a3a45875b430faf9f6a7d43f5472b": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "99ddf6a49610428c9e89c20b7c3594ae",
+          "Name": "Java"
+        },
+        "Faculty": {
+          "Email": "F12344@nwmissouri.edu",
+          "FirstName": "Fella ",
+          "Id": "74c8018a2edb4d7fa641a1d654b7d510",
+          "LastName": "Aziz",
+          "Name": " 027272"
+        },
+        "Id": "27b3f7932186439d9067a48363b417bb",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "820a3a45875b430faf9f6a7d43f5472b",
+      "IsApproved": false,
+      "Student": {
+        "Email": "s545008@nwmissouri.edu",
+        "FirstName": "Rajashekhar",
+        "Id": "1ff3ab1d651a492eaf0a0329615295bf",
+        "LastName": "Kota",
+        "Name": " 082799"
+      }
+    },
+    "8584a318911048648a7aac2551df1045": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "7f75d0efe0e24cee8a32ecd1069909df",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "8584a318911048648a7aac2551df1045",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545015@nwmissouri.edu",
+        "FirstName": "Laxman",
+        "Id": "18c932444ec14b6aa65e5e32e091714c",
+        "LastName": "Alugubelli",
+        "Name": " 047963"
+      }
+    },
+    "87a70a7cdab44472becd1dbc4d11ffe8": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "TestFaculty@gmai.com",
+          "Id": "e5fe8009f84243bd9bbe056ffdb5ef09",
+          "Name": "TestFaculty"
+        },
+        "Id": "dc572f8766d144cdaf5775d76d588436",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "87a70a7cdab44472becd1dbc4d11ffe8",
+      "Student": {
+        "Email": "nalatiravalireddy@gmail.com",
+        "Id": "be7df63bc1bb4de28a99285f03e14ab5",
+        "Name": "Sweety"
+      }
+    },
+    "8d83fee5bd4d4d40b79488f24ae7a60a": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "628a9eb35517474892950502495cd37b",
+          "Name": "Database systems"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "83ef974024ca4ea89a072735edf61f5b",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "8d83fee5bd4d4d40b79488f24ae7a60a",
+      "Student": {
+        "Email": "abhi@gmail.com",
+        "Id": "73dad339408644aab56feb8b7e339817",
+        "Name": "Abhilash"
+      }
+    },
+    "96a6b1e510ca49b689df83c05c460f08": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "48f46a91cf624d0bb3ee083bf5e8a0c1",
+        "LastClassOn": "2022-10-05T13:23:11.2650597Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 1
+      },
+      "Id": "96a6b1e510ca49b689df83c05c460f08",
+      "Student": {
+        "Email": "Sindhura.rc@gmail.com",
+        "Id": "9aee30db631f4c3abe7f5c777e93bfcd",
+        "Name": "Sindhura Byrapuneni"
+      }
+    },
+    "9f1d00c98d934b99803206d7a3cd7a16": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "e55c8f1a734a4cf0b99a994353cd37e2",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "9f1d00c98d934b99803206d7a3cd7a16",
+      "Student": {
+        "Email": "sunny579@gmail.com",
+        "Id": "0352c8348db444e3bfce167832be00a9",
+        "Name": "Sunny"
+      }
+    },
+    "9f253c5cb26f4bc78f70d55eaa96b60f": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "7f75d0efe0e24cee8a32ecd1069909df",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "9f253c5cb26f4bc78f70d55eaa96b60f",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545717@nwmissouri.edu",
+        "FirstName": "Ravali ",
+        "Id": "321abdff211e44ddb6677e9272e386ff",
+        "LastName": "Nalati",
+        "Name": " 475092"
+      }
+    },
+    "9fe849046ab0461e8510222d62d1890d": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "628a9eb35517474892950502495cd37b",
+          "Name": "Database systems"
+        },
+        "Faculty": {
+          "Email": "hvrabhi2@gmail.com",
+          "Id": "76ab53bc608d49f2916d9fb972e96045",
+          "Name": "Hvrabhi2"
+        },
+        "Id": "e1b9d4d71faf4633a43e9a205e2d79ac",
+        "LastClassOn": "2022-09-30T14:45:02.5293984Z",
+        "Section": {
+          "Id": "6b0e7176d10c463983f915e51840e748",
+          "Name": "DB01"
+        },
+        "TotalCount": 1
+      },
+      "Id": "9fe849046ab0461e8510222d62d1890d",
+      "Student": {
+        "Email": "s545008@nwmissouri.edu",
+        "FirstName": "Rajashekhar",
+        "Id": "1ff3ab1d651a492eaf0a0329615295bf",
+        "LastName": "Kota",
+        "Name": " 082799"
+      }
+    },
+    "a057a301ca07453fb4a39a43e8e80dff": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "628a9eb35517474892950502495cd37b",
+          "Name": "Database systems"
+        },
+        "Faculty": {
+          "Email": "harshakalluri579@gmail.com",
+          "Id": "6fce5cde42b44154bb16f0641591f8bc",
+          "Name": "Harsha Kalluri"
+        },
+        "Id": "1484dd2308e04830b757c5c57982e2e7",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "9c2a8af41c584d47ac90bc876152e461",
+          "Name": "PM01"
+        },
+        "TotalCount": 0
+      },
+      "Id": "a057a301ca07453fb4a39a43e8e80dff",
+      "IsApproved": true,
+      "Student": {
+        "Email": "test17@gmail.com",
+        "FirstName": "AJAY",
+        "Id": "0f51b245136b426cb974c0dd1447442f",
+        "LastName": "KUMAR",
+        "Name": " 381136"
+      }
+    },
+    "a5c1abda2dae4abc81761c9221a30b08": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "7f75d0efe0e24cee8a32ecd1069909df",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "a5c1abda2dae4abc81761c9221a30b08",
+      "IsApproved": true,
+      "Student": {
+        "Email": "s545008@nwmissouri.edu",
+        "FirstName": "Rajashekhar",
+        "Id": "1ff3ab1d651a492eaf0a0329615295bf",
+        "LastName": "Kota",
+        "Name": " 082799"
+      }
+    },
+    "a80d47f20692431981a89e0dd46084cc": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "prasunkumar@gmail.com",
+          "Id": "65078a2b61264ccb9f929f4b556ab7db",
+          "Name": "prasun"
+        },
+        "Id": "5af2d9e5ec69498995fa0819e695e255",
+        "LastClassOn": "2022-09-30T03:22:29.8357547Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 6
+      },
+      "Id": "a80d47f20692431981a89e0dd46084cc",
+      "Student": {
+        "Email": "nalatiravalireddy@gmail.com",
+        "Id": "be7df63bc1bb4de28a99285f03e14ab5",
+        "Name": "Sweety"
+      }
+    },
+    "abd75b14da194cdabb5c65ae65919573": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+          "Name": "Mobile Computing - IOS"
+        },
+        "Faculty": {
+          "Email": "DrCase@gmail.com",
+          "Id": "d42142fbda46469f9bdfea4c4afd5cf0",
+          "Name": "case"
+        },
+        "Id": "e70b3595e92f4aa5b8c3c5e778d6b30d",
+        "IsApproved": false,
+        "LastClassOn": "2022-09-30T14:44:28.6076543Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 1
+      },
+      "Id": "abd75b14da194cdabb5c65ae65919573",
+      "IsApproved": false,
+      "Student": {
+        "Email": "S545015@nwmissouri.edu",
+        "FirstName": "Laxman",
+        "Id": "18c932444ec14b6aa65e5e32e091714c",
+        "LastName": "Alugubelli",
+        "Name": " 047963"
+      }
+    },
+    "abe9d7c491c64eee8de3c389517d5867": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "7f75d0efe0e24cee8a32ecd1069909df",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "abe9d7c491c64eee8de3c389517d5867",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545721@nwmissouri.edu",
+        "FirstName": "Rashmi",
+        "Id": "5cc3d2fdde324043a9fe4e1b80784d53",
+        "LastName": "chava",
+        "Name": " 537660"
+      }
+    },
+    "ac6c2a8eec604ddba0058afa0838b042": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "48f46a91cf624d0bb3ee083bf5e8a0c1",
+        "IsApproved": false,
+        "LastClassOn": "2022-10-05T13:23:11.2650597Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 1
+      },
+      "Id": "ac6c2a8eec604ddba0058afa0838b042",
+      "IsApproved": false,
+      "Student": {
+        "Email": "S545015@nwmissouri.edu",
+        "FirstName": "Laxman",
+        "Id": "18c932444ec14b6aa65e5e32e091714c",
+        "LastName": "Alugubelli",
+        "Name": " 047963"
+      }
+    },
+    "ac74874f10de4d4691bd80a0201c2170": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "e55c8f1a734a4cf0b99a994353cd37e2",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "ac74874f10de4d4691bd80a0201c2170",
+      "Student": {
+        "Email": "Sindhura.rc@gmail.com",
+        "Id": "9aee30db631f4c3abe7f5c777e93bfcd",
+        "Name": "Sindhura Byrapuneni"
+      }
+    },
+    "addb43cb1495471ea0c7fb301a71fce2": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "TestFaculty@gmai.com",
+          "Id": "e5fe8009f84243bd9bbe056ffdb5ef09",
+          "Name": "TestFaculty"
+        },
+        "Id": "dc572f8766d144cdaf5775d76d588436",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "addb43cb1495471ea0c7fb301a71fce2",
+      "Student": {
+        "Email": "sumanth@gmail.com",
+        "Id": "3975e216dc7f4e128c56405603feabcc",
+        "Name": "Sumanth"
+      }
+    },
+    "b0b3c79d323f4276879708c4068947a3": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "prasunkumar@gmail.com",
+          "Id": "65078a2b61264ccb9f929f4b556ab7db",
+          "Name": "prasun"
+        },
+        "Id": "84fbb0c266264cbc995a1508dd878ce5",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S4"
+        },
+        "TotalCount": 1
+      },
+      "Id": "b0b3c79d323f4276879708c4068947a3",
+      "Student": {
+        "Email": "testcase900@gmail.com",
+        "Id": "350a94de1653404aa03df62219f11d62",
+        "Name": "testcase900"
+      }
+    },
+    "b7c49e2350874ceaa8dd65fd45384ded": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1838dd8789c54db080ff3fb920da16c8",
+          "Name": "Software Engineering"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "a9308a4b652d48c9b1a556b940ac8e65",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S2"
+        },
+        "TotalCount": 0
+      },
+      "Id": "b7c49e2350874ceaa8dd65fd45384ded",
+      "IsApproved": true,
+      "Student": {
+        "Email": "s545008@nwmissouri.edu",
+        "FirstName": "Rajashekhar",
+        "Id": "1ff3ab1d651a492eaf0a0329615295bf",
+        "LastName": "Kota",
+        "Name": " 082799"
+      }
+    },
+    "b8631907675f44f3aeac9ac60a3a97de": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "prasunkumar@gmail.com",
+          "Id": "65078a2b61264ccb9f929f4b556ab7db",
+          "Name": "prasun"
+        },
+        "Id": "5af2d9e5ec69498995fa0819e695e255",
+        "LastClassOn": "2022-09-30T03:22:29.8357547Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 6
+      },
+      "Id": "b8631907675f44f3aeac9ac60a3a97de",
+      "Student": {
+        "Email": "sumanth@gmail.com",
+        "Id": "3975e216dc7f4e128c56405603feabcc",
+        "Name": "Sumanth"
+      }
+    },
+    "b9a6b48cc22a468fb80648b1f9fa6830": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+          "Name": "Mobile Computing - IOS"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "30e6d489f5334fee9853e78eeebd1136",
+        "IsApproved": false,
+        "LastClassOn": "2022-10-18T01:41:19.4311038Z",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 2
+      },
+      "Id": "b9a6b48cc22a468fb80648b1f9fa6830",
+      "IsApproved": true,
+      "Student": {
+        "Email": "s545008@nwmissouri.edu",
+        "FirstName": "Rajashekhar",
+        "Id": "1ff3ab1d651a492eaf0a0329615295bf",
+        "LastName": "Kota",
+        "Name": " 082799"
+      }
+    },
+    "c36e6a2db5e04e28b5048b9562531b61": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "7f75d0efe0e24cee8a32ecd1069909df",
+        "LastClassOn": "2022-10-19T03:03:14.1362834Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 1
+      },
+      "Id": "c36e6a2db5e04e28b5048b9562531b61",
+      "Student": {
+        "Email": "S545519@nwmissouri.edu",
+        "FirstName": "Mahima  ",
+        "Id": "1e000b0de50b469c8ed13300f6472f70",
+        "LastName": "Byrapuneni",
+        "Name": " 117346"
+      }
+    },
+    "c9d1fa65e5a34a7d84ec9b02523546aa": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "prasunkumar@gmail.com",
+          "Id": "65078a2b61264ccb9f929f4b556ab7db",
+          "Name": "prasun"
+        },
+        "Id": "5af2d9e5ec69498995fa0819e695e255",
+        "LastClassOn": "2022-09-30T03:22:29.8357547Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 6
+      },
+      "Id": "c9d1fa65e5a34a7d84ec9b02523546aa",
+      "Student": {
+        "Email": "nathon@nw.com",
+        "Id": "3bf53e61eaad40ed9322f008a592ae35",
+        "Name": "Nathon"
+      }
+    },
+    "cb16f98a497f4631990e3be0395e0a9e": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+          "Name": "Mobile Computing - IOS"
+        },
+        "Faculty": {
+          "Email": "laxman@gmail.com",
+          "FirstName": "Laxman",
+          "Id": "3f0508d7514145a4a6531d7e36f0a27a",
+          "LastName": "namxal",
+          "Name": " 603184"
+        },
+        "Id": "2fe687c543e84bcebed4195b4e7c87c3",
+        "IsApproved": false,
+        "LastClassOn": "2022-10-17T02:06:38.6290402Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 2
+      },
+      "Id": "cb16f98a497f4631990e3be0395e0a9e",
+      "IsApproved": false,
+      "Student": {
+        "Email": "laxman.alugubelli@gmail.com",
+        "FirstName": "Laxman",
+        "Id": "a1633d87201044a3b4ccf8e6775a17df",
+        "LastName": "Alugubelli",
+        "Name": " 899500"
+      }
+    },
+    "cc0742bcc6324f408ce8df8db4151b58": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "628a9eb35517474892950502495cd37b",
+          "Name": "Database systems"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "83ef974024ca4ea89a072735edf61f5b",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "cc0742bcc6324f408ce8df8db4151b58",
+      "Student": {
+        "Email": "Sindhura.rc@gmail.com",
+        "Id": "9aee30db631f4c3abe7f5c777e93bfcd",
+        "Name": "Sindhura Byrapuneni"
+      }
+    },
+    "cd05011ee35e4ba39fc43e6c1ef8202c": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "628a9eb35517474892950502495cd37b",
+          "Name": "Database systems"
+        },
+        "Faculty": {
+          "Email": "harshakalluri579@gmail.com",
+          "Id": "6fce5cde42b44154bb16f0641591f8bc",
+          "Name": "Harsha Kalluri"
+        },
+        "Id": "1484dd2308e04830b757c5c57982e2e7",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "9c2a8af41c584d47ac90bc876152e461",
+          "Name": "PM01"
+        },
+        "TotalCount": 0
+      },
+      "Id": "cd05011ee35e4ba39fc43e6c1ef8202c",
+      "IsApproved": true,
+      "Student": {
+        "Email": "test17@gmail.com",
+        "FirstName": "AJAY",
+        "Id": "0f51b245136b426cb974c0dd1447442f",
+        "LastName": "KUMAR",
+        "Name": " 381136"
+      }
+    },
+    "d455ad2ea56647efaf6dad9ebb4183d2": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1838dd8789c54db080ff3fb920da16c8",
+          "Name": "Software Engineering"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "Name": " 614989"
+        },
+        "Id": "a9308a4b652d48c9b1a556b940ac8e65",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S2"
+        },
+        "TotalCount": 0
+      },
+      "Id": "d455ad2ea56647efaf6dad9ebb4183d2",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545427@nwmissouri.edu",
+        "Id": "05e9a4a25f634a3b915c31edbcf9400b",
+        "Name": " 417579"
+      }
+    },
+    "d5451689abfd4831a1277e9e9127e8b0": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "prasunkumar@gmail.com",
+          "Id": "65078a2b61264ccb9f929f4b556ab7db",
+          "Name": "prasun"
+        },
+        "Id": "5af2d9e5ec69498995fa0819e695e255",
+        "LastClassOn": "2022-09-30T03:22:29.8357547Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 6
+      },
+      "Id": "d5451689abfd4831a1277e9e9127e8b0",
+      "Student": {
+        "Email": "laxman.alugubel@gmail.com",
+        "Id": "43ac18210fe144458e96c1c0afaf7ec7",
+        "Name": "lucky510"
+      }
+    },
+    "d61567c8ee8b4600a3db817982a666d2": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+          "Name": "Mobile Computing - IOS"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "30e6d489f5334fee9853e78eeebd1136",
+        "IsApproved": false,
+        "LastClassOn": "2022-10-18T01:41:19.4311038Z",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 2
+      },
+      "Id": "d61567c8ee8b4600a3db817982a666d2",
+      "IsApproved": false,
+      "Student": {
+        "Email": "s545412@nwmissouri.edu",
+        "FirstName": "Sravankumar",
+        "Id": "70ea851e614e46fb8a383d7da54d4339",
+        "LastName": "ch",
+        "Name": " 843773"
+      }
+    },
+    "d8702efbd6bb4c579492c169619a41c6": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "prasunkumar@gmail.com",
+          "Id": "65078a2b61264ccb9f929f4b556ab7db",
+          "Name": "prasun"
+        },
+        "Id": "5af2d9e5ec69498995fa0819e695e255",
+        "LastClassOn": "2022-09-29T08:33:56.6810707Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 5
+      },
+      "Id": "d8702efbd6bb4c579492c169619a41c6",
+      "Student": {
+        "Email": "ajaykumarchepuri1@gmail.com",
+        "Id": "115fdab84fc64117afa0367211745460",
+        "Name": "Sravan"
+      }
+    },
+    "db4270ed98d143d8ac5feae0dba0165b": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "prasunkumar@gmail.com",
+          "Id": "65078a2b61264ccb9f929f4b556ab7db",
+          "Name": "prasun"
+        },
+        "Id": "5af2d9e5ec69498995fa0819e695e255",
+        "LastClassOn": "2022-09-29T08:33:56.6810707Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 5
+      },
+      "Id": "db4270ed98d143d8ac5feae0dba0165b",
+      "Student": {
+        "Email": "testcase900@gmail.com",
+        "Id": "350a94de1653404aa03df62219f11d62",
+        "Name": "testcase900"
+      }
+    },
+    "dd1f06aa1f5d4044920c37c84fc22762": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "TestFaculty@gmai.com",
+          "Id": "e5fe8009f84243bd9bbe056ffdb5ef09",
+          "Name": "TestFaculty"
+        },
+        "Id": "9537c9de2c034de2ac2b7064d305b655",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S3"
+        },
+        "TotalCount": 0
+      },
+      "Id": "dd1f06aa1f5d4044920c37c84fc22762",
+      "Student": {
+        "Email": "nalatiravalireddy@gmail.com",
+        "Id": "be7df63bc1bb4de28a99285f03e14ab5",
+        "Name": "Sweety"
+      }
+    },
+    "e0cb33f61a1546b6a279bb6c8bb8c2a5": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+          "Name": "Mobile Computing - IOS"
+        },
+        "Faculty": {
+          "Email": "DrCase@gmail.com",
+          "Id": "d42142fbda46469f9bdfea4c4afd5cf0",
+          "Name": "case"
+        },
+        "Id": "e70b3595e92f4aa5b8c3c5e778d6b30d",
+        "LastClassOn": "2022-09-30T14:44:28.6076543Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 1
+      },
+      "Id": "e0cb33f61a1546b6a279bb6c8bb8c2a5",
+      "Student": {
+        "Email": "sumanth@gmail.com",
+        "Id": "3975e216dc7f4e128c56405603feabcc",
+        "Name": "Sumanth"
+      }
+    },
+    "e2c1717b39b449e2a1b2c072e6fdefd5": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "7f75d0efe0e24cee8a32ecd1069909df",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "e2c1717b39b449e2a1b2c072e6fdefd5",
+      "IsApproved": false,
+      "Student": {
+        "Email": "s545412@nwmissouri.edu",
+        "FirstName": "Sravankumar",
+        "Id": "70ea851e614e46fb8a383d7da54d4339",
+        "LastName": "ch",
+        "Name": " 843773"
+      }
+    },
+    "e2f47c60f1db49a0a5c8f7b3f6d65c4d": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1838dd8789c54db080ff3fb920da16c8",
+          "Name": "Software Engineering"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "a9308a4b652d48c9b1a556b940ac8e65",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S2"
+        },
+        "TotalCount": 0
+      },
+      "Id": "e2f47c60f1db49a0a5c8f7b3f6d65c4d",
+      "IsApproved": false,
+      "Student": {
+        "Email": "s545412@nwmissouri.edu",
+        "FirstName": "Sravankumar",
+        "Id": "70ea851e614e46fb8a383d7da54d4339",
+        "LastName": "ch",
+        "Name": " 843773"
+      }
+    },
+    "e3317dedcb4d4a388859a5c4674c7632": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "628a9eb35517474892950502495cd37b",
+          "Name": "Database systems"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "83ef974024ca4ea89a072735edf61f5b",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "e3317dedcb4d4a388859a5c4674c7632",
+      "Student": {
+        "Email": "rashmichava4@gmail.com",
+        "Id": "f3853e2690de4d5dba60be87d9f6cb99",
+        "Name": "rashmi"
+      }
+    },
+    "e92220d8b9ef455ebd184a012acdfe9d": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "00ff0199ca8243b091d49c1a7739a324",
+          "Name": "BigData"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "48f46a91cf624d0bb3ee083bf5e8a0c1",
+        "LastClassOn": "2022-10-05T13:23:11.2650597Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 1
+      },
+      "Id": "e92220d8b9ef455ebd184a012acdfe9d",
+      "Student": {
+        "Email": "sunny579@gmail.com",
+        "Id": "0352c8348db444e3bfce167832be00a9",
+        "Name": "Sunny"
+      }
+    },
+    "eb6225a9d77443e68afe0fb29b81413c": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "1838dd8789c54db080ff3fb920da16c8",
+          "Name": "Software Engineering"
+        },
+        "Faculty": {
+          "Email": "F12341@nwmissouri.edu",
+          "FirstName": "Ajay",
+          "Id": "7ad4028867934ce092ef8faa535494e9",
+          "LastName": "Bandi",
+          "Name": " 614989"
+        },
+        "Id": "a9308a4b652d48c9b1a556b940ac8e65",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "a272520fe7074834b5cad0b6603aa7eb",
+          "Name": "S2"
+        },
+        "TotalCount": 0
+      },
+      "Id": "eb6225a9d77443e68afe0fb29b81413c",
+      "IsApproved": true,
+      "Student": {
+        "Email": "S545015@nwmissouri.edu",
+        "FirstName": "Laxman",
+        "Id": "18c932444ec14b6aa65e5e32e091714c",
+        "LastName": "Alugubelli",
+        "Name": " 047963"
+      }
+    },
+    "eb6b4cd5a4dd4f01885e190e46d029ab": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "e55c8f1a734a4cf0b99a994353cd37e2",
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 0
+      },
+      "Id": "eb6b4cd5a4dd4f01885e190e46d029ab",
+      "Student": {
+        "Email": "rashmichava4@gmail.com",
+        "Id": "f3853e2690de4d5dba60be87d9f6cb99",
+        "Name": "rashmi"
+      }
+    },
+    "eda070eaac9a49c4a8154a1bcff9a780": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "628a9eb35517474892950502495cd37b",
+          "Name": "Database systems"
+        },
+        "Faculty": {
+          "Email": "harshakalluri579@gmail.com",
+          "Id": "6fce5cde42b44154bb16f0641591f8bc",
+          "Name": "Harsha Kalluri"
+        },
+        "Id": "1484dd2308e04830b757c5c57982e2e7",
+        "IsApproved": false,
+        "LastClassOn": "0001-01-01T00:00:00",
+        "Section": {
+          "Id": "9c2a8af41c584d47ac90bc876152e461",
+          "Name": "PM01"
+        },
+        "TotalCount": 0
+      },
+      "Id": "eda070eaac9a49c4a8154a1bcff9a780",
+      "IsApproved": true,
+      "Student": {
+        "Email": "ajaykumarchepuri1@gmail.com",
+        "Id": "0eadceece8ea4d78ba5b4680e24034cb",
+        "Name": " 101168"
+      }
+    },
+    "f1df344e4e024076a0a3bb8dc2fb3446": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "56315cf45c82417d9f29c55ba051a40a",
+          "Name": "WebApplication"
+        },
+        "Faculty": {
+          "Email": "prasunkumar@gmail.com",
+          "Id": "65078a2b61264ccb9f929f4b556ab7db",
+          "Name": "prasun"
+        },
+        "Id": "5af2d9e5ec69498995fa0819e695e255",
+        "LastClassOn": "2022-09-30T03:22:29.8357547Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 6
+      },
+      "Id": "f1df344e4e024076a0a3bb8dc2fb3446",
+      "Student": {
+        "Email": "testpr@gmail.com",
+        "Id": "348906f374264892a0bd87d76413c409",
+        "Name": "Testpr"
+      }
+    },
+    "f9db0051c4f94a85bee48f8effc09400": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "628a9eb35517474892950502495cd37b",
+          "Name": "Database systems"
+        },
+        "Faculty": {
+          "Email": "hvrabhi2@gmail.com",
+          "Id": "76ab53bc608d49f2916d9fb972e96045",
+          "Name": "Hvrabhi2"
+        },
+        "Id": "e1b9d4d71faf4633a43e9a205e2d79ac",
+        "LastClassOn": "2022-09-30T14:45:02.5293984Z",
+        "Section": {
+          "Id": "6b0e7176d10c463983f915e51840e748",
+          "Name": "DB01"
+        },
+        "TotalCount": 1
+      },
+      "Id": "f9db0051c4f94a85bee48f8effc09400",
+      "Student": {
+        "Email": "sumanth@gmail.com",
+        "Id": "3975e216dc7f4e128c56405603feabcc",
+        "Name": "Sumanth"
+      }
+    },
+    "fdc774bd39f049eb82d033daa8cb93ca": {
+      "Course_Section_Faculty": {
+        "Course": {
+          "Id": "628a9eb35517474892950502495cd37b",
+          "Name": "Database systems"
+        },
+        "Faculty": {
+          "Email": "sravankumar93915@gmail.com",
+          "Id": "33af4394121d41aabe2d6a389d941e48",
+          "Name": "DrFellah"
+        },
+        "Id": "83ef974024ca4ea89a072735edf61f5b",
+        "LastClassOn": "2022-10-05T14:07:21.8091079Z",
+        "Section": {
+          "Id": "70fe3ba0c0874ce58987e345e032481d",
+          "Name": "S1"
+        },
+        "TotalCount": 1
+      },
+      "Id": "fdc774bd39f049eb82d033daa8cb93ca",
+      "Student": {
+        "Email": "S545721@nwmissouri.edu",
+        "FirstName": "Rashmi",
+        "Id": "5cc3d2fdde324043a9fe4e1b80784d53",
+        "LastName": "chava",
+        "Name": " 537660"
+      }
+    }
+  },
+  "Students_Attendance": {
+    "0291da6c03214478b1c86f45f2dd924b": {
+      "ApprovedOn": "2022-10-05T13:29:13.0126102Z",
+      "AttendedOn": "2022-10-05T13:27:28.0786712Z",
+      "Id": "0291da6c03214478b1c86f45f2dd924b",
+      "IsApproved": false,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "00ff0199ca8243b091d49c1a7739a324",
+            "Name": "BigData"
+          },
+          "Faculty": {
+            "Email": "sravankumar93915@gmail.com",
+            "Id": "33af4394121d41aabe2d6a389d941e48",
+            "Name": "DrFellah"
+          },
+          "Id": "48f46a91cf624d0bb3ee083bf5e8a0c1",
+          "LastClassOn": "2022-10-05T13:23:11.2650597Z",
+          "Section": {
+            "Id": "70fe3ba0c0874ce58987e345e032481d",
+            "Name": "S1"
+          },
+          "TotalCount": 1
+        },
+        "Id": "01b29fb8083b4e7ca86d6c404ead99ba",
+        "Student": {
+          "Email": "abhi@gmail.com",
+          "Id": "73dad339408644aab56feb8b7e339817",
+          "Name": "Abhilash"
+        }
+      }
+    },
+    "02d9c922b350449295edf32ef2815218": {
+      "ApprovedOn": "2022-10-19T14:04:52.403794Z",
+      "AttendedOn": "2022-10-19T14:04:12.6770267Z",
+      "Id": "02d9c922b350449295edf32ef2815218",
+      "IsApproved": true,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+            "Name": "Mobile Computing - IOS"
+          },
+          "Faculty": {
+            "Email": "F12341@nwmissouri.edu",
+            "FirstName": "Ajay",
+            "Id": "7ad4028867934ce092ef8faa535494e9",
+            "LastName": "Bandi",
+            "Name": " 614989"
+          },
+          "Id": "30e6d489f5334fee9853e78eeebd1136",
+          "LastClassOn": "2022-10-19T02:25:50.8792369Z",
+          "Section": {
+            "Id": "a272520fe7074834b5cad0b6603aa7eb",
+            "Name": "S3"
+          },
+          "TotalCount": 3
+        },
+        "Id": "6f1a04ffe9ff4440b1f6a0edde03ff95",
+        "Student": {
+          "Email": "S545519@nwmissouri.edu",
+          "FirstName": "Mahima  ",
+          "Id": "1e000b0de50b469c8ed13300f6472f70",
+          "LastName": "Byrapuneni",
+          "Name": " 117346"
+        }
+      }
+    },
+    "10a7b8f576e44a6d879518157534506d": {
+      "ApprovedOn": "0001-01-01T00:00:00",
+      "AttendedOn": "2022-09-30T14:48:34.9055819Z",
+      "Id": "10a7b8f576e44a6d879518157534506d",
+      "IsApproved": false,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "628a9eb35517474892950502495cd37b",
+            "Name": "Database systems"
+          },
+          "Faculty": {
+            "Email": "hvrabhi2@gmail.com",
+            "Id": "76ab53bc608d49f2916d9fb972e96045",
+            "Name": "Hvrabhi2"
+          },
+          "Id": "e1b9d4d71faf4633a43e9a205e2d79ac",
+          "LastClassOn": "2022-09-30T14:45:02.5293984Z",
+          "Section": {
+            "Id": "6b0e7176d10c463983f915e51840e748",
+            "Name": "DB01"
+          },
+          "TotalCount": 1
+        },
+        "Id": "f9db0051c4f94a85bee48f8effc09400",
+        "Student": {
+          "Email": "sumanth@gmail.com",
+          "Id": "3975e216dc7f4e128c56405603feabcc",
+          "Name": "Sumanth"
+        }
+      }
+    },
+    "25c67d722ab54c348ff6042308183b5a": {
+      "ApprovedOn": "2022-09-29T11:10:30.4236499Z",
+      "AttendedOn": "0001-01-01T00:00:00",
+      "Id": "25c67d722ab54c348ff6042308183b5a",
+      "IsApproved": true,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "56315cf45c82417d9f29c55ba051a40a",
+            "Name": "WebApplication"
+          },
+          "Faculty": {
+            "Email": "prasunkumar@gmail.com",
+            "Id": "65078a2b61264ccb9f929f4b556ab7db",
+            "Name": "prasun"
+          },
+          "Id": "5af2d9e5ec69498995fa0819e695e255",
+          "LastClassOn": "0001-01-01T00:00:00",
+          "Section": {
+            "Id": "70fe3ba0c0874ce58987e345e032481d",
+            "Name": "S1"
+          },
+          "TotalCount": 0
+        },
+        "Id": "68f289176ed04d4f8fde9922fd9cbdc8",
+        "Student": {
+          "Email": "ajaykumarchepuri1@gmail.com",
+          "Id": "115fdab84fc64117afa0367211745460",
+          "Name": "Sravan"
+        }
+      }
+    },
+    "3949bce8d77144ed9dc50041caa1bc9a": {
+      "ApprovedOn": "2022-10-05T13:24:47.8535111Z",
+      "AttendedOn": "2022-10-05T13:24:33.3888871Z",
+      "Id": "3949bce8d77144ed9dc50041caa1bc9a",
+      "IsApproved": true,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "00ff0199ca8243b091d49c1a7739a324",
+            "Name": "BigData"
+          },
+          "Faculty": {
+            "Email": "sravankumar93915@gmail.com",
+            "Id": "33af4394121d41aabe2d6a389d941e48",
+            "Name": "DrFellah"
+          },
+          "Id": "48f46a91cf624d0bb3ee083bf5e8a0c1",
+          "LastClassOn": "0001-01-01T00:00:00",
+          "Section": {
+            "Id": "70fe3ba0c0874ce58987e345e032481d",
+            "Name": "S1"
+          },
+          "TotalCount": 0
+        },
+        "Id": "63d1235995d5422486f0183c098c62bb",
+        "Student": {
+          "Email": "arrabellisumanth85@gmail.com",
+          "Id": "f92f80a371c94651a565128e77f99b19",
+          "Name": "sumanth"
+        }
+      }
+    },
+    "403f2033aeb24c5389fa04e9813541d9": {
+      "ApprovedOn": "0001-01-01T00:00:00",
+      "AttendedOn": "2022-10-19T07:07:24.972012Z",
+      "Id": "403f2033aeb24c5389fa04e9813541d9",
+      "IsApproved": true,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+            "Name": "Mobile Computing - IOS"
+          },
+          "Faculty": {
+            "Email": "laxman@gmail.com",
+            "FirstName": "Laxman",
+            "Id": "3f0508d7514145a4a6531d7e36f0a27a",
+            "LastName": "namxal",
+            "Name": " 603184"
+          },
+          "Id": "2fe687c543e84bcebed4195b4e7c87c3",
+          "IsApproved": false,
+          "LastClassOn": "2022-10-19T05:47:40.1265445Z",
+          "Section": {
+            "Id": "70fe3ba0c0874ce58987e345e032481d",
+            "Name": "S1"
+          },
+          "TotalCount": 3
+        },
+        "Id": "6a4a053547e649ceb4f4487bb20cf99b",
+        "IsApproved": false,
+        "Student": {
+          "Email": "ajaykumarchepuri1@gmail.com",
+          "Id": "0eadceece8ea4d78ba5b4680e24034cb",
+          "Name": " 101168"
+        }
+      }
+    },
+    "44f8a3125a3b4fecae5886134243bb67": {
+      "ApprovedOn": "0001-01-01T00:00:00",
+      "AttendedOn": "2022-10-05T14:10:11.3875125Z",
+      "Id": "44f8a3125a3b4fecae5886134243bb67",
+      "IsApproved": false,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "628a9eb35517474892950502495cd37b",
+            "Name": "Database systems"
+          },
+          "Faculty": {
+            "Email": "sravankumar93915@gmail.com",
+            "Id": "33af4394121d41aabe2d6a389d941e48",
+            "Name": "DrFellah"
+          },
+          "Id": "83ef974024ca4ea89a072735edf61f5b",
+          "LastClassOn": "0001-01-01T00:00:00",
+          "Section": {
+            "Id": "70fe3ba0c0874ce58987e345e032481d",
+            "Name": "S1"
+          },
+          "TotalCount": 0
+        },
+        "Id": "6b521de4dfa8477689b32069ab5f4444",
+        "Student": {
+          "Email": "sunny579@gmail.com",
+          "Id": "0352c8348db444e3bfce167832be00a9",
+          "Name": "Sunny"
+        }
+      }
+    },
+    "48e2313d06e34b338d39aa56f3665db8": {
+      "ApprovedOn": "2022-10-05T14:10:40.1915845Z",
+      "AttendedOn": "2022-10-05T14:10:16.0656571Z",
+      "Id": "48e2313d06e34b338d39aa56f3665db8",
+      "IsApproved": true,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "628a9eb35517474892950502495cd37b",
+            "Name": "Database systems"
+          },
+          "Faculty": {
+            "Email": "sravankumar93915@gmail.com",
+            "Id": "33af4394121d41aabe2d6a389d941e48",
+            "Name": "DrFellah"
+          },
+          "Id": "83ef974024ca4ea89a072735edf61f5b",
+          "LastClassOn": "0001-01-01T00:00:00",
+          "Section": {
+            "Id": "70fe3ba0c0874ce58987e345e032481d",
+            "Name": "S1"
+          },
+          "TotalCount": 0
+        },
+        "Id": "8d83fee5bd4d4d40b79488f24ae7a60a",
+        "Student": {
+          "Email": "abhi@gmail.com",
+          "Id": "73dad339408644aab56feb8b7e339817",
+          "Name": "Abhilash"
+        }
+      }
+    },
+    "62ca69cd8d664cc596de4cc0ec72b41d": {
+      "Id": "62ca69cd8d664cc596de4cc0ec72b41d",
+      "IsApproved": false,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "56315cf45c82417d9f29c55ba051a40a",
+            "Name": "WebApplication"
+          },
+          "Faculty": {
+            "Email": "prasunkumar@gmail.com",
+            "Id": "65078a2b61264ccb9f929f4b556ab7db",
+            "Name": "prasun"
+          },
+          "Id": "5af2d9e5ec69498995fa0819e695e255",
+          "Section": {
+            "Id": "70fe3ba0c0874ce58987e345e032481d",
+            "Name": "S1"
+          }
+        },
+        "Id": "68f289176ed04d4f8fde9922fd9cbdc8",
+        "Student": {
+          "Email": "ajaykumarchepuri1@gmail.com",
+          "Id": "115fdab84fc64117afa0367211745460",
+          "Name": "Sravan"
+        }
+      }
+    },
+    "675970417bda4405aaeece209f10f7e2": {
+      "ApprovedOn": "0001-01-01T00:00:00",
+      "AttendedOn": "2022-10-05T14:11:06.1929605Z",
+      "Id": "675970417bda4405aaeece209f10f7e2",
+      "IsApproved": false,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "628a9eb35517474892950502495cd37b",
+            "Name": "Database systems"
+          },
+          "Faculty": {
+            "Email": "sravankumar93915@gmail.com",
+            "Id": "33af4394121d41aabe2d6a389d941e48",
+            "Name": "DrFellah"
+          },
+          "Id": "83ef974024ca4ea89a072735edf61f5b",
+          "LastClassOn": "0001-01-01T00:00:00",
+          "Section": {
+            "Id": "70fe3ba0c0874ce58987e345e032481d",
+            "Name": "S1"
+          },
+          "TotalCount": 0
+        },
+        "Id": "1d093381af68476da75128568dc7e735",
+        "Student": {
+          "Email": "Sindhura.rc@gmail.com",
+          "Id": "9aee30db631f4c3abe7f5c777e93bfcd",
+          "Name": "Sindhura Byrapuneni"
+        }
+      }
+    },
+    "8439b13657454ff2a7dbfc3a6371b2ff": {
+      "ApprovedOn": "0001-01-01T00:00:00",
+      "AttendedOn": "2022-10-05T13:27:41.2551414Z",
+      "Id": "8439b13657454ff2a7dbfc3a6371b2ff",
+      "IsApproved": false,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "00ff0199ca8243b091d49c1a7739a324",
+            "Name": "BigData"
+          },
+          "Faculty": {
+            "Email": "sravankumar93915@gmail.com",
+            "Id": "33af4394121d41aabe2d6a389d941e48",
+            "Name": "DrFellah"
+          },
+          "Id": "48f46a91cf624d0bb3ee083bf5e8a0c1",
+          "LastClassOn": "2022-10-05T13:23:11.2650597Z",
+          "Section": {
+            "Id": "70fe3ba0c0874ce58987e345e032481d",
+            "Name": "S1"
+          },
+          "TotalCount": 1
+        },
+        "Id": "093658fb333d405993c112c50c3570bb",
+        "Student": {
+          "Email": "rashmichava4@gmail.com",
+          "Id": "f3853e2690de4d5dba60be87d9f6cb99",
+          "Name": "rashmi"
+        }
+      }
+    },
+    "8b47525efaa64dee89dfb62a64651a7c": {
+      "ApprovedOn": "0001-01-01T00:00:00",
+      "AttendedOn": "2022-10-18T22:47:12.4006258Z",
+      "Id": "8b47525efaa64dee89dfb62a64651a7c",
+      "IsApproved": true,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+            "Name": "Mobile Computing - IOS"
+          },
+          "Faculty": {
+            "Email": "F12341@nwmissouri.edu",
+            "FirstName": "Ajay",
+            "Id": "7ad4028867934ce092ef8faa535494e9",
+            "LastName": "Bandi",
+            "Name": " 614989"
+          },
+          "Id": "30e6d489f5334fee9853e78eeebd1136",
+          "IsApproved": false,
+          "LastClassOn": "2022-10-18T01:41:19.4311038Z",
+          "Section": {
+            "Id": "a272520fe7074834b5cad0b6603aa7eb",
+            "Name": "S3"
+          },
+          "TotalCount": 2
+        },
+        "Id": "560852d778804a8d8eac80f6351c005f",
+        "IsApproved": true,
+        "Student": {
+          "Email": "S545721@nwmissouri.edu",
+          "FirstName": "Rashmi",
+          "Id": "5cc3d2fdde324043a9fe4e1b80784d53",
+          "LastName": "chava",
+          "Name": " 537660"
+        }
+      }
+    },
+    "8e0e041c0cf44c4f8a96d1636436aaa0": {
+      "Id": "8e0e041c0cf44c4f8a96d1636436aaa0",
+      "IsApproved": false,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "56315cf45c82417d9f29c55ba051a40a",
+            "Name": "WebApplication"
+          },
+          "Faculty": {
+            "Email": "prasunkumar@gmail.com",
+            "Id": "65078a2b61264ccb9f929f4b556ab7db",
+            "Name": "prasun"
+          },
+          "Id": "5af2d9e5ec69498995fa0819e695e255",
+          "Section": {
+            "Id": "70fe3ba0c0874ce58987e345e032481d",
+            "Name": "S1"
+          }
+        },
+        "Id": "68f289176ed04d4f8fde9922fd9cbdc8",
+        "Student": {
+          "Email": "ajaykumarchepuri1@gmail.com",
+          "Id": "115fdab84fc64117afa0367211745460",
+          "Name": "Sravan"
+        }
+      }
+    },
+    "a161f0ff45114275ac632b7c44a34116": {
+      "ApprovedOn": "0001-01-01T00:00:00",
+      "AttendedOn": "2022-10-05T14:27:45.9810485Z",
+      "Id": "a161f0ff45114275ac632b7c44a34116",
+      "IsApproved": false,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "00ff0199ca8243b091d49c1a7739a324",
+            "Name": "BigData"
+          },
+          "Faculty": {
+            "Email": "sravankumar93915@gmail.com",
+            "Id": "33af4394121d41aabe2d6a389d941e48",
+            "Name": "DrFellah"
+          },
+          "Id": "48f46a91cf624d0bb3ee083bf5e8a0c1",
+          "LastClassOn": "2022-10-05T13:23:11.2650597Z",
+          "Section": {
+            "Id": "70fe3ba0c0874ce58987e345e032481d",
+            "Name": "S1"
+          },
+          "TotalCount": 1
+        },
+        "Id": "e92220d8b9ef455ebd184a012acdfe9d",
+        "Student": {
+          "Email": "sunny579@gmail.com",
+          "Id": "0352c8348db444e3bfce167832be00a9",
+          "Name": "Sunny"
+        }
+      }
+    },
+    "f84d22ba188b465d9a1bc09591e5c6db": {
+      "ApprovedOn": "0001-01-01T00:00:00",
+      "AttendedOn": "2022-10-05T14:10:14.4002854Z",
+      "Id": "f84d22ba188b465d9a1bc09591e5c6db",
+      "IsApproved": false,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "628a9eb35517474892950502495cd37b",
+            "Name": "Database systems"
+          },
+          "Faculty": {
+            "Email": "sravankumar93915@gmail.com",
+            "Id": "33af4394121d41aabe2d6a389d941e48",
+            "Name": "DrFellah"
+          },
+          "Id": "83ef974024ca4ea89a072735edf61f5b",
+          "LastClassOn": "0001-01-01T00:00:00",
+          "Section": {
+            "Id": "70fe3ba0c0874ce58987e345e032481d",
+            "Name": "S1"
+          },
+          "TotalCount": 0
+        },
+        "Id": "e3317dedcb4d4a388859a5c4674c7632",
+        "Student": {
+          "Email": "rashmichava4@gmail.com",
+          "Id": "f3853e2690de4d5dba60be87d9f6cb99",
+          "Name": "rashmi"
+        }
+      }
+    },
+    "fcf6820e428241bea1836d4d15a99945": {
+      "ApprovedOn": "0001-01-01T00:00:00",
+      "AttendedOn": "2022-10-18T21:20:14.7594506Z",
+      "Id": "fcf6820e428241bea1836d4d15a99945",
+      "IsApproved": true,
+      "IsAttended": true,
+      "Student_Course_Registration": {
+        "Course_Section_Faculty": {
+          "Course": {
+            "Id": "1ead694724ce4ca38370a808fcd2b1b6",
+            "Name": "Mobile Computing - IOS"
+          },
+          "Faculty": {
+            "Email": "F12341@nwmissouri.edu",
+            "FirstName": "Ajay",
+            "Id": "7ad4028867934ce092ef8faa535494e9",
+            "LastName": "Bandi",
+            "Name": " 614989"
+          },
+          "Id": "30e6d489f5334fee9853e78eeebd1136",
+          "IsApproved": false,
+          "LastClassOn": "2022-10-18T01:41:19.4311038Z",
+          "Section": {
+            "Id": "a272520fe7074834b5cad0b6603aa7eb",
+            "Name": "S3"
+          },
+          "TotalCount": 2
+        },
+        "Id": "171df431646047c4a20743d9c06b5aa2",
+        "IsApproved": true,
+        "Student": {
+          "Email": "S545146@nwmissouri.edu",
+          "FirstName": "sumanth ",
+          "Id": "4b3fcde81f444faab798384bac2587b0",
+          "LastName": "a",
+          "Name": " 757403"
+        }
+      }
+    }
+  },
+  "UPIN": {
+    "1240b22d0b374495bd425e4e111d9e8b": {
+      "Email": "ravalireddynalati@gmail.com",
+      "Id": "1240b22d0b374495bd425e4e111d9e8b",
+      "PIN": 990
+    },
+    "1a079e5d3ac6429a85f1a385084a2a67": {
+      "Email": "S545135@Nwmissouri.edu",
+      "Id": "1a079e5d3ac6429a85f1a385084a2a67",
+      "PIN": 900330
+    },
+    "27b87bbb3ce24ce0b9f7b34e2fa599d5": {
+      "Email": "sunny579@gmail.com",
+      "Id": "27b87bbb3ce24ce0b9f7b34e2fa599d5",
+      "PIN": 8426
+    },
+    "2eb1663974b0466b8ce40ebb028148fa": {
+      "Email": "ram@gmail.com",
+      "Id": "2eb1663974b0466b8ce40ebb028148fa",
+      "PIN": 594752
+    },
+    "30454a25df2f4f4f9d0fd0877ba01b0b": {
+      "Email": "harsha579@gmail.com",
+      "Id": "30454a25df2f4f4f9d0fd0877ba01b0b",
+      "PIN": 575
+    },
+    "3161323a7e794ee8ab330f605e8b8278": {
+      "Email": "htest@test.com",
+      "Id": "3161323a7e794ee8ab330f605e8b8278",
+      "PIN": 7969
+    },
+    "34102a6c96b34bfc99fac07f8ded0868": {
+      "Email": "F12345@nwmissouri.edu",
+      "Id": "34102a6c96b34bfc99fac07f8ded0868",
+      "PIN": 819225
+    },
+    "38988352a2f6404b9cef1cfdb2473652": {
+      "Email": "xyz1234@gmail.com",
+      "Id": "38988352a2f6404b9cef1cfdb2473652",
+      "PIN": 7481
+    },
+    "3c94c9bd2ec2429c9450fb477ce41a1a": {
+      "Email": "laxman.alugubelliii@gmail.com",
+      "Id": "3c94c9bd2ec2429c9450fb477ce41a1a",
+      "PIN": 4063
+    },
+    "4486941a208c406d9fd1f56c11d4908a": {
+      "Email": "TestFac6@gmai.com",
+      "Id": "4486941a208c406d9fd1f56c11d4908a",
+      "PIN": 8927
+    },
+    "49b569b53e454d7dac22bfaf208d7100": {
+      "Email": "Sindhura.rc@gmail.com",
+      "Id": "49b569b53e454d7dac22bfaf208d7100",
+      "PIN": 1414
+    },
+    "4d40406ef71849e5a26e2c2b53c01bad": {
+      "Email": "Test12@gmail.com",
+      "Id": "4d40406ef71849e5a26e2c2b53c01bad",
+      "PIN": 666
+    },
+    "4fe3dba2dcb34841b464382df25af2e9": {
+      "Email": "S545717@nwmissouri.edu",
+      "Id": "4fe3dba2dcb34841b464382df25af2e9",
+      "PIN": 804529
+    },
+    "51bd969f0256434485e99a69a73eb1a1": {
+      "Email": "S545721@nwmissouri.edu",
+      "Id": "51bd969f0256434485e99a69a73eb1a1",
+      "PIN": 873726
+    },
+    "5c74ac6a7d5647ddbee552d687a21b90": {
+      "Email": "TestFac1@gmail.com",
+      "Id": "5c74ac6a7d5647ddbee552d687a21b90",
+      "PIN": 9200
+    },
+    "5e0623a9a3514f8dbda15884bb449be2": {
+      "Email": "ajaykumarchepuri1@gmail.com",
+      "Id": "5e0623a9a3514f8dbda15884bb449be2",
+      "PIN": 252925
+    },
+    "625f2ce117994ef1835c2b4ecc5562c7": {
+      "Email": "S545015@nwmissouri.edu",
+      "Id": "625f2ce117994ef1835c2b4ecc5562c7",
+      "PIN": 902475
+    },
+    "6818f87aafe640e38253405208523612": {
+      "Email": "sumanth@gmail.com",
+      "Id": "6818f87aafe640e38253405208523612",
+      "PIN": 6105
+    },
+    "685e05a8fc5841beb7a539eaebdb65d6": {
+      "Email": "testcase900@gmail.com",
+      "Id": "685e05a8fc5841beb7a539eaebdb65d6",
+      "PIN": 9240
+    },
+    "707d4b373a9a4f6cb29bd7d3157e1baa": {
+      "Email": "nalatiravalireddy@gmail.com",
+      "Id": "707d4b373a9a4f6cb29bd7d3157e1baa",
+      "PIN": 3390
+    },
+    "760638eef19542979cbbc2cb855f8288": {
+      "Email": "testpr@gmail.com",
+      "Id": "760638eef19542979cbbc2cb855f8288",
+      "PIN": 254
+    },
+    "8416129856954b7bb727ad670015efbf": {
+      "Email": "arrabellisumanth85@gmail.com",
+      "Id": "8416129856954b7bb727ad670015efbf",
+      "PIN": 9019
+    },
+    "88f04b2988a54da6a932ca8178ac25cc": {
+      "Email": "mahima97.rc@gmail.com",
+      "Id": "88f04b2988a54da6a932ca8178ac25cc",
+      "PIN": 683829
+    },
+    "9022d6749fc24468a91bd6e4d764a2a4": {
+      "Email": "test26@gmail.com",
+      "Id": "9022d6749fc24468a91bd6e4d764a2a4",
+      "PIN": 2662
+    },
+    "938b270658314defb8fe019346a0762d": {
+      "Email": "sravantestaccount@gmail.com",
+      "Id": "938b270658314defb8fe019346a0762d",
+      "PIN": 8164
+    },
+    "950ac17d7aeb411294cfa13f6589a604": {
+      "Email": "Test@wdss.com",
+      "Id": "950ac17d7aeb411294cfa13f6589a604",
+      "PIN": 8458
+    },
+    "a234a8b0351c4e21a5ed3e9a7c974869": {
+      "Email": "s545008@nwmissouri.edu",
+      "Id": "a234a8b0351c4e21a5ed3e9a7c974869",
+      "PIN": 837850
+    },
+    "a5362946bc4846e0a7bd4436e0c17c54": {
+      "Email": "S545161@nwmissouri.edu",
+      "Id": "a5362946bc4846e0a7bd4436e0c17c54",
+      "PIN": 667950
+    },
+    "b34d27e040fe4508b69c6d424b5cb780": {
+      "Email": "mahima97.rc@gmail.com",
+      "Id": "b34d27e040fe4508b69c6d424b5cb780",
+      "PIN": 5207
+    },
+    "bad99cf2f91c42608ebd2edfa5b799f3": {
+      "Email": "laxman.alugubel@gmail.com",
+      "Id": "bad99cf2f91c42608ebd2edfa5b799f3",
+      "PIN": 1600
+    },
+    "bc60ca8c868a44d4bf7c96b0181db4ff": {
+      "Email": "abhi@gmail.com",
+      "Id": "bc60ca8c868a44d4bf7c96b0181db4ff",
+      "PIN": 1368
+    },
+    "c0919b93109b442aac4d1a2ab3f543dd": {
+      "Email": "test123@gmail.com",
+      "Id": "c0919b93109b442aac4d1a2ab3f543dd",
+      "PIN": 6408
+    },
+    "c2034587a3ea4988b73f4669dde00974": {
+      "Email": "nathon@nw.com",
+      "Id": "c2034587a3ea4988b73f4669dde00974",
+      "PIN": 8686
+    },
+    "c34b5a4ce383485b827f3259d386e9c7": {
+      "Email": "S545427@nwmissouri.edu",
+      "Id": "c34b5a4ce383485b827f3259d386e9c7",
+      "PIN": 480940
+    },
+    "c4140ff0218941d6a57de378fd01442c": {
+      "Email": "S545568@nwmissouri.edu",
+      "Id": "c4140ff0218941d6a57de378fd01442c",
+      "PIN": 209981
+    },
+    "c8ba4a45151b4234938c0d692ad7e920": {
+      "Email": "S545146@nwmissouri.edu",
+      "Id": "c8ba4a45151b4234938c0d692ad7e920",
+      "PIN": 541712
+    },
+    "c95bfe17aba343d5afb5fb524d44b80c": {
+      "Email": "test17@gmail.com",
+      "Id": "c95bfe17aba343d5afb5fb524d44b80c",
+      "PIN": 242417
+    },
+    "c9b7e04e475c49b0b7d59aaf63060311": {
+      "Email": "sravankumarcheipuri1@gmail.com",
+      "Id": "c9b7e04e475c49b0b7d59aaf63060311",
+      "PIN": 154
+    },
+    "ccb64e0dd7b045d8ab8a575f40503c2d": {
+      "Email": "ajaykumarchepuri1@gmail.com",
+      "Id": "ccb64e0dd7b045d8ab8a575f40503c2d",
+      "PIN": 315649
+    },
+    "ccdcc515082a4726b70a7619ee4494a2": {
+      "Email": "rashmichava4@gmail.com",
+      "Id": "ccdcc515082a4726b70a7619ee4494a2",
+      "PIN": 9461
+    },
+    "d4773c14a31a47ddac0c431a1d13d9d8": {
+      "Email": "prasad123@gmail.com",
+      "Id": "d4773c14a31a47ddac0c431a1d13d9d8",
+      "PIN": 1820
+    },
+    "d5912032e92a4d0fb833ab515f9083c0": {
+      "Email": "laxman.alugubelli@gmail.com",
+      "Id": "d5912032e92a4d0fb833ab515f9083c0",
+      "PIN": 747393
+    },
+    "d8839affa7484d248b18d93e36331cd9": {
+      "Email": "s545412@nwmissouri.edu",
+      "Id": "d8839affa7484d248b18d93e36331cd9",
+      "PIN": 391214
+    },
+    "dc89affba0dc4b6d886be893e00abce9": {
+      "Email": "S545245@nwmissouri.edi",
+      "Id": "dc89affba0dc4b6d886be893e00abce9",
+      "PIN": 704489
+    },
+    "e1ddfb1fae0f47a782baac078116b1c9": {
+      "Email": "Test3@gmail.com",
+      "Id": "e1ddfb1fae0f47a782baac078116b1c9",
+      "PIN": 1234
+    },
+    "e766bd856e714e9487816bb055b130ab": {
+      "Email": "F12342@nwmissouri.edu",
+      "Id": "e766bd856e714e9487816bb055b130ab",
+      "PIN": 218371
+    },
+    "e79bfecc05a14220a8bc447b1d261ad1": {
+      "Email": "AJAYKUMARCHEPURI1@GMAIL.COM",
+      "Id": "e79bfecc05a14220a8bc447b1d261ad1",
+      "PIN": 2582
+    },
+    "edaa2da4fa2e4b0684bd126da8547a82": {
+      "Email": "S545519@nwmissouri.edu",
+      "Id": "edaa2da4fa2e4b0684bd126da8547a82",
+      "PIN": 986288
+    },
+    "fc62e270e3b7447e807b5e8399b96202": {
+      "Email": "S545114@nwmissouri.edu",
+      "Id": "fc62e270e3b7447e807b5e8399b96202",
+      "PIN": 202387
+    },
+    "fe30c316544044b3a4794860713c47fe": {
+      "Email": "TestUser@gmail.com",
+      "Id": "fe30c316544044b3a4794860713c47fe",
+      "PIN": 8840
+    }
+  },
+  "User": {
+    "0442d52957494ff0ba8df1458724926f": {
+      "Email": "F12347@nwmissouri.edu",
+      "FirstName": "Prasad",
+      "Id": "0442d52957494ff0ba8df1458724926f",
+      "IsApproved": true,
+      "LastName": "chitty ",
+      "Password": "",
+      "Type": "Faculty",
+      "UserName": " 812616"
+    },
+    "058275426de04b3297de61075bfac976": {
+      "Email": "s545008@nwmissouri.edu",
+      "FirstName": "Rajashekhar",
+      "Id": "058275426de04b3297de61075bfac976",
+      "IsApproved": true,
+      "LastName": "Kota",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 082799"
+    },
+    "079d01f5a83b4e85b4c485ce66473ad4": {
+      "Email": "S545245@nwmissouri.edi",
+      "FirstName": "Abhilash ",
+      "Id": "079d01f5a83b4e85b4c485ce66473ad4",
+      "IsApproved": true,
+      "LastName": "Malipatlola",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 869411"
+    },
+    "0957e26245ca41e29447b49d216b411b": {
+      "Email": "mahima97.rc@gmail.com",
+      "FirstName": "Mahima",
+      "Id": "0957e26245ca41e29447b49d216b411b",
+      "IsApproved": true,
+      "LastName": "Byrapuneni",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 395702"
+    },
+    "1cea289b7a3d47ac8d5e95bc3b8820a4": {
+      "Email": "S545161@nwmissouri.edu",
+      "FirstName": "Karthik",
+      "Id": "1cea289b7a3d47ac8d5e95bc3b8820a4",
+      "IsApproved": true,
+      "LastName": "Noone",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 538949"
+    },
+    "380d2e8486df45038f0f12c0326d451b": {
+      "Email": "S545717@nwmissouri.edu",
+      "FirstName": "Ravali ",
+      "Id": "380d2e8486df45038f0f12c0326d451b",
+      "IsApproved": true,
+      "LastName": "Nalati",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 475092"
+    },
+    "3d87afdeddd74e16be45e357337ab1c2": {
+      "Email": "S545114@nwmissouri.edu",
+      "FirstName": "Narayan reddy",
+      "Id": "3d87afdeddd74e16be45e357337ab1c2",
+      "IsApproved": true,
+      "LastName": "dodla",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 847037"
+    },
+    "59786673ce964fe286ed89e04809f756": {
+      "Email": "S545135@Nwmissouri.edu",
+      "FirstName": "Siddharth ",
+      "Id": "59786673ce964fe286ed89e04809f756",
+      "IsApproved": true,
+      "LastName": "addunoor",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 338767"
+    },
+    "612ad59fef18490aa1e3573aebd1ba43": {
+      "Email": "S545015@nwmissouri.edu",
+      "FirstName": "Laxman",
+      "Id": "612ad59fef18490aa1e3573aebd1ba43",
+      "IsApproved": true,
+      "LastName": "Alugubelli",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 047963"
+    },
+    "6370ebf980fb4f3e9ebc53241084319e": {
+      "Email": "S545427@nwmissouri.edu",
+      "FirstName": "Sindhura  ",
+      "Id": "6370ebf980fb4f3e9ebc53241084319e",
+      "IsApproved": true,
+      "LastName": "Byrapuneni",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 417579"
+    },
+    "7afbbea89c1f4d8bb0d3f2250fc48f3c": {
+      "Email": "laxman@gmail.com",
+      "FirstName": "Laxman",
+      "Id": "7afbbea89c1f4d8bb0d3f2250fc48f3c",
+      "IsApproved": true,
+      "LastName": "namxal",
+      "Password": "",
+      "Type": "Faculty",
+      "UserName": " 603184"
+    },
+    "7c0c870b075547cab7c56de6effd9f3e": {
+      "Email": "S545568@nwmissouri.edu",
+      "FirstName": "Saiharsha",
+      "Id": "7c0c870b075547cab7c56de6effd9f3e",
+      "IsApproved": true,
+      "LastName": "Kalluri",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 674491"
+    },
+    "851f7f6d58e941e6a154d936c12d274f": {
+      "Email": "test17@gmail.com",
+      "FirstName": "AJAY",
+      "Id": "851f7f6d58e941e6a154d936c12d274f",
+      "IsApproved": true,
+      "LastName": "KUMAR",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 381136"
+    },
+    "86c55eb8cb3c45b2a19ccf1e181315bf": {
+      "Email": "F12343@nwmissouri.edu",
+      "FirstName": "Likitha",
+      "Id": "86c55eb8cb3c45b2a19ccf1e181315bf",
+      "IsApproved": true,
+      "LastName": "Gopi ",
+      "Password": "",
+      "Type": "Faculty",
+      "UserName": " 705258"
+    },
+    "94dd1f2ad57c42059a465ef92a90a702": {
+      "Email": "ram@gmail.com",
+      "FirstName": "Ram ",
+      "Id": "94dd1f2ad57c42059a465ef92a90a702",
+      "IsApproved": true,
+      "LastName": "mar",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 619322"
+    },
+    "96e5caf72b06456c901250b167a3f2dc": {
+      "Email": "laxman.alugubelli@gmail.com",
+      "FirstName": "Laxman",
+      "Id": "96e5caf72b06456c901250b167a3f2dc",
+      "IsApproved": true,
+      "LastName": "Alugubelli",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 899500"
+    },
+    "97ae92bc21fd483fbca0acd19c9d4c84": {
+      "Email": "F12341@nwmissouri.edu",
+      "FirstName": "Ajay",
+      "Id": "97ae92bc21fd483fbca0acd19c9d4c84",
+      "IsApproved": true,
+      "LastName": "Bandi",
+      "Password": "",
+      "Type": "Faculty",
+      "UserName": " 614989"
+    },
+    "9f4d5f772b1f459fadcd0da0966d23a6": {
+      "Email": "F12344@nwmissouri.edu",
+      "FirstName": "Fella ",
+      "Id": "9f4d5f772b1f459fadcd0da0966d23a6",
+      "IsApproved": true,
+      "LastName": "Aziz",
+      "Password": "",
+      "Type": "Faculty",
+      "UserName": " 027272"
+    },
+    "a2c10d8c61b440b59a26a77858951c10": {
+      "Email": "s545412@nwmissouri.edu",
+      "FirstName": "Sravankumar",
+      "Id": "a2c10d8c61b440b59a26a77858951c10",
+      "IsApproved": true,
+      "LastName": "ch",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 843773"
+    },
+    "ac0bb94349024e5691fe1c58077f36a1": {
+      "Email": "S545146@nwmissouri.edu",
+      "FirstName": "sumanth ",
+      "Id": "ac0bb94349024e5691fe1c58077f36a1",
+      "IsApproved": true,
+      "LastName": "a",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 757403"
+    },
+    "adad4f23d9074b2c8863bd618bb7bd7e": {
+      "Email": "S545721@nwmissouri.edu",
+      "FirstName": "Rashmi",
+      "Id": "adad4f23d9074b2c8863bd618bb7bd7e",
+      "IsApproved": true,
+      "LastName": "chava",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 537660"
+    },
+    "c4005d067e3448c4a81561dab3f71f5c": {
+      "Email": "F12345@nwmissouri.edu",
+      "FirstName": "Ratan",
+      "Id": "c4005d067e3448c4a81561dab3f71f5c",
+      "IsApproved": true,
+      "LastName": "Lal",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 040592"
+    },
+    "c8acdd7725454d048dfc97e8c551814d": {
+      "Email": "ajaykumarchepuri1@gmail.com",
+      "FirstName": "AJAY",
+      "Id": "c8acdd7725454d048dfc97e8c551814d",
+      "IsApproved": true,
+      "LastName": "KUMAR",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 746582"
+    },
+    "d89caa6267214c84ad69f715bdbffd76": {
+      "Email": "F12342@nwmissouri.edu",
+      "FirstName": "Prasad",
+      "Id": "d89caa6267214c84ad69f715bdbffd76",
+      "IsApproved": true,
+      "LastName": "chitty ",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 822358"
+    },
+    "df6aa268a6bb43f0a2e22a25358d4e0c": {
+      "Email": "12346@nwmissouri.edu",
+      "FirstName": "Rathan ",
+      "Id": "df6aa268a6bb43f0a2e22a25358d4e0c",
+      "IsApproved": true,
+      "LastName": "Lal",
+      "Password": "",
+      "Type": "Faculty",
+      "UserName": " 765617"
+    },
+    "e48a2adc61fc413a818c4d0cfbcbd1b2": {
+      "Email": "S545519@nwmissouri.edu",
+      "FirstName": "Mahima  ",
+      "Id": "e48a2adc61fc413a818c4d0cfbcbd1b2",
+      "IsApproved": true,
+      "LastName": "Byrapuneni",
+      "Password": "",
+      "Type": "Student",
+      "UserName": " 117346"
+    },
+    "e8ea75fb3b094a0a86b8099144451d40": {
+      "Email": "admin@ams.com",
+      "FirstName": "ADMIN",
+      "Id": "e8ea75fb3b094a0a86b8099144451d40",
+      "IsApproved": true,
+      "LastName": "",
+      "Password": "",
+      "Type": "Admin",
+      "UserName": " 101168"
+    }
+  }
+}
