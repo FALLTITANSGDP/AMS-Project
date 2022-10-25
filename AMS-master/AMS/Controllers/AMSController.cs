@@ -568,7 +568,7 @@ namespace AMS.Controllers
                     await dbOperations.UpdateData<QRCodeTracker>(currentRecord.Id, currentRecord, "QRCodeTracker");
                 }
             }
-            return RedirectToAction("ViewRegCourseDetails", "AMS", new { data = data });            
+            return RedirectToAction("ViewRegCourseDetails", "AMS", new { data = data });
         }
 
         #endregion QRCode
@@ -708,5 +708,12 @@ namespace AMS.Controllers
 
         #endregion AdminApprovals
 
+        #region errorPages
+        public IActionResult Error()
+        {
+            return View();
+        }
+      
+        #endregion errorPages
     }
 }
