@@ -690,7 +690,7 @@ namespace AMS.Controllers
         public async Task<IActionResult> GetPendingSubjectApprovals()
         {
             var usersList = await dbOperations.GetAllData<Models.Student_Course_Registration>("Student_Course_Registration");
-            usersList = usersList.Where(x => x.IsApproved == true).ToList();
+            usersList = usersList.Where(x => x.IsApproved == false).ToList();
             return View("PendingSubjectApprovals", usersList);
         }
 
