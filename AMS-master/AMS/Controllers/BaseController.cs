@@ -7,13 +7,14 @@ namespace AMS.Controllers
     {
         public static string firebaseDatabaseUrl = "https://attendance-tracking-system-ft-default-rtdb.firebaseio.com";
 
-        public string APIKey = "AIzaSyABqIyfQB8vfsfpMouZTceIzuxcyhTftlw";
+        public string APIKey = "AIzaSyABqIyfQB8vfsfpMouZTceIzuxcyhTftl";
         public FirebaseConfig AuthConfig { get; set; }
         public FirebaseAuthProvider AuthProvider { get; set; }
         public BaseController()
         {
             AuthProvider = new FirebaseAuthProvider(new FirebaseConfig(APIKey));
             AuthConfig = new FirebaseConfig(APIKey);
+           
         }
 
     }
