@@ -12,7 +12,7 @@
                 <h6 class="mb-4">Details</h6>
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm">
+                        <div class="col-5">
                             <b>Course Name :</b> <i>@Model.Course_Section_Faculty.Course.Name</i>
                         </div>
                         <div class="col-sm">
@@ -21,9 +21,9 @@
                         <div class="col-sm">
                             <a asp-action="CreateQRCode" asp-controller="AMS" asp-route-data="@Model.Course_Section_Faculty.Id" class="link-primary" target="_blank">QR Code</a>
                         </div>
-                        <div class="col-sm">
+                       @* <div class="col-sm">
                             <a asp-action="ExtendQRCodeTime" asp-controller="AMS" asp-route-data="@Model.Course_Section_Faculty.Id" class="link-primary">Extend QR Code Time</a>
-                        </div>
+                        </div>*@
                     </div>
                 </div>
             </div>
@@ -42,9 +42,8 @@
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
+                            <th scope="col"> Attended Date</th>
                             <th scope="col">Is Attend</th>
-                            @*<th scope="col">Is Approved</th>
-                            <th scope="col">Action</th>*@
                         </tr>
                     </thead>
                     <tbody id="myTable">
@@ -57,35 +56,17 @@
                             <tr>
                                 <td>@listItem.Student_Course_Registration.Student.FirstName @listItem.Student_Course_Registration.Student.LastName - @listItem.Student_Course_Registration.Student.Name</td>
                                 <td><a href="#" onclick="GetPercentage('@listItem.Student_Course_Registration.Student.Email','@Model.Course_Section_Faculty.Id')">@listItem.Student_Course_Registration.Student.Email</a></td>
+
                                 @if (@listItem.IsAttended)
                                 {
+                                    <td>@listItem.AttendedOn</td>
                                     <td><h6>Attended</h6></td>
                                 }
                                 else
                                 {
+                                    <td> -- </td>
                                     <td>Not Attended</td>
                                 }
-                                @* @if (@listItem.IsApproved)
-                            {
-                            <td><h6>Approved</h6></td>
-                            }
-                            else if (!@listItem.IsApproved && listItem.ApprovedOn.Ticks > 0)
-                            {
-                            <td>Rejected</td>
-                            }
-                            else
-                            {
-                            <td>Pending</td>
-                            }
-
-                            @if (@listItem.IsApproved)
-                            {
-                            <td><a asp-action="UpdateAttendance" asp-controller="AMS" asp-route-email="@listItem.Student_Course_Registration.Student.Email" asp-route-data="@listItem.Id" asp-route-isApproved=false asp-route-cId="@listItem.Student_Course_Registration.Course_Section_Faculty.Id" class="link-primary">Reject</a></td>
-                            }
-                            else
-                            {
-                            <td><a asp-action="UpdateAttendance" asp-controller="AMS" asp-route-email="@listItem.Student_Course_Registration.Student.Email" asp-route-data="@listItem.Id" asp-route-isApproved=true asp-route-cId="@listItem.Student_Course_Registration.Course_Section_Faculty.Id" class="link-primary">Approve</a></td>
-                            }*@
                             </tr>
                         }
 
@@ -115,5 +96,5 @@
     $(document).ready(function () {
         $('#AtagDiv a').removeClass('active');
         $('#').addClass('active');
-    }}
+    }
 </script>

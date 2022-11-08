@@ -13,6 +13,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using MessagePack.Resolvers;
 using System.Numerics;
 using System.Security.Cryptography;
+using Microsoft.AspNetCore.Mvc.ViewComponents;
+using System.Composition;
+using System.Text;
 
 namespace AMS.Controllers
 {
@@ -85,8 +88,8 @@ namespace AMS.Controllers
 
         public async Task<IActionResult> FacultyDashboard()
         {
-            FacultyDashboardViewModel facultyDashboardViewModel = new FacultyDashboardViewModel();
-            ProfileViewModel profile = new ProfileViewModel
+            FacultyDashboardViewModel facultyDashboardViewModel = new();
+            ProfileViewModel profile = new()
             {
                 UserId = HttpContext.Session.GetString("UserId"),
                 Email = HttpContext.Session.GetString("UserEmail"),
@@ -96,6 +99,24 @@ namespace AMS.Controllers
                 PhoneNumber = "N/A"
             };
             facultyDashboardViewModel.Profile = profile;
+            var registrationList = await dbOperations.GetAllData<Course_Section_Faculty>("Course_Section_Faculty");
+            var facultyEmail = HttpContext.Session.GetString("UserEmail");
+            var registrationCourse = registrationList.Where(x => x.Faculty.Email.Equals(facultyEmail, StringComparison.OrdinalIgnoreCase)).ToList();
+            facultyDashboardViewModel.TiltesData = new List<TilesViewModel>();
+            foreach (var item in registrationCourse)
+            {
+                TilesViewModel tilesViewModel = new TilesViewModel
+                {
+                    Id = item.Id,
+                    DisplayContent = item.Course.Name,
+                    Action = "ViewRegCourseDetails",
+                    Controller = "AMS",
+                    Description = "Section :" + item.Section.Name + "Timings :" + item.Section.TimeSlot
+                };
+                facultyDashboardViewModel.TiltesData.Add(tilesViewModel);
+            }
+
+
             return View(facultyDashboardViewModel);
         }
 
@@ -546,7 +567,8 @@ namespace AMS.Controllers
                 {
                     currentRecord.QRId = Guid.NewGuid().ToString("N");
                     QId = currentRecord.QRId;
-                    if (currentRecord.Expiry < DateTime.UtcNow && currentRecord.Expiry.Date == DateTime.UtcNow.Date && currentRecord.Expiry.Month == DateTime.UtcNow.Month && currentRecord.Expiry.Year == DateTime.UtcNow.Year)
+                    ViewBag.QRExpiresIn = currentRecord.Expiry.ToString("MMM d yyyy HH:mm:ss");
+                    if ((currentRecord.Expiry < DateTime.UtcNow))
                     {
                         ViewBag.IsVisible = false;
                     }
@@ -557,10 +579,11 @@ namespace AMS.Controllers
             {
                 QRCodeTracker qRCodeTracker = new QRCodeTracker
                 {
-                    Expiry = DateTime.UtcNow.AddMinutes(15),
+                    Expiry = DateTime.UtcNow.AddMinutes(5),
                     QRId = Guid.NewGuid().ToString("N"),
                     UId = data
                 };
+                ViewBag.QRExpiresIn = qRCodeTracker.Expiry.ToString("MMM d yyyy HH:mm:ss");
                 QId = qRCodeTracker.QRId;
                 await dbOperations.SaveData<QRCodeTracker>(qRCodeTracker, "QRCodeTracker");
             }
@@ -575,6 +598,9 @@ namespace AMS.Controllers
             byte[] BitmapArray = QrBitmap.BitmapToByteArray();
             string QrUri = string.Format("data:image/png;base64,{0}", Convert.ToBase64String(BitmapArray));
             ViewBag.QrCodeUri = QrUri;
+            ViewBag.CurrentTime = DateTime.UtcNow;
+            ViewBag.QrCodeId = data;
+
             return View();
         }
 

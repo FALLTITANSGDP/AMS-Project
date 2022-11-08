@@ -45,7 +45,7 @@
 
                             <th scope="col">Course</th>
                             <th scope="col">Section</th>
-                            <th scope="col">Reg. Students</th>
+                            <th scope="col">People</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -60,7 +60,7 @@
 
                                 <td>@listItem.Course.Name</td>
                                 <td>@listItem.Section.Name</td>
-                                <td><a asp-action="GetRegisteredStudents" asp-controller="AMS" asp-route-data="@listItem.Id" class="link-primary">View Reg. Students</a></td>
+                                <td><a asp-action="GetRegisteredStudents" asp-controller="AMS" asp-route-data="@listItem.Id" class="link-primary">View</a></td>
                                 <td><a asp-action="ViewRegCourseDetails" asp-controller="AMS" asp-route-data="@listItem.Id" class="link-primary">View Details</a></td>
                             </tr>
                         }
