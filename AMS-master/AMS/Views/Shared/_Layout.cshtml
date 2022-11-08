@@ -56,24 +56,24 @@
                         <span> @HttpContextAccessor.HttpContext.Session.GetString("UserType")</span>
                     </div>
                 </div>
-                <div class="navbar-nav w-100">
-                    <a asp-action="Index" asp-controller="Home" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                <div id="AtagDiv" class="navbar-nav w-100">
+                    <a asp-action="Index" asp-controller="Home" id="home" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     @if (User.IsInRole("Faculty"))
                     {
-                        <a asp-action="FacultyRegistration" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Course</a>
+                        <a asp-action="FacultyRegistration" asp-controller="AMS" id="facultyCourse" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Course</a>
                     }
                     @if (User.IsInRole("Student"))
                     {
-                        <a asp-action="StudentRegistration" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Register Course</a>
-                        <a asp-action="ShowMyRegCourse" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>My Attendance</a>
+                        <a asp-action="StudentRegistration" asp-controller="AMS" id="studentRegistration"  class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Register Course</a>
+                        <a asp-action="ShowMyRegCourse" asp-controller="AMS" id="studentAttendance" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>My Attendance</a>
                     }
                     @if (User.IsInRole("Admin"))
                     {
-                        <a asp-action="GetPendingUserApprovals" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Users</a>
-                        <a asp-action="GetPendingSubjectApprovals" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Subject</a>
+                        <a asp-action="GetPendingUserApprovals" asp-controller="AMS" id="adminUsers" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Users</a>
+                        <a asp-action="GetPendingSubjectApprovals" asp-controller="AMS" id="adminSubject" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Subject</a>
 
-                        <a asp-action="Section" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Section</a>
-                        <a asp-action="Course" asp-controller="AMS" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Course</a>
+                        <a asp-action="Section" asp-controller="AMS" id="adminSection" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Section</a>
+                        <a asp-action="Course" asp-controller="AMS" id="adminCourse" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Course</a>
 
                     }
                 </div>
@@ -153,23 +153,8 @@
     <script src="~/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="~/js/main.js"></script>
-    <script type="text/javascript">
+    @*<script src="~/js/main.js"></script>*@
 
-        var selector = '.navbar-nav w-100 a';
-
-        $(selector).on('click', function () {
-            $(selector).removeClass('active');
-            $(this).addClass('active');
-        });
-
-                                            //$('a .nav-item nav-link').click(function () {
-                                            //    $(this).addClass('active').siblings().removeClass('active');
-                                            //});
-                                            //$('.nav-item nav-link active').removeClass('active');
-                                           //$(att).addClass('active');
-
-    </script>
 </body>
 @RenderSection("scripts", required: false)
 </html>

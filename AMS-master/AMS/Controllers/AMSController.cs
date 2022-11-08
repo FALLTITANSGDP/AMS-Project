@@ -83,6 +83,22 @@ namespace AMS.Controllers
 
         #region FacultyRegistration
 
+        public async Task<IActionResult> FacultyDashboard()
+        {
+            FacultyDashboardViewModel facultyDashboardViewModel = new FacultyDashboardViewModel();
+            ProfileViewModel profile = new ProfileViewModel
+            {
+                UserId = HttpContext.Session.GetString("UserId"),
+                Email = HttpContext.Session.GetString("UserEmail"),
+                Name = HttpContext.Session.GetString("UserName"),
+                UserType = HttpContext.Session.GetString("_UserType"),
+                Address = "N/A",
+                PhoneNumber = "N/A"
+            };
+            facultyDashboardViewModel.Profile = profile;
+            return View(facultyDashboardViewModel);
+        }
+
         public async Task<IActionResult> FacultyRegistration()
         {
             var courseList = await dbOperations.GetAllData<Course>("Course");
@@ -168,7 +184,13 @@ namespace AMS.Controllers
 
         #endregion FacultyRegistration
 
-        #region StudentCourseRegistration        
+        #region StudentCourseRegistration  
+
+        public async Task<IActionResult> StudentDashboard()
+        {
+            var studentDashboardViewModel = new StudentDashboardViewModel();
+            return View(studentDashboardViewModel);
+        }
 
         public async Task<IActionResult> GetRegisteredStudents(string data)
         {
@@ -686,7 +708,6 @@ namespace AMS.Controllers
             return RedirectToAction("GetPendingUserApprovals");
         }
 
-
         public async Task<IActionResult> GetPendingSubjectApprovals()
         {
             var usersList = await dbOperations.GetAllData<Models.Student_Course_Registration>("Student_Course_Registration");
@@ -713,7 +734,7 @@ namespace AMS.Controllers
         {
             return View();
         }
-      
+
         #endregion errorPages
     }
 }

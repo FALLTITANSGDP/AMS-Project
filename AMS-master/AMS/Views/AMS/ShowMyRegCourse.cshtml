@@ -90,7 +90,8 @@
     }
     const myChart = new Chart(ctx6, config);
     jQuery(document).ready(function () {
-
+        $('#AtagDiv a').removeClass('active');
+        $('#studentAttendance').addClass('active');
         var id = $('#Course').find(":selected").val();
         if (typeof id === "undefined") {
             console.log(id);
@@ -103,6 +104,8 @@
             $("#divNoData").attr("hidden", true);
             renderChart(id);
         }
+
+
 
     });
 
@@ -124,3 +127,4 @@
         });
     }
 </script>
+

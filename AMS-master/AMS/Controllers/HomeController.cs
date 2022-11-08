@@ -30,6 +30,18 @@ namespace AMS.Controllers
         public async Task<IActionResult> Index()
         {
             var token = HttpContext.Session.GetString("_UserToken");
+            if (token == null)
+            {
+                return View("UnAuthorize");
+            }
+            if (User.IsInRole("Faculty"))
+            {
+                return RedirectToAction("FacultyDashboard", "AMS");
+            }
+            //if (User.IsInRole("Student"))
+            //{
+            //    return RedirectToAction("StudentDashboard", "AMS");
+            //}           
             if (token != null)
             {
                 var email = HttpContext.Session.GetString("UserEmail");
@@ -273,7 +285,7 @@ namespace AMS.Controllers
         /// <returns></returns>
         public IActionResult ForgotPassword()
         {
-             return View("ForgotPassword");
+            return View("ForgotPassword");
         }
 
         /// <summary>
