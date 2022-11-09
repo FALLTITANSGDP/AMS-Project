@@ -1,4 +1,91 @@
-﻿@{
-    ViewBag.Title = "Faculty Dashboard";
+﻿@model AMS.ViewModels.StudentVM.StudentDashboardViewModel;
+@{
+    ViewBag.Title = "Student Dashboard";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
+<section style="background-color: #f3f6f9;margin-top: 1%;margin-right: 1%;">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <img src="~/img/user.webp" alt="avatar"
+                             class="rounded-circle img-fluid" style="width: 150px;">
+                        <h5 class="my-3">@Model.Profile.Name - @Model.Profile.UserId</h5>
+                        <p class="text-muted mb-1">@Model.Profile.UserType</p>
+                        <p class="text-muted mb-4">@Model.Profile.Address</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Full Name</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">@Model.Profile.Name</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Email</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">@Model.Profile.Email</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Phone</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">@Model.Profile.PhoneNumber</p>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Address</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">@Model.Profile.Address</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<h4 style="margin-top: 3%;">Registered Course's</h4>
+<div class="row" style="margin-top:1%;margin-right:0.5%">
+    @foreach (var item in Model.TiltesData)
+    {
+        <div class="col-sm-3" style="margin-top:1%;">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 18px;">
+                        @item.DisplayContent
+                    </h5>
+                    <p class="card-text">@item.Description</p>
+                    @*<a asp-action="@item.Action" asp-controller="@item.Controller" asp-route-data="@item.Id" class="btn btn-primary">More Details</a>*@
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+
+
+
+

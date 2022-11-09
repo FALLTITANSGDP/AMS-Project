@@ -38,10 +38,10 @@ namespace AMS.Controllers
             {
                 return RedirectToAction("FacultyDashboard", "AMS");
             }
-            //if (User.IsInRole("Student"))
-            //{
-            //    return RedirectToAction("StudentDashboard", "AMS");
-            //}
+            if (User.IsInRole("Student"))
+            {
+                return RedirectToAction("StudentDashboard", "AMS");
+            }
             if (token != null)
             {
                 var email = HttpContext.Session.GetString("UserEmail");

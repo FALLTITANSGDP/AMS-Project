@@ -207,10 +207,37 @@ namespace AMS.Controllers
         #endregion FacultyRegistration
 
         #region StudentCourseRegistration  
-
         public async Task<IActionResult> StudentDashboard()
         {
-            var studentDashboardViewModel = new StudentDashboardViewModel();
+            StudentDashboardViewModel studentDashboardViewModel = new();
+            ProfileViewModel profile = new()
+            {
+                UserId = HttpContext.Session.GetString("UserId"),
+                Email = HttpContext.Session.GetString("UserEmail"),
+                Name = HttpContext.Session.GetString("UserName"),
+                UserType = HttpContext.Session.GetString("_UserType"),
+                Address = "N/A",
+                PhoneNumber = "N/A"
+            };
+            studentDashboardViewModel.Profile = profile;
+            var registrationList = await dbOperations.GetAllData<Student_Course_Registration>("Student_Course_Registration");
+            var studentEmail = HttpContext.Session.GetString("UserEmail");
+            var registrationCourse = registrationList.Where(x => x.Student.Email.Equals(studentEmail, StringComparison.OrdinalIgnoreCase)).ToList();
+            studentDashboardViewModel.TiltesData = new List<TilesViewModel>();
+            foreach (var item in registrationCourse)
+            {
+                TilesViewModel tilesViewModel = new TilesViewModel
+                {
+                    Id = item.Id,
+                    DisplayContent = item.Course_Section_Faculty.Course.Name,
+                    Action = "GetRegisteredStudents",
+                    Controller = "AMS",
+                    Description = "Section :" + item.Course_Section_Faculty.Section.Name
+                };
+                studentDashboardViewModel.TiltesData.Add(tilesViewModel);
+            }
+
+
             return View(studentDashboardViewModel);
         }
 

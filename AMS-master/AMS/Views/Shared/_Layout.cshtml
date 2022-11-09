@@ -64,7 +64,7 @@
                     }
                     @if (User.IsInRole("Student"))
                     {
-                        <a asp-action="StudentRegistration" asp-controller="AMS" id="studentRegistration"  class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Register Course</a>
+                        @*<a asp-action="StudentRegistration" asp-controller="AMS" id="studentRegistration"  class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Register Course</a>*@
                         <a asp-action="ShowMyRegCourse" asp-controller="AMS" id="studentAttendance" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>My Attendance</a>
                     }
                     @if (User.IsInRole("Admin"))
