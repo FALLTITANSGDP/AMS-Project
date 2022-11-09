@@ -5,8 +5,7 @@ using QRCoder;
 using System.Drawing;
 using Microsoft.AspNetCore.Authorization;
 using AMS.ViewModels;
-using AMS.ViewModels.Faculty;
-using AMS.ViewModels.Student;
+using AMS.ViewModels.StudentVM;
 using static QRCoder.PayloadGenerator;
 using NuGet.Common;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -16,6 +15,8 @@ using System.Security.Cryptography;
 using Microsoft.AspNetCore.Mvc.ViewComponents;
 using System.Composition;
 using System.Text;
+using AMS.ViewModels.FacultyVM;
+using AMS.ViewModels.StudentVM;
 
 namespace AMS.Controllers
 {
@@ -714,6 +715,78 @@ namespace AMS.Controllers
         #endregion MyProfile
 
         #region AdminApprovals
+
+        public async Task<IActionResult> AdminStudentRegistration()
+        {
+            var students = await dbOperations.GetAllData<Student>("Student");
+            var scheduledCourses = await dbOperations.GetAllData<Course_Section_Faculty>("Course_Section_Faculty");
+            AdminStudentRegistration studentRegistrationViewModel = new()
+            {
+                Students = students,
+                Course_Section_Faculty = scheduledCourses
+            };
+            return View(studentRegistrationViewModel);
+        }
+
+        public async Task<IActionResult> AdminFacultyRegistration()
+        {
+            var facultList = await dbOperations.GetAllData<Faculty>("Faculty");
+            var courseList = await dbOperations.GetAllData<Course>("Course");
+            var sectionList = await dbOperations.GetAllData<Section>("Section");
+            var registrationList = await dbOperations.GetAllData<Course_Section_Faculty>("Course_Section_Faculty");
+            FacultyRegistrationViewModel data = new()
+            {
+                Faculties = facultList,
+                Courses = courseList,
+                Sections = sectionList,
+                RegistrationList = registrationList.ToList()
+            };
+            return View(data);
+        }
+
+        public async Task<IActionResult> AdminRegisterFacultyWithCourse(CourseViewModel courseViewModel)
+        {
+            try
+            {
+                if (courseViewModel.FName == null || courseViewModel == null || courseViewModel.SName == null || courseViewModel.CName == null)
+                {
+                    //With Fail Message
+                    return View("AdminFacultyRegistration");
+                }
+                Course_Section_Faculty data = new() { };
+                var courseList = await dbOperations.GetAllData<Course>("Course");
+                var sectionList = await dbOperations.GetAllData<Section>("Section");
+                var facultyList = await dbOperations.GetAllData<Faculty>("Faculty");
+                if (courseList != null && courseList.Count > 0 && sectionList != null && sectionList.Count > 0 && facultyList != null && facultyList.Count > 0)
+                {
+                    var facultyInfo = facultyList.FirstOrDefault(x => x.Email == courseViewModel.FName);
+                    var selectedCourse = courseList.FirstOrDefault(x => x.Name == courseViewModel.CName);
+                    var selectedSection = sectionList.FirstOrDefault(x => x.Name == courseViewModel.SName);
+                    if (selectedCourse != null && selectedSection != null && facultyInfo != null)
+                    {
+                        data.Course = selectedCourse;
+                        data.Section = selectedSection;
+                        data.Faculty = facultyInfo;
+                    }
+                }
+                if (data.Course == null || data.Section == null)
+                {
+                    //With Fail Message
+                    return View("AdminFacultyRegistration");
+                }
+                var result = await dbOperations.SaveData(data, "Course_Section_Faculty");
+                if (result == null)
+                {
+                    //With Success Message
+                    return RedirectToAction("AdminFacultyRegistration");
+                }
+                return RedirectToAction("AdminFacultyRegistration");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
         public async Task<IActionResult> GetPendingUserApprovals()
         {

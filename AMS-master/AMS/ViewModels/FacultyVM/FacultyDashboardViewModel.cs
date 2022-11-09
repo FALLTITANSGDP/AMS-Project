@@ -1,4 +1,4 @@
-﻿namespace AMS.ViewModels.Faculty
+﻿namespace AMS.ViewModels.FacultyVM
 {
     public class FacultyDashboardViewModel
     {

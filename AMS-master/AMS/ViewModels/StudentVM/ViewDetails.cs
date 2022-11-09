@@ -1,6 +1,6 @@
 ﻿using AMS.Models;
 
-namespace AMS.ViewModels.Student
+namespace AMS.ViewModels.StudentVM
 {
     public class ViewDetails
     {

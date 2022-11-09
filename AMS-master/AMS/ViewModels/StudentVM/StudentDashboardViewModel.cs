@@ -1,4 +1,4 @@
-﻿namespace AMS.ViewModels.Student
+﻿namespace AMS.ViewModels.StudentVM
 {
     public class StudentDashboardViewModel
     {
