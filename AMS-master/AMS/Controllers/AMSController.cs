@@ -226,7 +226,7 @@ namespace AMS.Controllers
             studentDashboardViewModel.TiltesData = new List<TilesViewModel>();
             foreach (var item in registrationCourse)
             {
-                TilesViewModel tilesViewModel = new TilesViewModel
+                TilesViewModel tilesViewModel = new()
                 {
                     Id = item.Id,
                     DisplayContent = item.Course_Section_Faculty.Course.Name,
@@ -506,7 +506,7 @@ namespace AMS.Controllers
         {
             try
             {
-                var pinList = await dbOperations.GetAllData<UPIN>("UPIN");
+                //var pinList = await dbOperations.GetAllData<UPIN>("UPIN");
                 var QRList = await dbOperations.GetAllData<QRCodeTracker>("QRCodeTracker");
                 var currentQRCode = QRList.FirstOrDefault(x => x.UId.Equals(data.CId, StringComparison.OrdinalIgnoreCase));
                 if (currentQRCode == null || !currentQRCode.QRId.Equals(data.QRId, StringComparison.OrdinalIgnoreCase))
@@ -520,12 +520,12 @@ namespace AMS.Controllers
                     ViewData["Invalid"] = "Student does not exist";
                     return View();
                 }
-                var userPINDetails = pinList.FirstOrDefault(x => x.Email.Equals(data.Email, StringComparison.OrdinalIgnoreCase));
-                if (userPINDetails.PIN != data.PIN)
-                {
-                    ViewData["Invalid"] = "Invalid PIN";
-                    return View();
-                }
+                //var userPINDetails = pinList.FirstOrDefault(x => x.Email.Equals(data.Email, StringComparison.OrdinalIgnoreCase));
+                //if (userPINDetails.PIN != data.PIN)
+                //{
+                //    ViewData["Invalid"] = "Invalid PIN";
+                //    return View();
+                //}
                 var student_Course_Registration = await dbOperations.GetAllData<Student_Course_Registration>("Student_Course_Registration");
                 var studentCourseRegistered = student_Course_Registration.FirstOrDefault(x => x.Student.Email.Equals(data.Email, StringComparison.OrdinalIgnoreCase) && x.Course_Section_Faculty.Id.Equals(data.CId, StringComparison.OrdinalIgnoreCase));
                 if (studentCourseRegistered != null)
@@ -747,10 +747,12 @@ namespace AMS.Controllers
         {
             var students = await dbOperations.GetAllData<Student>("Student");
             var scheduledCourses = await dbOperations.GetAllData<Course_Section_Faculty>("Course_Section_Faculty");
-            AdminStudentRegistration studentRegistrationViewModel = new()
+            var registrationList = await dbOperations.GetAllData<Student_Course_Registration>("Student_Course_Registration");
+            AdminStudentRegistrationViewModel studentRegistrationViewModel = new()
             {
                 Students = students,
-                Course_Section_Faculty = scheduledCourses
+                Course_Section_Faculty = scheduledCourses,
+                RegistrationList = registrationList
             };
             return View(studentRegistrationViewModel);
         }
@@ -808,6 +810,48 @@ namespace AMS.Controllers
                     return RedirectToAction("AdminFacultyRegistration");
                 }
                 return RedirectToAction("AdminFacultyRegistration");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<IActionResult> AdminRegisterStudentWithCourse(CourseViewModel courseViewModel)
+        {
+            try
+            {
+                if (courseViewModel == null)
+                {
+                    //Fail Message
+                    return RedirectToAction("AdminStudentRegistration", "AMS");
+                }
+                Student_Course_Registration student_Course_Registration = new Student_Course_Registration();
+                var course_Section_Faculty = await dbOperations.GetAllData<Course_Section_Faculty>("Course_Section_Faculty");
+                var studentList = await dbOperations.GetAllData<Student>("Student");
+                var selectedCourse_Section_Faculty = course_Section_Faculty.FirstOrDefault(x => x.Id == courseViewModel.CName);
+                if (selectedCourse_Section_Faculty != null && studentList.Count > 0)
+                {
+                    var student = studentList.FirstOrDefault(x => x.Email.Equals(courseViewModel.SName, StringComparison.OrdinalIgnoreCase));
+                    if (student != null)
+                    {
+                        student_Course_Registration.Course_Section_Faculty = selectedCourse_Section_Faculty;
+                        student_Course_Registration.Student = student;
+                        student_Course_Registration.IsApproved = false;
+                    }
+                }
+                if (student_Course_Registration.Student == null || student_Course_Registration.Course_Section_Faculty == null)
+                {
+                    //Message with Error
+                    return RedirectToAction("AdminStudentRegistration");
+                }
+                var result = await dbOperations.SaveData(student_Course_Registration, "Student_Course_Registration");
+                if (result == null)
+                {
+                    //Message with Error
+                    return RedirectToAction("AdminStudentRegistration");
+                }
+                return RedirectToAction("AdminStudentRegistration");
             }
             catch (Exception)
             {

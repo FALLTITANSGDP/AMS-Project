@@ -1,5 +1,85 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using AMS.ViewModels.StudentVM
 @{
+    ViewBag.Title = "Course Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model AdminStudentRegistrationViewModel;
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="bg-light col-sm-12 col-xl-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h6 class="mb-4">Add Course </h6>
+                <form asp-action="AdminRegisterStudentWithCourse" asp-controller="AMS" method="post">
+                    <div class="row mb-3" style="float:left;width:33%">
+                        <div class="form-floating mb-3">
+                            <select name="SName" asp-items="@(new SelectList(Model.Students,"Email","Email"))" class="form-select" id="floatingSelect"
+                                    aria-label="Floating label select example"></select>
+                            <label for="floatingSelect">Student</label>
+                        </div>
+                    </div>
+                    <div class="row mb-3" style="float:left;width:30%;margin-left:1%">
+                        <div class="form-floating mb-3">
+                            <select name="CName" asp-items="@(new SelectList(Model.Course_Section_Faculty,"Id","DisplayName"))" class="form-select" id="floatingSelect"
+                                    aria-label="Floating label select example"></select>
+                            <label for="floatingSelect">Course</label>
+                        </div>
+                    </div>
+                    <div style="float:left;margin-left:1%;margin-top:1%;margin-bottom:1%">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="bg-light col-sm-12 col-xl-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h6 class="mb-4">Course Registered</h6>
+                <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Student Email</th>
+                            <th scope="col">Course Name</th>
+                            <th scope="col">Section Name</th>
+                            <th scope="col">Faculty Name</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myTable">
+                        @if (@Model.RegistrationList.Count <= 0)
+                        {
+                            <tr><td colspan=4 style="text-align: center;"><h6>No Registrations</h6></td></tr>
+                        }
+                        @foreach (var listItem in Model.RegistrationList)
+                        {
+                            <tr>
+                                <td>@listItem.Student.Email </td>
+                                <td>@listItem.Course_Section_Faculty.Course.Name </td>
+                                <td>@listItem.Course_Section_Faculty.Section.Name</td>
+                                <td>@listItem.Course_Section_Faculty.Faculty.Name</td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#AtagDiv a').removeClass('active');
+        $('#adminFaculty').addClass('active');
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
