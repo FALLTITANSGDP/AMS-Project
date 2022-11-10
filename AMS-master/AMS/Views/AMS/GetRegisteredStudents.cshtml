@@ -10,7 +10,7 @@
     <div class="row g-4">
         <div class="bg-light col-sm-12 col-xl-12">
             <div class="bg-light rounded h-100 p-4">
-                <h6 class="mb-4">Student's List</h6>
+                <h6 class="mb-4">Reg. Student's List</h6>
                 <input class="form-control" id="myInput" type="text" placeholder="Search..">
                 <table class="table">
                     <thead>
@@ -18,6 +18,7 @@
                             <th scope="col">Id</th>
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody id="myTable">
@@ -31,6 +32,7 @@
                                 <td>@listItem.Student.Name</td>
                                 <td>@listItem.Student.FirstName @listItem.Student.LastName</td>
                                 <td>@listItem.Student.Email</td>
+                                <td><a asp-action="GetAttendance" asp-controller="AMS" asp-route-data="@listItem.Id" target="_blank">View Attendance</a></td>
                             </tr>
                         }
                     </tbody>
@@ -44,9 +46,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function () {
+        $('#AtagDiv a').removeClass('active');
+        $('#people').addClass('active');
         $("#myInput").on("keyup", function () {
-            $('#AtagDiv a').removeClass('active');
-            $('#').addClass('active');
             var value = $(this).val().toLowerCase();
             $("#myTable tr").filter(function () {
                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)

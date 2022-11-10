@@ -140,6 +140,7 @@ namespace AMS.Controllers
         {
             try
             {
+                ViewBag.IsPeopleEnable = data;
                 ViewDetails viewDetails = new();
                 var facultyRegList = await dbOperations.GetAllData<Course_Section_Faculty>("Course_Section_Faculty");
                 var selectedCourseDetails = facultyRegList.FirstOrDefault(x => x.Id == data);
@@ -156,6 +157,21 @@ namespace AMS.Controllers
             }
             catch (Exception ex)
             {
+                throw;
+            }
+        }
+
+        public async Task<IActionResult> GetAttendance(string data)
+        {
+            try
+            {
+                var attendanceLise = await dbOperations.GetAllData<Students_Attendance>("Students_Attendance");
+                attendanceLise = attendanceLise.Where(x => x.Student_Course_Registration.Course_Section_Faculty.Id == data).OrderBy(x => x.Student_Course_Registration.Student.Email).ToList();
+                return View(attendanceLise);                            
+            }
+            catch (Exception)
+            {
+
                 throw;
             }
         }
@@ -243,6 +259,7 @@ namespace AMS.Controllers
 
         public async Task<IActionResult> GetRegisteredStudents(string data)
         {
+            ViewBag.IsPeopleEnable = data;
             var studnetCourseReg = await dbOperations.GetAllData<Student_Course_Registration>("Student_Course_Registration");
             studnetCourseReg = studnetCourseReg.Where(x => x.Course_Section_Faculty.Id == data).ToList();
             return View(studnetCourseReg);

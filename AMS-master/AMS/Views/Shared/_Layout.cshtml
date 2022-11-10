@@ -61,6 +61,11 @@
                     @if (User.IsInRole("Faculty"))
                     {
                         <a asp-action="FacultyRegistration" asp-controller="AMS" id="facultyCourse" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Course</a>
+                        if (ViewBag.IsPeopleEnable != null)
+                        {
+                            <a asp-action="GetRegisteredStudents" asp-controller="AMS" asp-route-data="@ViewBag.IsPeopleEnable" id="people" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>People</a>
+                        }
+
                     }
                     @if (User.IsInRole("Student"))
                     {
