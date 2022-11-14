@@ -4,6 +4,6 @@ namespace AMS.ViewModels
 {
     public class DashboardViewModel : User
     {
-        public string UserType { get; set; }
+        public string userType { get; set; }
     }
 }
