@@ -94,7 +94,7 @@
                 </div>
             </div>
         </div>
-        @if (User.IsInRole("Student"))
+       @* @if (User.IsInRole("Student"))
         {
             <div class="row">
                 <div class="col-lg-4" style="margin-left: 2%;">
@@ -108,14 +108,14 @@
             </div>
         }
         else
-        {
+        {*@
             <div class="row">
                 <div class="col-lg-4" style="margin-left: 2%;">
                     <a asp-action="ResetPassword" asp-controller="Home" class="btn btn-primary">Reset Password</a>
                 </div>
                 <div class="col-lg-8"></div>
             </div>
-        }
+        @*}*@
     </div>
 </section>
 

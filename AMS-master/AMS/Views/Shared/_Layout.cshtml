@@ -99,12 +99,12 @@
                     <i class="fa fa-bars"></i>
                 </a>
                 <div class="navbar-nav align-items-center ms-auto">
-                    @if (User.IsInRole("Student"))
+                   @* @if (User.IsInRole("Student"))
                     {
                         <div class="navbar-nav align-items-center ms-auto">
                             <h6 style="padding-top: 20%;">PIN-@HttpContextAccessor.HttpContext.Session.GetInt32("UserPIN")</h6>
                         </div>
-                    }
+                    }*@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="~/img/user.webp" alt="" style="width: 40px; height: 40px;">
