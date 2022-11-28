@@ -21,8 +21,8 @@
                         <div class="col-sm">
                             <a asp-action="CreateQRCode" asp-controller="AMS" asp-route-data="@Model.Course_Section_Faculty.Id" class="link-primary" target="_blank">QR Code</a>
                         </div>
-                       @* <div class="col-sm">
-                            <a asp-action="ExtendQRCodeTime" asp-controller="AMS" asp-route-data="@Model.Course_Section_Faculty.Id" class="link-primary">Extend QR Code Time</a>
+                        @* <div class="col-sm">
+                        <a asp-action="ExtendQRCodeTime" asp-controller="AMS" asp-route-data="@Model.Course_Section_Faculty.Id" class="link-primary">Extend QR Code Time</a>
                         </div>*@
                     </div>
                 </div>
@@ -91,10 +91,16 @@
         });
     }
 </script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('#AtagDiv a').removeClass('active');
-        $('#people').addClass('active');
-    }
+    $(document).ready(function () {        //$('#AtagDiv a').removeClass('active');
+        //$('#people').addClass('active');
+
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    })
 </script>

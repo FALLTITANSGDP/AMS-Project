@@ -1,11 +1,11 @@
 ﻿@{
     ViewBag.Title = "GetAttendance Page";
 }
-@model List<AMS.Models.Students_Attendance>
+@model List<AMS.ViewModels.FacultyVM.StudentAttendanceViewModel>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>NWMSU - Northwest Missouri state university</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
@@ -45,17 +45,26 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Course Details</th>
-                    <th>Attended On</th>
+                    <th>Date</th>
+                    <th>Attendance</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td>@item.Student_Course_Registration.Student.DisplayName</td>
-                        <td>@item.Student_Course_Registration.Student.Email</td>
-                        <td>@item.Student_Course_Registration.Course_Section_Faculty.DisplayName</td>
-                        <td>@item.ApprovedOn.ToString("yyyy MM dd")</td>
+                        <td>@item.StudentName</td>
+                        <td>@item.StudentEmail</td>
+                        <td>@item.CourseDetails</td>
+                        <td>@item.ClassOn.ToString("yyyy MM dd")</td>
+                        @if(@item.IsAttendand)
+                        {
+                        <td style="color:green">Present</td>
+                        }
+                        else
+                        {
+                        <td style="color:red">Absent </td>
+                        }
                     </tr>
                 }
             </tbody>

@@ -161,13 +161,53 @@ namespace AMS.Controllers
             }
         }
 
-        public async Task<IActionResult> GetAttendance(string data)
+        public async Task<IActionResult> GetAttendance(string data, string Id)
         {
             try
             {
+                if (string.IsNullOrEmpty(data) || string.IsNullOrEmpty(Id))
+                {
+                    var studentAttendanceViewModel = new List<StudentAttendanceViewModel>();
+                    return View(studentAttendanceViewModel);
+                }
                 var attendanceLise = await dbOperations.GetAllData<Students_Attendance>("Students_Attendance");
-                attendanceLise = attendanceLise.Where(x => x.Student_Course_Registration.Course_Section_Faculty.Id == data).OrderBy(x => x.Student_Course_Registration.Student.Email).ToList();
-                return View(attendanceLise);                            
+                attendanceLise = attendanceLise.Where(x => x.Student_Course_Registration.Id == data).OrderBy(x => x.Student_Course_Registration.Student.Email).ToList();
+                var currentStudent = attendanceLise.FirstOrDefault();
+                if (currentStudent == null)
+                {
+                    var studentAttendanceViewModel = new List<StudentAttendanceViewModel>();
+                    return View(studentAttendanceViewModel);
+                }
+                var scheduledClass = await dbOperations.GetAllData<Scheduled_Class_Tracker>("Scheduled_Class_Tracker");
+                scheduledClass = scheduledClass.Where(x => x.course_Section_Faculty.Id.Trim().Equals(Id.Trim(), StringComparison.OrdinalIgnoreCase)).ToList();
+                if (scheduledClass.Count <= 0)
+                {
+                    var studentAttendanceViewModel = new List<StudentAttendanceViewModel>();
+                    return View(studentAttendanceViewModel);
+                }
+                var finalAttendanceList = new List<StudentAttendanceViewModel>();
+                foreach (var sClass in scheduledClass)
+                {
+                    StudentAttendanceViewModel studentAttendanceViewModel = new StudentAttendanceViewModel
+                    {
+                        CourseDetails = sClass.course_Section_Faculty.DisplayName,
+                        IsAttendand = true,
+                        ClassOn = sClass.ClassOn,
+                        StudentEmail = currentStudent.Student_Course_Registration.Student.Email,
+                        StudentName = currentStudent.Student_Course_Registration.Student.DisplayName
+                    };
+                    if (attendanceLise.Any(x => x.AttendedOn.Date.ToShortDateString() == sClass.ClassOn.ToShortDateString()))
+                    {
+                        studentAttendanceViewModel.IsAttendand = true;
+                    }
+                    else
+                    {
+                        studentAttendanceViewModel.IsAttendand = false;
+                    }
+                    finalAttendanceList.Add(studentAttendanceViewModel);
+                }
+
+                return View(finalAttendanceList);
             }
             catch (Exception)
             {
@@ -260,6 +300,7 @@ namespace AMS.Controllers
         public async Task<IActionResult> GetRegisteredStudents(string data)
         {
             ViewBag.IsPeopleEnable = data;
+            ViewBag.Course_Section_Faculty_Id = data;
             var studnetCourseReg = await dbOperations.GetAllData<Student_Course_Registration>("Student_Course_Registration");
             studnetCourseReg = studnetCourseReg.Where(x => x.Course_Section_Faculty.Id == data).ToList();
             return View(studnetCourseReg);
@@ -391,17 +432,27 @@ namespace AMS.Controllers
 
         public async Task<string> GetAttendancePercentage(string studentEmail, string Uid)
         {
-
             var studentCourseReg = await dbOperations.GetAllData<Student_Course_Registration>("Student_Course_Registration");
             if (studentCourseReg.Count > 0)
             {
                 var currentStudentCourse = studentCourseReg.FirstOrDefault(x => x.Student.Email.Equals(studentEmail, StringComparison.OrdinalIgnoreCase) && x.Course_Section_Faculty.Id == Uid);
                 if (currentStudentCourse != null)
                 {
-                    var totalCount = currentStudentCourse.Course_Section_Faculty.TotalCount;
+                    var courseSectionFacultyId = currentStudentCourse.Course_Section_Faculty.Id;
+                    var courseSectionFacultyDetails = await dbOperations.GetAllData<Course_Section_Faculty>("Course_Section_Faculty");
+                    var totalCountDetails = courseSectionFacultyDetails.FirstOrDefault(x => x.Id.Equals(courseSectionFacultyId, StringComparison.OrdinalIgnoreCase));
+                    if (totalCountDetails == null || totalCountDetails.TotalCount <= 0)
+                    {
+                        return "0";
+                    }
+
                     var attendanceList = await dbOperations.GetAllData<Students_Attendance>("Students_Attendance");
                     attendanceList = attendanceList.Where(x => x.Student_Course_Registration.Course_Section_Faculty.Id.Equals(currentStudentCourse.Course_Section_Faculty.Id) && x.Student_Course_Registration.Student.Email.Equals(studentEmail, StringComparison.OrdinalIgnoreCase) && x.IsApproved).ToList();
-                    var percentage = (int)Math.Round((double)(100 * attendanceList.Count) / totalCount);
+                    if (attendanceList.Count > totalCountDetails.TotalCount)
+                    {
+                        return "100";
+                    }
+                    var percentage = (int)Math.Round((double)(100 * attendanceList.Count) / totalCountDetails.TotalCount);
                     return percentage.ToString();
                 }
             }
@@ -749,13 +800,28 @@ namespace AMS.Controllers
                     var result = await dbOperations.UpdateData<Course_Section_Faculty>(currentRecord.Id, currentRecord, "Course_Section_Faculty");
                     if (result != null)
                     {
-                        return true;
+                        var result1 = await UpdateScheduledClassTracker(result);
+                        return result1;
                     }
                 }
             }
             return false;
         }
 
+        private async Task<bool> UpdateScheduledClassTracker(Course_Section_Faculty course_Section_Faculty)
+        {
+            Scheduled_Class_Tracker scheduled_Class_Tracker = new Scheduled_Class_Tracker
+            {
+                course_Section_Faculty = course_Section_Faculty,
+                ClassOn = DateTime.UtcNow
+            };
+            var result = await dbOperations.SaveData<Scheduled_Class_Tracker>(scheduled_Class_Tracker, "Scheduled_Class_Tracker");
+            if (result != null)
+            {
+                return true;
+            }
+            return false;
+        }
         #endregion MyProfile
 
         #region AdminApprovals

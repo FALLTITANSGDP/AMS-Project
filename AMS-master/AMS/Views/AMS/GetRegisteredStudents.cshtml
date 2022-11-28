@@ -29,10 +29,11 @@
                         @foreach (var listItem in Model)
                         {
                             <tr>
+
                                 <td>@listItem.Student.Name</td>
                                 <td>@listItem.Student.FirstName @listItem.Student.LastName</td>
                                 <td>@listItem.Student.Email</td>
-                                <td><a asp-action="GetAttendance" asp-controller="AMS" asp-route-data="@listItem.Id" target="_blank">View Attendance</a></td>
+                                <td><a asp-action="GetAttendance" asp-controller="AMS" asp-route-data="@listItem.Id" asp-route-Id="@ViewBag.Course_Section_Faculty_Id " target="_blank">View Attendance</a></td>
                             </tr>
                         }
                     </tbody>
