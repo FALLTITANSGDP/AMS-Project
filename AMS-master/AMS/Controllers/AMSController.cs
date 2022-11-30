@@ -179,7 +179,7 @@ namespace AMS.Controllers
                     return View(studentAttendanceViewModel);
                 }
                 var scheduledClass = await dbOperations.GetAllData<Scheduled_Class_Tracker>("Scheduled_Class_Tracker");
-                scheduledClass = scheduledClass.Where(x => x.course_Section_Faculty.Id.Trim().Equals(Id.Trim(), StringComparison.OrdinalIgnoreCase)).ToList();
+                scheduledClass = scheduledClass.Where(x => x.course_Section_Faculty.Id.Trim().Equals(Id.Trim(),StringComparison.OrdinalIgnoreCase)).ToList();
                 if (scheduledClass.Count <= 0)
                 {
                     var studentAttendanceViewModel = new List<StudentAttendanceViewModel>();
